@@ -2,6 +2,9 @@ import React from 'react'
 import RahmaLogo from '../Assets/images/rahmaLogo.png'
 
 const Footer = () => {
+
+    var year = new Date().getFullYear()
+
     return (
         <>
             <div className="Footer">
@@ -22,11 +25,11 @@ const Footer = () => {
                         <div className='contact'>
                             <h5>Contact</h5>
                             <br />
-                            <a href="mailto: info@rahmaww.org">
+                            <a href="mailto:info@rahmaww.org">
                             <i className="fa-solid fa-envelope"></i> info@rahmaww.org</a>
                             <br />
-                            <a href="tel: (248) 566 3111">
-                            <i className="fa-solid fa-phone-volume"></i> (248) 566 3111</a>
+                            <a href="tel:+2485663111">
+                            <i className="fa-solid fa-phone-volume"></i> +(248) 566 3111</a>
                             <br />
                             <a href="">
                             <i class="fa-solid fa-location-dot"></i> 31333 Southfield Rd. STE 100 
@@ -64,7 +67,7 @@ const Footer = () => {
             </div>
 
             <div className='copyright'>
-                <p>Copyright © 2022 Rahma Worldwide, All Rights Reserved</p>
+                <p>Copyright © {year} Rahma Worldwide, All Rights Reserved</p>
             </div>
         </>
     )
