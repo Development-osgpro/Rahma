@@ -18,11 +18,6 @@ body {
   width: 100%;
   padding: 0.5rem 0 !important;
 }
-@media (max-width: 600px) {
-  .rahma-nav .email-phone {
-    padding: 0.2rem 0 !important;
-  }
-}
 .rahma-nav .email-phone .container {
   margin-inline: auto !important;
 }
