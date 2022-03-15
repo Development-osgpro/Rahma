@@ -1,19 +1,36 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Navbar, Container, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap'
 import logo from '../Assets/images/logo.png'
 import MHAlogo from '../Assets/images/mha-logo-02.png'
 
 const NavBar = () => {
+
+    // const [handleTopColorDonate, setHandleTopColorDonate] = useState();
+
+    const handleTopColor = () => {
+        const emailPhone = document.getElementById('email-phone')
+        emailPhone.style.transition = 'all .5s ease-in-out'
+        emailPhone.style.backgroundColor = '#2b7634'
+        console.log("hover")
+    }
+
+    const handleTopColorBack = () => {
+        const emailPhone = document.getElementById('email-phone')
+        emailPhone.style.transition = 'all .5s ease-in-out'
+        emailPhone.style.backgroundColor = '#2b3990'
+        console.log("hover")
+    }
+
     return (
         <>
             <div className='rahma-nav'>
-                <div className='email-phone'>
+                <div className='email-phone' id='email-phone'>
                     <div className="container">
                         <div className="container col-10">
-                            <a href="mailto: info@rahmaww.org">
+                            <a href="mailto:info@rahmaww.org">
                             <i className="fa-solid fa-envelope"></i> info@rahmaww.org</a>
-                            <a href="tel: (248) 566 3111">
-                            <i className="fa-solid fa-phone-volume"></i> (248) 566 3111</a>
+                            <a href="tel:+2485663111">
+                            <i className="fa-solid fa-phone-volume"></i> +(248) 566 3111</a>
                         </div>
                     </div>
                 </div>
@@ -24,8 +41,8 @@ const NavBar = () => {
                             <Container fluid className='col-10'>
                                 <Navbar.Brand href="#"><img src={logo} alt="" /></Navbar.Brand>
                                 <div className='donate-btn'>
-                                    <button>Donate</button>
-                                    <img src={MHAlogo} alt="" />
+                                    <button onMouseOver={() => handleTopColor()} onMouseLeave={() => handleTopColorBack()}>Donate</button>
+                                    <a href="https://www.mhanational.org/" target='_blank'><img src={MHAlogo} alt="" /></a>
                                 </div>                            
                                 <Navbar.Toggle aria-controls="navbarScroll"/>
                                 <Navbar.Collapse id="navbarScroll">

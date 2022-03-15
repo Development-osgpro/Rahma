@@ -1,19 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 /* all background image in the site */
 .Footer {
   background-image: url('./Assets/images/footer-bg.jpg');
   background-size: cover;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-image: url('./Assets/images/logo-overlay.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .navbar-toggler {
+    border: none !important;
+  }
+  .navbar-toggler:not(.collapsed) span {
+    background-image: url("./Assets/images/png-x.png");
+    transform: rotate(-180deg)
+  }
 }
