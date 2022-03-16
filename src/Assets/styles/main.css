@@ -466,6 +466,7 @@ body {
 .homepage .hero-section {
   position: relative;
   z-index: 10;
+  overflow: hidden;
 }
 .homepage .hero-section .animation-screen {
   display: flex;
@@ -473,10 +474,67 @@ body {
   height: 65vh;
   background-color: #e3e3e3;
 }
+.homepage .hero-section .animation-screen .container {
+  height: 100% !important;
+}
+.homepage .hero-section .animation-screen .container .container {
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+}
+.homepage .hero-section .animation-screen .container .container .donate-now h4 {
+  width: 500px;
+  font-weight: 600;
+  color: #2b3990;
+  font-size: 30px;
+}
+.homepage .hero-section .animation-screen .container .container .donate-now button {
+  margin: 3rem 0;
+  width: 220px;
+  height: 70px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  font-weight: 600;
+  background: #2b3990;
+  background: linear-gradient(32deg, #2b3990 0%, #2b7634 100%);
+  color: white;
+  font-size: 20px;
+  transition: background 0.3s ease-out;
+}
+.homepage .hero-section .animation-screen .container .container .donate-now button:hover {
+  background-position-y: 70px;
+}
+.homepage .hero-section .animation-screen .container .container .donate-now div {
+  display: flex;
+}
+.homepage .hero-section .animation-screen .container .container .donate-now div a {
+  background-color: white;
+  margin: 1rem 0.5rem;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px gray;
+  transition: all 0.2s ease-in-out;
+}
+.homepage .hero-section .animation-screen .container .container .donate-now div a i {
+  color: #2b3990;
+  font-weight: 600;
+}
+.homepage .hero-section .animation-screen .container .container .donate-now div a:hover {
+  margin: 0.5rem;
+}
+.homepage .hero-section .animation-screen .container .container .donate-now div a:hover i {
+  transition: all 0.2s ease-in-out;
+  color: #2b7634;
+}
 .homepage .hero-section .animation-screen .hero-hand-img {
   position: absolute;
-  right: 600px;
-  bottom: 0;
+  right: 35%;
+  bottom: 0 !important;
 }
 .homepage .hero-section .animation-screen .hero-hand-img img {
   width: 200px;
@@ -490,8 +548,8 @@ body {
 .homepage .hero-section .animation-screen .hero-main-img div {
   background-color: #d2d5e5;
   height: 110%;
-  width: 550px;
-  border-radius: 900px 0px 0px 400px;
+  width: 130%;
+  border-radius: 2000px 0px 0px 900px;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -499,7 +557,76 @@ body {
 }
 .homepage .hero-section .animation-screen .hero-main-img img {
   height: 100%;
+  max-width: 405px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
   z-index: 100;
-  border-radius: 900px 0px 0px 400px;
+  border-radius: 2000px 0px 0px 1000px;
+}
+
+.animation-remotecontrol {
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 100;
+}
+.animation-remotecontrol .container .container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.animation-remotecontrol .container .container div {
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+.animation-remotecontrol .container .container div.active svg {
+  transform: scale(1.3);
+  position: relative;
+  z-index: 1;
+}
+.animation-remotecontrol .container .container div.active svg path {
+  fill: #2b7634 !important;
+}
+.animation-remotecontrol .container .container div.active div {
+  overflow: hidden;
+  position: relative;
+}
+.animation-remotecontrol .container .container div.active div .circle {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  z-index: 0;
+  background-color: #2b7634;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+.animation-remotecontrol .container .container div:hover svg path {
+  fill: #2b7634 !important;
+}
+.animation-remotecontrol .container .container div div:not(.circle) {
+  box-shadow: 0px 0px 5px gray;
+  height: 100px;
+  width: 88px !important;
+  margin: -2rem 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 30px 30px 0 0;
+  cursor: pointer;
+}
+.animation-remotecontrol .container .container div svg {
+  height: 70px;
+  width: 100%;
+  margin: auto;
+}
+.animation-remotecontrol .container .container div svg path {
+  fill: #2b3990;
+  transition: all 0.4s ease-in-out;
+}
+.animation-remotecontrol .container .container div p {
+  font-size: 11.5px;
+  letter-spacing: 0px;
+  margin-top: 1rem;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

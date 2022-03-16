@@ -25,20 +25,20 @@ const Footer = () => {
                         <div className='contact'>
                             <h5>Contact</h5>
                             <br />
-                            <a href="mailto:info@rahmaww.org">
+                            <a href="mailto:info@rahmaww.org" rel='noopener noreferrer'>
                             <i className="fa-solid fa-envelope"></i> info@rahmaww.org</a>
                             <br />
-                            <a href="tel:+2485663111">
+                            <a href="tel:+2485663111" rel='noopener noreferrer'>
                             <i className="fa-solid fa-phone-volume"></i> +(248) 566 3111</a>
                             <br />
-                            <a href="">
-                            <i class="fa-solid fa-location-dot"></i> 31333 Southfield Rd. STE 100 
+                            <a href="https://www.google.ru/maps/place/Google+Building+41,+Mountain+View,+CA+94043,+USA/@37.4224082,-122.0877973,17z/data=!3m1!4b1!4m5!3m4!1s0x808fba02f3d60bc5:0x6bc3b76cb42de9de!8m2!3d37.4224082!4d-122.0856086" rel='noopener noreferrer'>
+                            <i className="fa-solid fa-location-dot"></i> 31333 Southfield Rd. STE 100 
                             Beverly Hills, MI 48025
                             </a>
                         </div>
 
                         <div className='rahma-message'>
-                            <img src={RahmaLogo} alt="" />
+                            <img src={RahmaLogo} alt="Rahma Logo" />
                             <h5>We’d love to hear from you.</h5>
                             <h5>Just choose the most convenient method and 
                             we’ll get back to you as soon as we can.</h5>
@@ -46,10 +46,10 @@ const Footer = () => {
                             Nonprofit Organization (Tax ID 47-1304361)</h5>
                             <h5>View IRS Letter</h5>
                             <div className='social-icons'>
-                                <a href='https://www.facebook.com/RahmaWorldwide/' target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href='https://www.instagram.com/rahmaworldwide/' target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                                <a href='https://twitter.com/rahmaworldwide' target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                                <a href='https://www.youtube.com/c/RahmaWorldwide' target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                <a href='https://www.facebook.com/RahmaWorldwide/' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-facebook-f"></i></a>
+                                <a href='https://www.instagram.com/rahmaworldwide/' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-instagram"></i></a>
+                                <a href='https://twitter.com/rahmaworldwide' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-twitter"></i></a>
+                                <a href='https://www.youtube.com/c/RahmaWorldwide' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-youtube"></i></a>
                             </div>
                         </div>
                         </div>
