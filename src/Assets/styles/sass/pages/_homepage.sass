@@ -1,5 +1,6 @@
 @import '../layout/variables'
 
+// styleing hero us section
 .homepage
     .hero-section
         position: relative
@@ -16,12 +17,18 @@
                     height: 100% !important
                     display: flex
                     align-items: center
+                    @media ( max-width: 768px )
+                        width: 100% !important
                     .donate-now
                         h4
-                            width: 500px
+                            width: 52%
                             font-weight: 600
                             color: $main-blue
                             font-size: 30px
+                            @media ( max-width: 1400px )
+                                width: 350px !important
+                            @media ( max-width: 1340px )
+                                width: 300px !important
                         button
                             margin: 3rem 0
                             width: 220px
@@ -60,15 +67,35 @@
                                         color: $main-green
             .hero-hand-img
                 position: absolute
-                right: 35%
+                z-index: 3000
+                right: 30%
                 bottom: 0 !important
+                @media ( max-width: 1199px )
+                    right: 30%
+                @media ( max-width: 1023px )
+                    right: 0
+                    margin-right: 1rem
                 img
-                    width: 200px
+                    height: 500px
+                    max-width: 372px !important
+                    object-fit: cover
+                    @media ( max-width: 1200px )
+                        right: 28%
+                    @media ( max-width: 1199px )
+                        height: 400px
+                    @media ( max-width: 1023px )
+                        height: 500px
+                    @media ( max-width: 768px )
+                        height: 400px
             .hero-main-img
                 position: absolute
                 right: 0
                 bottom: 0
                 height: 100%
+                @media ( max-width: 1200px )
+                    width: 300px
+                @media ( max-width: 1023px )
+                    display: none !important
                 div
                     background-color: #d2d5e5
                     height: 110%
@@ -90,14 +117,19 @@
     margin-bottom: 3rem
     position: relative
     z-index: 100
+    height: 200px !important 
+    margin-top: -2rem  
     .container
+        height: 100%
         .container
+            height: 100%
             margin: auto
             display: flex
             justify-content: center
             align-items: center
+            &:scrollbar
+                display: none !important
             div
-                background-color: white
                 transition: all .5s ease-in-out
                 &.active 
                     svg
@@ -126,11 +158,12 @@
                 div:not(.circle)
                     box-shadow: 0px 0px 5px gray
                     height: 100px
-                    width: 88px !important
+                    width: 87px !important
                     margin: -2rem 0.5rem 0
                     padding: 0.5rem
                     border-radius: 30px 30px 0 0
                     cursor: pointer
+                    background-color: white
                 svg
                     height: 70px
                     width: 100%
@@ -143,3 +176,209 @@
                     letter-spacing: 0px
                     margin-top: 1rem
                     text-align: center
+
+
+// styleing about us section
+.aboutus-section 
+    padding: 3rem 0
+    margin-bottom: 20rem
+    background-color: #e3e3e3
+    .container
+        .container
+            .about
+                display: flex
+                .about-text-video
+                    width: 50%
+                    h4
+                        color: #707070
+                        font-weight: 700
+                        margin: 2rem 0
+                    p
+                        max-width: 700px
+                    ul
+                        list-style: none
+                        margin: 0 !important
+                        padding: 0 !important
+                        li
+                            margin: 0 !important
+                            padding: 0 !important
+                            i
+                                color: $main-blue !important
+                    .video
+                        margin-top: 2rem
+                        display: flex
+                        align-items: center
+                        justify-content: center 
+                        & > button
+                                background: transparent !important
+                                outline: none
+                                border: 2px solid $main-blue
+                                border-radius: 50%
+                                width: 80px
+                                height: 80px
+                                position: relative
+                                &::before
+                                    content: ''
+                                    position: absolute
+                                    top: 50%
+                                    right: 65px
+                                    background-color: $main-blue
+                                    width: 1000px
+                                    height: 2px
+                                i
+                                    color: $main-blue
+                                    font-size: 30px
+                                    text-align: center
+                        h6
+                            span
+                                border-bottom: 1px solid $main-blue
+                            display: inline-block
+                            font-size: 12px
+                            color: $main-blue
+                            margin-left: 1rem
+
+                .about-images
+                    display: flex
+                    width: 70%
+                    justify-content: flex-end
+                    flex-wrap: wrap
+                    margin-top: 5rem
+                    div
+                        &:first-of-type
+                            flex-basis: 100%
+                            display: flex
+                            justify-content: flex-end
+                            margin-bottom: 2rem
+                            img
+                                width: 50%
+                                object-fit: cover
+                                height: 200px
+                                border-radius: 50px 0 50px 50px
+                                box-shadow: 5px 5px 10px gray
+                        &:nth-of-type(2)
+                            flex-basis: 55%
+                            margin-right: 2rem
+                            display: flex
+                            justify-content: center
+                            img
+                                width: 100%
+                                object-fit: cover
+                                height: 200px
+                                border-radius: 50px 50px 50px 0px
+                                box-shadow: 5px 5px 10px gray
+                        &:last-of-type
+                            flex-basis: 37%
+                            display: flex
+                            justify-content: flex-end
+                            height: 300px
+                            img
+                                width: 100%
+                                object-fit: cover
+                                height: 100%
+                                border-radius: 50px 50px 0px 50px
+                                box-shadow: 5px 5px 10px gray
+            .success-stories
+                display: flex
+                justify-content: space-between
+                margin-top: 5rem
+                margin-bottom: -15rem
+                .success-stories-text
+                    width: 40%
+                    height: 400px
+                    display: flex
+                    flex-direction: column
+                    h1
+                        color: #707070
+                        font-weight: 700
+                    p
+                        margin: 3rem 0
+                    button
+                        margin-top: auto
+                        align-self: flex-end
+                        border-radius: 50%
+                        background: transparent
+                        border: 1px solid $main-blue
+                        width: 80px
+                        height: 80px 
+                        font-size: 12px 
+                        color: $main-blue
+                        i
+                            color: $main-blue
+
+                .success-stories-video
+                    width: 60%
+                    display: flex
+                    justify-content: center
+                    div
+                        width: 70%
+                        padding: 3rem 1rem
+                        background-color: white
+                        box-shadow: 0px 0px 7px gray inset
+                        border-radius: 30px 
+                        video
+                            width: 100%
+                            height: 500px
+
+.best_moment
+    margin-bottom: 5rem
+    background-color: #e3e3e3
+    padding: 3rem
+    .container
+        .container.col-10
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            h1
+                text-align: center
+                color: #707070
+                margin-bottom: 2rem
+                font-weight: 700
+            p
+                position: relative
+                width: 200px     
+                text-align: center           
+                &::after
+                    content: ""
+                    background-color: $main-blue
+                    position: absolute
+                    height: 2px 
+                    width: 70px
+                    top: 50%
+                    left: 0
+                    // transform: translate(-50%)
+                &::before
+                    content: ""
+                    background-color: $main-blue
+                    position: absolute
+                    height: 2px 
+                    width: 70px
+                    top: 50%
+                    right: 0
+                    // transform: translate(-50%)
+                i
+                    transform: rotate(-90deg)
+                    color: $main-blue
+            .before-after-slider
+                height: 500px !important
+                img
+                    height: 100%
+                    object-fit: cover
+                .before-after-slider__delimiter
+                    background-color: $main-blue !important
+                    width: 30px !important
+                    & > div
+                            .before-after-slider__delimiter-icon
+                                border-radius: 0 0 0 0 !important
+                                height: 100px !important
+                                width: 30px !important
+                                position: relative
+                                &::before
+                                    content: ""
+                                    top: 50%
+                                    left: 50% 
+                                    position: absolute
+                                    width: 20px 
+                                    height: 100%
+                                    background-color: $main-blue
+                                    transform: translate(-50%, -50%)

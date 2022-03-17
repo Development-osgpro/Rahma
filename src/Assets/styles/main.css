@@ -8,6 +8,16 @@ body {
   box-sizing: border-box !important;
 }
 
+.h1-styles {
+  color: #707070 !important;
+  font-weight: 700;
+}
+.h1-styles span {
+  color: white !important;
+  background-color: #2b3990 !important;
+  padding: 0rem 0.5rem;
+}
+
 .rahma-nav {
   box-shadow: 0px 1px 10px #34598a;
   position: relative;
@@ -482,11 +492,26 @@ body {
   display: flex;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .homepage .hero-section .animation-screen .container .container {
+    width: 100% !important;
+  }
+}
 .homepage .hero-section .animation-screen .container .container .donate-now h4 {
-  width: 500px;
+  width: 52%;
   font-weight: 600;
   color: #2b3990;
   font-size: 30px;
+}
+@media (max-width: 1400px) {
+  .homepage .hero-section .animation-screen .container .container .donate-now h4 {
+    width: 350px !important;
+  }
+}
+@media (max-width: 1340px) {
+  .homepage .hero-section .animation-screen .container .container .donate-now h4 {
+    width: 300px !important;
+  }
 }
 .homepage .hero-section .animation-screen .container .container .donate-now button {
   margin: 3rem 0;
@@ -533,17 +558,62 @@ body {
 }
 .homepage .hero-section .animation-screen .hero-hand-img {
   position: absolute;
-  right: 35%;
+  z-index: 3000;
+  right: 30%;
   bottom: 0 !important;
 }
+@media (max-width: 1199px) {
+  .homepage .hero-section .animation-screen .hero-hand-img {
+    right: 30%;
+  }
+}
+@media (max-width: 1023px) {
+  .homepage .hero-section .animation-screen .hero-hand-img {
+    right: 0;
+    margin-right: 1rem;
+  }
+}
 .homepage .hero-section .animation-screen .hero-hand-img img {
-  width: 200px;
+  height: 500px;
+  max-width: 372px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1200px) {
+  .homepage .hero-section .animation-screen .hero-hand-img img {
+    right: 28%;
+  }
+}
+@media (max-width: 1199px) {
+  .homepage .hero-section .animation-screen .hero-hand-img img {
+    height: 400px;
+  }
+}
+@media (max-width: 1023px) {
+  .homepage .hero-section .animation-screen .hero-hand-img img {
+    height: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .homepage .hero-section .animation-screen .hero-hand-img img {
+    height: 400px;
+  }
 }
 .homepage .hero-section .animation-screen .hero-main-img {
   position: absolute;
   right: 0;
   bottom: 0;
   height: 100%;
+}
+@media (max-width: 1200px) {
+  .homepage .hero-section .animation-screen .hero-main-img {
+    width: 300px;
+  }
+}
+@media (max-width: 1023px) {
+  .homepage .hero-section .animation-screen .hero-main-img {
+    display: none !important;
+  }
 }
 .homepage .hero-section .animation-screen .hero-main-img div {
   background-color: #d2d5e5;
@@ -569,15 +639,23 @@ body {
   margin-bottom: 3rem;
   position: relative;
   z-index: 100;
+  height: 200px !important;
+  margin-top: -2rem;
+}
+.animation-remotecontrol .container {
+  height: 100%;
 }
 .animation-remotecontrol .container .container {
+  height: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.animation-remotecontrol .container .container:scrollbar {
+  display: none !important;
+}
 .animation-remotecontrol .container .container div {
-  background-color: white;
   transition: all 0.5s ease-in-out;
 }
 .animation-remotecontrol .container .container div.active svg {
@@ -609,11 +687,12 @@ body {
 .animation-remotecontrol .container .container div div:not(.circle) {
   box-shadow: 0px 0px 5px gray;
   height: 100px;
-  width: 88px !important;
+  width: 87px !important;
   margin: -2rem 0.5rem 0;
   padding: 0.5rem;
   border-radius: 30px 30px 0 0;
   cursor: pointer;
+  background-color: white;
 }
 .animation-remotecontrol .container .container div svg {
   height: 70px;
@@ -629,4 +708,245 @@ body {
   letter-spacing: 0px;
   margin-top: 1rem;
   text-align: center;
+}
+
+.aboutus-section {
+  padding: 3rem 0;
+  margin-bottom: 20rem;
+  background-color: #e3e3e3;
+}
+.aboutus-section .container .container .about {
+  display: flex;
+}
+.aboutus-section .container .container .about .about-text-video {
+  width: 50%;
+}
+.aboutus-section .container .container .about .about-text-video h4 {
+  color: #707070;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+.aboutus-section .container .container .about .about-text-video p {
+  max-width: 700px;
+}
+.aboutus-section .container .container .about .about-text-video ul {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.aboutus-section .container .container .about .about-text-video ul li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.aboutus-section .container .container .about .about-text-video ul li i {
+  color: #2b3990 !important;
+}
+.aboutus-section .container .container .about .about-text-video .video {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutus-section .container .container .about .about-text-video .video > button {
+  background: transparent !important;
+  outline: none;
+  border: 2px solid #2b3990;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+.aboutus-section .container .container .about .about-text-video .video > button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 65px;
+  background-color: #2b3990;
+  width: 1000px;
+  height: 2px;
+}
+.aboutus-section .container .container .about .about-text-video .video > button i {
+  color: #2b3990;
+  font-size: 30px;
+  text-align: center;
+}
+.aboutus-section .container .container .about .about-text-video .video h6 {
+  display: inline-block;
+  font-size: 12px;
+  color: #2b3990;
+  margin-left: 1rem;
+}
+.aboutus-section .container .container .about .about-text-video .video h6 span {
+  border-bottom: 1px solid #2b3990;
+}
+.aboutus-section .container .container .about .about-images {
+  display: flex;
+  width: 70%;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+.aboutus-section .container .container .about .about-images div:first-of-type {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+.aboutus-section .container .container .about .about-images div:first-of-type img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+  border-radius: 50px 0 50px 50px;
+  box-shadow: 5px 5px 10px gray;
+}
+.aboutus-section .container .container .about .about-images div:nth-of-type(2) {
+  flex-basis: 55%;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.aboutus-section .container .container .about .about-images div:nth-of-type(2) img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+  border-radius: 50px 50px 50px 0px;
+  box-shadow: 5px 5px 10px gray;
+}
+.aboutus-section .container .container .about .about-images div:last-of-type {
+  flex-basis: 37%;
+  display: flex;
+  justify-content: flex-end;
+  height: 300px;
+}
+.aboutus-section .container .container .about .about-images div:last-of-type img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  border-radius: 50px 50px 0px 50px;
+  box-shadow: 5px 5px 10px gray;
+}
+.aboutus-section .container .container .success-stories {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+  margin-bottom: -15rem;
+}
+.aboutus-section .container .container .success-stories .success-stories-text {
+  width: 40%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.aboutus-section .container .container .success-stories .success-stories-text h1 {
+  color: #707070;
+  font-weight: 700;
+}
+.aboutus-section .container .container .success-stories .success-stories-text p {
+  margin: 3rem 0;
+}
+.aboutus-section .container .container .success-stories .success-stories-text button {
+  margin-top: auto;
+  align-self: flex-end;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #2b3990;
+  width: 80px;
+  height: 80px;
+  font-size: 12px;
+  color: #2b3990;
+}
+.aboutus-section .container .container .success-stories .success-stories-text button i {
+  color: #2b3990;
+}
+.aboutus-section .container .container .success-stories .success-stories-video {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+.aboutus-section .container .container .success-stories .success-stories-video div {
+  width: 70%;
+  padding: 3rem 1rem;
+  background-color: white;
+  box-shadow: 0px 0px 7px gray inset;
+  border-radius: 30px;
+}
+.aboutus-section .container .container .success-stories .success-stories-video div video {
+  width: 100%;
+  height: 500px;
+}
+
+.best_moment {
+  margin-bottom: 5rem;
+  background-color: #e3e3e3;
+  padding: 3rem;
+}
+.best_moment .container .container.col-10 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.best_moment .container .container.col-10 h1 {
+  text-align: center;
+  color: #707070;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.best_moment .container .container.col-10 p {
+  position: relative;
+  width: 200px;
+  text-align: center;
+}
+.best_moment .container .container.col-10 p::after {
+  content: "";
+  background-color: #2b3990;
+  position: absolute;
+  height: 2px;
+  width: 70px;
+  top: 50%;
+  left: 0;
+}
+.best_moment .container .container.col-10 p::before {
+  content: "";
+  background-color: #2b3990;
+  position: absolute;
+  height: 2px;
+  width: 70px;
+  top: 50%;
+  right: 0;
+}
+.best_moment .container .container.col-10 p i {
+  transform: rotate(-90deg);
+  color: #2b3990;
+}
+.best_moment .container .container.col-10 .before-after-slider {
+  height: 500px !important;
+}
+.best_moment .container .container.col-10 .before-after-slider img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.best_moment .container .container.col-10 .before-after-slider .before-after-slider__delimiter {
+  background-color: #2b3990 !important;
+  width: 30px !important;
+}
+.best_moment .container .container.col-10 .before-after-slider .before-after-slider__delimiter > div .before-after-slider__delimiter-icon {
+  border-radius: 0 0 0 0 !important;
+  height: 100px !important;
+  width: 30px !important;
+  position: relative;
+}
+.best_moment .container .container.col-10 .before-after-slider .before-after-slider__delimiter > div .before-after-slider__delimiter-icon::before {
+  content: "";
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: #2b3990;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=main.css.map */

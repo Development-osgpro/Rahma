@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import "./Assets/styles/sass/layout/modal-video.css"
 import './Assets/styles/main.css'
 
 ReactDOM.render(
