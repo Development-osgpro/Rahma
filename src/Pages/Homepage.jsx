@@ -17,13 +17,19 @@ import { ReactComponent as HeroSvgicon10 } from '../Assets/svgs/hero-icons/icon-
 import { ReactComponent as HeroSvgicon11 } from '../Assets/svgs/hero-icons/icon-11.svg'
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper";
 import ModalVideo from 'react-modal-video'
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 
 import afterImg from "../Assets/images/after-before-slider-01.jpg"
 import beforeImg from "../Assets/images/after-before-slider-02.jpg"
+import child from "../Assets/images/child.jpg"
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
+import "swiper/css/free-mode";
+import { Navigation, Mousewheel, Keyboard } from "swiper";
+import { FreeMode, Pagination } from "swiper";
+import bulls from '../Assets/svgs/hero-icons/bulls.svg'
 
 const Homepage = () => {
 
@@ -36,11 +42,11 @@ const Homepage = () => {
 
     // framer motion variants
     const HandimageVariants = {
-        hidden: { opacity: 0 , y: 100},
+        hidden: { opacity: 0 , y: 600},
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration : 1.5, ease: 'easeInOut', },
+            transition: { duration : 2, ease: 'easeInOut', },
         }
     }
 
@@ -50,7 +56,7 @@ const Homepage = () => {
         visible: {
             opacity: 1,
             x: 0,
-            transition: { duration : 1.5},
+            transition: { duration : 3},
         }
     }
 
@@ -64,11 +70,11 @@ const Homepage = () => {
 
     // framer motion variants
     const TextHeroVariants = {
-        hidden: { opacity: 0 , x: -100},
+        hidden: { opacity: 0 , y: -500},
         visible: {
             opacity: 1,
-            x: 0,
-            transition: { duration : 3 },
+            y: 0,
+            transition: { duration : 1 },
         }
     }
 
@@ -382,6 +388,273 @@ const Homepage = () => {
                                     firstImage={FIRST_IMAGE}
                                     secondImage={SECOND_IMAGE}
                                 />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="our-causes">
+                        <div className="container">
+                            <div className="container col-10">
+                                <div className='our-text'>
+                                    <h4>OUR CAUSES</h4>
+                                    <h1 className='h1-styles'>SUPPORT OUR <span>CAUSE</span></h1>
+                                </div>
+                                <Swiper
+                                    slidesPerView={3}
+                                    spaceBetween={30}
+                                    freeMode={true}
+                                    pagination={{
+                                    clickable: true,
+                                    }}
+                                    modules={[FreeMode, Pagination]}
+                                    className="mySwiper"
+                                >
+                                    <SwiperSlide className='the-swiper-slide'>
+                                        <div className='cause'>
+                                            <div className='image-holder'>
+                                                <img src={beforeImg} alt="children img" />
+                                                <span>Protection</span>
+                                            </div>
+                                            <div className='context'>
+                                                <h4>SAVE THE CHILDREN FROM</h4>
+                                                <p>WE ARE A NON-PROFIT
+                                                ORGANISATION IN USA THAT WORKS
+                                                TOWARDS SUPPORTING
+                                                UNDERPRIVILEGED CHILDREN REACH
+                                                THEIR FULL POTENTIAL - PHYSICAL,
+                                                </p>
+                                                <hr />
+                                                <Box width={300}>
+                                                    <Slider defaultValue={50} aria-label="Always visible" valueLabelDisplay="on"/>
+                                                </Box>
+                                                <div className='raised-goal'>
+                                                    <p>RAISED : $900 </p>
+                                                    <p>GOAL : $900</p>
+                                                </div>
+                                                <div className='heddin-massage'>
+                                                    <p>When you go to sleep remember who has 
+                                                    nowhere to sleep
+                                                    </p>        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide className='the-swiper-slide'>
+                                        <div className='cause'>
+                                            <div className='image-holder'>
+                                                <img src={afterImg} alt="children img" />
+                                                <span>Protection</span>
+                                            </div>
+                                            <div className='context'>
+                                                <h4>SAVE THE CHILDREN FROM</h4>
+                                                <p>WE ARE A NON-PROFIT
+                                                ORGANISATION IN USA THAT WORKS
+                                                TOWARDS SUPPORTING
+                                                UNDERPRIVILEGED CHILDREN REACH
+                                                THEIR FULL POTENTIAL - PHYSICAL,
+                                                </p>
+                                                <hr />
+                                                <Box width={300}>
+                                                    <Slider defaultValue={50} aria-label="Always visible" valueLabelDisplay="on"/>
+                                                </Box>
+                                                <div className='raised-goal'>
+                                                    <p>RAISED : $900 </p>
+                                                    <p>GOAL : $900</p>
+                                                </div>
+                                                <div className='heddin-massage'>
+                                                    <p>When you go to sleep remember who has 
+                                                    nowhere to sleep
+                                                    </p>        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide className='the-swiper-slide'>
+                                        <div className='cause'>
+                                            <div className='image-holder'>
+                                                <img src={testImage} alt="children img" />
+                                                <span>Protection</span>
+                                            </div>
+                                            <div className='context'>
+                                                <h4>SAVE THE CHILDREN FROM</h4>
+                                                <p>WE ARE A NON-PROFIT
+                                                ORGANISATION IN USA THAT WORKS
+                                                TOWARDS SUPPORTING
+                                                UNDERPRIVILEGED CHILDREN REACH
+                                                THEIR FULL POTENTIAL - PHYSICAL,
+                                                </p>
+                                                <hr />
+                                                <Box width={300}>
+                                                    <Slider defaultValue={50} aria-label="Always visible" valueLabelDisplay="on"/>
+                                                </Box>
+                                                <div className='raised-goal'>
+                                                    <p>RAISED : $900 </p>
+                                                    <p>GOAL : $900</p>
+                                                </div>
+                                                <div className='heddin-massage'>
+                                                    <p>When you go to sleep remember who has 
+                                                    nowhere to sleep
+                                                    </p>        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                </Swiper>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="campaingns">
+                        <div className="container">
+                            <div className="container col-10">
+                                <section className='campaingns-container'>
+                                    <div className='campaingns-img-slider'>
+                                        <h3>CAMPAIGNS</h3>
+                                        <Swiper
+                                            cssMode={true}
+                                            navigation={true}
+                                            pagination={true}
+                                            mousewheel={true}
+                                            keyboard={true}
+                                            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                                            className="mySwiper"
+                                        >
+                                            <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
+                                            <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
+                                            <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
+                                        </Swiper>
+                                    </div>
+                                    <div className='context'>
+                                        <img src={bulls} alt="small bulls img" />
+                                        <h2>WEALTH AND HEALTH</h2>
+                                        <p>MONTREAL, QC.</p>
+                                        <p>Donec varius sodales orci. Class aptent taciti
+                                        sociosqu torquent, per inceptos himenaeos.
+                                        End of content. Aenean arcu viverra varius
+                                        sodales sociosqu torquent, per inceptos
+                                        himenaeos.</p>
+                                        <p>Aenean arcu viverra varius sodales sociosqu
+                                        torquent, per inceptos himenaeos.Donec
+                                        varius sodales orci. Class aptent taciti
+                                        sociosqu torquent, per inceptos himenaeos.
+                                        End of content.</p>
+                                        <div>
+                                            <div>
+                                                <p><i class="fa-solid fa-location-dot"></i> JORDAN</p>
+                                                <p><i class="fa-solid fa-calendar-days"></i> 26 Oct at 3:32 pm</p>
+                                            </div>
+                                            <button>Learn More</button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="our-latest-news">
+                        <div className="container">
+                            <div className="container col-10">
+                                <div>
+                                    <h1 className='h1-styles'>OUR LATEST <span>NEWS</span></h1>
+                                </div>
+                                <section className='our-latest'>
+                                    <div className='context'>
+                                        <h6>“SKILLS OF EVALUATING FOREIGN
+                                        FUNDING” COURSES HELD IN
+                                        JORDAN</h6>
+                                        <span><span>JORDAN</span> - 26 Oct at 3:32 pm</span>
+                                        <p>Rahma Worldwide collaborated with
+                                        the Department of Foreign Societies
+                                        at the Jordanian 
+                                        Ministry of Social Development, held
+                                        a workshop entitled “Skills of
+                                        Evaluating Foreign Funding”
+                                        which revolved around the
+                                        legislation and governing foreign 
+                                        funding and the mechanism 
+                                        of its application for organizations
+                                        operating in Jordan. Rahma
+                                        Worldwide’s Representative
+                                        in Jordan…</p>
+                                        <figure></figure>
+                                    </div>
+                                    <div className="img-slider">
+                                        <Swiper
+                                            cssMode={true}
+                                            navigation={true}
+                                            pagination={true}
+                                            mousewheel={true}
+                                            keyboard={true}
+                                            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                                            className="mySwiper"
+                                        >
+                                            <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
+                                            <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
+                                            <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
+                                        </Swiper>
+                                    </div>
+                                    <div className='social-media-filter'>
+                                    <div className='social-media'>
+                                        <div>
+                                            <div><i className="fa-brands fa-facebook-f"></i></div>
+                                            <div><i className="fa-brands fa-twitter"></i></div>
+                                            <div><i className="fa-brands fa-instagram"></i></div>
+                                            <div><i className="fa-brands fa-youtube"></i></div>
+                                        </div>
+                                            <div>
+                                                <img src={child} alt="img"/>
+                                                <div>
+                                                    <div>
+                                                        <span>SYRIA</span>
+                                                        <b>Agricultural Nursery Project Continues in Syria</b>
+                                                        <p>Rahma Worldwide collaborated with the Department of Foreign 
+                                                        Societies at the Jordanian Ministry of Social Development, 
+                                                        held a workshop entitled “Skills of Evaluating Foreign Funding” 
+                                                        which revolved </p>
+                                                    </div>
+                                                    <div>
+                                                        <span>26 Oct at 3:32 pm</span>
+                                                        <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <img src={child} alt="img"/>
+                                                <div>
+                                                    <div>
+                                                        <span>SYRIA</span>
+                                                        <b>Agricultural Nursery Project Continues in Syria</b>
+                                                        <p>Rahma Worldwide collaborated with the Department of Foreign 
+                                                        Societies at the Jordanian Ministry of Social Development, 
+                                                        held a workshop entitled “Skills of Evaluating Foreign Funding” 
+                                                        which revolved </p>
+                                                    </div>
+                                                    <div>
+                                                        <span>26 Oct at 3:32 pm</span>
+                                                        <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <img src={child} alt="img"/>
+                                                <div>
+                                                    <div>
+                                                        <span>SYRIA</span>
+                                                        <b>Agricultural Nursery Project Continues in Syria</b>
+                                                        <p>Rahma Worldwide collaborated with the Department of Foreign 
+                                                        Societies at the Jordanian Ministry of Social Development, 
+                                                        held a workshop entitled “Skills of Evaluating Foreign Funding” 
+                                                        which revolved </p>
+                                                    </div>
+                                                    <div>
+                                                        <span>26 Oct at 3:32 pm</span>
+                                                        <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
                         </div>
                     </div>

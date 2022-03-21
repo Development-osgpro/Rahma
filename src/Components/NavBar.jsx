@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Navbar, Container, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap'
 import logo from '../Assets/images/logo.png'
 import MHAlogo from '../Assets/images/mha-logo-02.png'
+import {NavLink, Link} from 'react-router-dom'
 
 const NavBar = () => {
 
@@ -35,7 +36,7 @@ const NavBar = () => {
                     <div className="container">
                         <Navbar bg="light" expand="lg">
                             <Container fluid className='col-10'>
-                                <Navbar.Brand href="#"><img src={logo} alt="Rahma Logo" /></Navbar.Brand>
+                                <Navbar.Brand href="#"><NavLink to='/homepage'><img src={logo} alt="Rahma Logo" /></NavLink></Navbar.Brand>
                                 <div className='donate-btn'>
                                     <button onMouseOver={() => handleTopColor()} onMouseLeave={() => handleTopColorBack()}>Donate</button>
                                     <a href="https://www.mhanational.org/" target='_blank' rel='noopener noreferrer'><img src={MHAlogo} alt="MHA Logo" /></a>
