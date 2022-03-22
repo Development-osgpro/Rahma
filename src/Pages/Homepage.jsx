@@ -1,35 +1,64 @@
 import React, { useState, useRef, useEffect } from 'react'
+
+// import navbar and footer
 import NavBar from '../Components/NavBar'
 import Footer from '../Components/Footer'
+
+// importing some testing images
 import hand from '../Assets/images/handimg.png'
 import mainHeroimg from '../Assets/images/hero-main-img.png'
 import testImg from '../Assets/images/test-12.jpg'
 import testImage from '../Assets/images/imagetest-01.jpg'
-import { ReactComponent as HeroSvgicon2 } from '../Assets/svgs/hero-icons/icon-02.svg'
-import { ReactComponent as HeroSvgicon3 } from '../Assets/svgs/hero-icons/icon-03.svg'
-import { ReactComponent as HeroSvgicon4 } from '../Assets/svgs/hero-icons/icon-04.svg'
-import { ReactComponent as HeroSvgicon5 } from '../Assets/svgs/hero-icons/icon-05.svg'
-import { ReactComponent as HeroSvgicon6 } from '../Assets/svgs/hero-icons/icon-06.svg'
-import { ReactComponent as HeroSvgicon7 } from '../Assets/svgs/hero-icons/icon-07.svg'
-import { ReactComponent as HeroSvgicon8 } from '../Assets/svgs/hero-icons/icon-08.svg'
-import { ReactComponent as HeroSvgicon9 } from '../Assets/svgs/hero-icons/icon-09.svg'
-import { ReactComponent as HeroSvgicon10 } from '../Assets/svgs/hero-icons/icon-10.svg'
-import { ReactComponent as HeroSvgicon11 } from '../Assets/svgs/hero-icons/icon-11.svg'
+import afterImg from "../Assets/images/after-before-slider-01.jpg"
+import beforeImg from "../Assets/images/after-before-slider-02.jpg"
+import child from "../Assets/images/child.jpg"
+import bulls from '../Assets/svgs/all-icons/bulls.svg'
+import girl from '../Assets/images/girlmage.jpg'
+import support3 from '../Assets/images/supportedBy-03.jpg'
+import support4 from '../Assets/images/supportedBy-04.jpg'
+
+// importing hero svgs
+import { ReactComponent as HeroSvgicon2 } from '../Assets/svgs/all-icons/icon-02.svg'
+import { ReactComponent as HeroSvgicon3 } from '../Assets/svgs/all-icons/icon-03.svg'
+import { ReactComponent as HeroSvgicon4 } from '../Assets/svgs/all-icons/icon-04.svg'
+import { ReactComponent as HeroSvgicon5 } from '../Assets/svgs/all-icons/icon-05.svg'
+import { ReactComponent as HeroSvgicon6 } from '../Assets/svgs/all-icons/icon-06.svg'
+import { ReactComponent as HeroSvgicon7 } from '../Assets/svgs/all-icons/icon-07.svg'
+import { ReactComponent as HeroSvgicon8 } from '../Assets/svgs/all-icons/icon-08.svg'
+import { ReactComponent as HeroSvgicon9 } from '../Assets/svgs/all-icons/icon-09.svg'
+import { ReactComponent as HeroSvgicon10 } from '../Assets/svgs/all-icons/icon-10.svg'
+import { ReactComponent as HeroSvgicon11 } from '../Assets/svgs/all-icons/icon-11.svg'
+
+import { ReactComponent as Icon1 } from '../Assets/svgs/all-icons/socialIcons-05.svg'
+import { ReactComponent as Icon2 } from '../Assets/svgs/all-icons/socialIcons-06.svg'
+import { ReactComponent as Icon3 } from '../Assets/svgs/all-icons/socialIcons-07.svg'
+import { ReactComponent as Icon4 } from '../Assets/svgs/all-icons/socialIcons-08.svg'
+
+// importing framer motion 
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react";
 import ModalVideo from 'react-modal-video'
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 
-import afterImg from "../Assets/images/after-before-slider-01.jpg"
-import beforeImg from "../Assets/images/after-before-slider-02.jpg"
-import child from "../Assets/images/child.jpg"
-import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
+// importing swiper js 
 import "swiper/css/free-mode";
 import { Navigation, Mousewheel, Keyboard } from "swiper";
 import { FreeMode, Pagination } from "swiper";
-import bulls from '../Assets/svgs/hero-icons/bulls.svg'
+
+// importing mui 
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+
+// importing the map
+import MapChart from '../MapChart'
+import { ReactComponent as Map1icon } from '../Assets/svgs/all-icons/map-icons-01.svg'
+import { ReactComponent as Map2icon } from '../Assets/svgs/all-icons/map-icons-02.svg'
 
 const Homepage = () => {
 
@@ -171,7 +200,40 @@ const Homepage = () => {
         }
     }
 
+    const [content, setContent] = useState("");
     const [videoIsOpen, setVideoIsOpen] = useState(false)
+
+    // map importing
+    const Testcomp = ({ content }) => {
+        return (
+            <h1 style={{ position: "absolute", top: "0", left: "0" }}>
+                {content}
+            </h1>
+        )
+    }
+
+    const actions = [
+        { icon: <a 
+                variants={facebookHeroVariants}
+                initial='hidden'
+                animate='visible'
+                href='https://www.facebook.com/RahmaWorldwide/' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-facebook-f" style={{color: '#3b5998'}}></i></a>},
+        { icon: <a 
+                variants={instaHeroVariants}
+                initial='hidden'
+                animate='visible'
+                href='https://www.instagram.com/rahmaworldwide/' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-instagram" style={{color: '#bc2a8d'}}></i></a>},
+        { icon: <a 
+                variants={twitterHeroVariants}
+                initial='hidden'
+                animate='visible'
+                href='https://twitter.com/rahmaworldwide' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-twitter" style={{color: '#1DA1F2'}}></i></a>},
+        { icon: <a 
+                variants={youtubeHeroVariants}
+                initial='hidden'
+                animate='visible'
+                href='https://www.youtube.com/c/RahmaWorldwide' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-youtube" style={{color: '#FF0000'}}></i></a>},
+    ];
 
     return (
         <>
@@ -378,7 +440,22 @@ const Homepage = () => {
                             </div>
                         </div>
                     </div>
-
+                    <Box sx={{height: 320, transform: 'translateZ(0px)', flexGrow: 1, position: 'absolute', zIndex: '2000', top: '0', left: '0', width: '320px' }}>
+                        <SpeedDial
+                            ariaLabel="SpeedDial basic example"
+                            sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                            icon={<SpeedDialIcon />}
+                        >
+                            {actions.map((action) => (
+                            <SpeedDialAction
+                                icon={action.icon}
+                            />
+                            ))}
+                        </SpeedDial>
+                    </Box>
+                    <Stack direction="row" spacing={2}>
+                        <Button variant="contained">Contained</Button>
+                    </Stack>
                     <div className="best_moment">
                         <div className="container">
                             <div className="container col-10">
@@ -425,7 +502,7 @@ const Homepage = () => {
                                                 </p>
                                                 <hr />
                                                 <Box width={300}>
-                                                    <Slider defaultValue={50} aria-label="Always visible" valueLabelDisplay="on"/>
+                                                    <Slider defaultValue={20} aria-label="Always visible" valueLabelDisplay="on"/>
                                                 </Box>
                                                 <div className='raised-goal'>
                                                     <p>RAISED : $900 </p>
@@ -485,7 +562,7 @@ const Homepage = () => {
                                                 </p>
                                                 <hr />
                                                 <Box width={300}>
-                                                    <Slider defaultValue={50} aria-label="Always visible" valueLabelDisplay="on"/>
+                                                    <Slider defaultValue={80} aria-label="Always visible" valueLabelDisplay="on"/>
                                                 </Box>
                                                 <div className='raised-goal'>
                                                     <p>RAISED : $900 </p>
@@ -588,24 +665,44 @@ const Homepage = () => {
                                             modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                                             className="mySwiper"
                                         >
-                                            <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
-                                            <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
-                                            <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
+                                            <SwiperSlide><img src={girl} alt="child img" /></SwiperSlide>
+                                            <SwiperSlide><img src={girl} alt="child img" /></SwiperSlide>
+                                            <SwiperSlide><img src={girl} alt="child img" /></SwiperSlide>
                                         </Swiper>
+                                        <button><i class="fa-solid fa-arrow-right"></i> READ MORE</button>
                                     </div>
                                     <div className='social-media-filter'>
                                     <div className='social-media'>
-                                        <div>
+                                        <div className='social-icons'>
                                             <div><i className="fa-brands fa-facebook-f"></i></div>
                                             <div><i className="fa-brands fa-twitter"></i></div>
                                             <div><i className="fa-brands fa-instagram"></i></div>
                                             <div><i className="fa-brands fa-youtube"></i></div>
                                         </div>
-                                            <div>
+                                            <div className='social-box'>
                                                 <img src={child} alt="img"/>
                                                 <div>
                                                     <div>
                                                         <span>SYRIA</span>
+                                                        <br />
+                                                        <b>Agricultural Nursery Project Continues in Syria</b>
+                                                        <p>Rahma Worldwide collaborated with the Department of Foreign 
+                                                        Societies at the Jordanian Ministry of Social Development, 
+                                                        held a workshop entitled “Skills of Evaluating Foreign Funding” 
+                                                        which revolved</p>
+                                                    </div>
+                                                    <div>
+                                                        <span>26 Oct at 3:32 pm</span>
+                                                        <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='social-box'>
+                                                <img src={child} alt="img"/>
+                                                <div>
+                                                    <div>
+                                                        <span>SYRIA</span>
+                                                        <br />
                                                         <b>Agricultural Nursery Project Continues in Syria</b>
                                                         <p>Rahma Worldwide collaborated with the Department of Foreign 
                                                         Societies at the Jordanian Ministry of Social Development, 
@@ -618,28 +715,12 @@ const Homepage = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div>
+                                            <div className='social-box'>
                                                 <img src={child} alt="img"/>
                                                 <div>
                                                     <div>
                                                         <span>SYRIA</span>
-                                                        <b>Agricultural Nursery Project Continues in Syria</b>
-                                                        <p>Rahma Worldwide collaborated with the Department of Foreign 
-                                                        Societies at the Jordanian Ministry of Social Development, 
-                                                        held a workshop entitled “Skills of Evaluating Foreign Funding” 
-                                                        which revolved </p>
-                                                    </div>
-                                                    <div>
-                                                        <span>26 Oct at 3:32 pm</span>
-                                                        <button><i class="fa-solid fa-arrow-right-long"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <img src={child} alt="img"/>
-                                                <div>
-                                                    <div>
-                                                        <span>SYRIA</span>
+                                                        <br />
                                                         <b>Agricultural Nursery Project Continues in Syria</b>
                                                         <p>Rahma Worldwide collaborated with the Department of Foreign 
                                                         Societies at the Jordanian Ministry of Social Development, 
@@ -655,6 +736,141 @@ const Homepage = () => {
                                         </div>
                                     </div>
                                 </section>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="map-world">
+                        <div className="container">
+                            <div className="container col-10">
+                                <div>
+                                    <h3>WORLD MAP SHOWS SOME OF OUR CURRENT</h3>
+                                    <h4>WORK AROUND THE WORLD</h4>
+                                    <h5>RAHMA WORLDWIDE HAS DIFFERENT PROGRAMS IMPLEMENTED IN EACH COUNTRY.
+                                    THEIR HUMANITARIAN AID REACHES VARIOUS COUNTRIES INCLUDING:</h5>
+                                    <h5>UNITED STATES – AFRICA – JORDAN – LEBANON – PALESTINE – SYRIA – TURKEY – YEMEN</h5>
+                                </div>
+                                <section className='map'>
+                                    <div className='the-map'>
+                                        <MapChart setTooltipContent={setContent} />
+                                        <Testcomp content={content} />
+                                        <div className='video'>
+                                            <ModalVideo channel='youtube' autoplay isOpen={videoIsOpen} videoId="X9uLXfjpzho" onClose={() => setVideoIsOpen(false)} />
+                                            <button className="btn-primary" onClick={()=> setVideoIsOpen(true)}><i className="fa-solid fa-circle-play"></i></button>
+                                            <h6><span>Watch</span> demo <br /> video</h6>
+                                        </div>
+                                    </div>
+                                    <div className='map-context'>
+                                        <h1>AFRICA</h1>
+                                        <div>
+                                            <div className='the-svg'>
+                                                <HeroSvgicon2 />
+                                            </div>
+                                            <div>
+                                                <h5>2514</h5>
+                                                <h5>2514</h5>
+                                            </div>
+                                            <div>
+                                                <Map1icon />
+                                                <Map2icon />
+                                            </div>
+                                            <div>
+                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div className='the-svg'>
+                                                <HeroSvgicon2 />
+                                            </div>
+                                            <div>
+                                                <h5>2514</h5>
+                                                <h5>2514</h5>
+                                            </div>
+                                            <div>
+                                                <Map1icon />
+                                                <Map2icon />
+                                            </div>
+                                            <div>
+                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div className='the-svg'>
+                                                <HeroSvgicon2 />
+                                            </div>
+                                            <div>
+                                                <h5>2514</h5>
+                                                <h5>2514</h5>
+                                            </div>
+                                            <div>
+                                                <Map1icon />
+                                                <Map2icon />
+                                            </div>
+                                            <div>
+                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div className='the-svg'>
+                                                <HeroSvgicon2 />
+                                            </div>
+                                            <div>
+                                                <h5>2514</h5>
+                                                <h5>2514</h5>
+                                            </div>
+                                            <div>
+                                                <Map1icon />
+                                                <Map2icon />
+                                            </div>
+                                            <div>
+                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                            </div>
+                                        </div>
+                                        <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="supported-by">
+                        <div className="container">
+                            <div className="container col-10">
+                                <p><i class="fa-solid fa-chevron-right"></i></p>
+                                <div className='first-support'>
+                                    <img src={support3} alt="" />
+                                    <div>
+                                        <h4>GOLD SEAL OF TRANSPARENCY AWARD</h4>
+                                        <p>
+                                            THE 2019 GUIDESTAR GOLD SEAL OF TRANSPARENCY
+                                            GIVEN TO RAHMA. WE HOLD THE TRUST OF OUR DONORS
+                                            IN HIGH REGARD. THIS SEAL DEMONSTRATES OUR
+                                            COMMITMENT TO PROVIDING THE MOST UP-TO-DATE
+                                            INFORMATION ABOUT THE WORK WE DO.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className='secound-support'>
+                                    <img src={support4} alt="" />
+                                    <div>
+                                        <h4>STATE OF MICHIGAN’S CHARITABLE SOLICITATION</h4>
+                                        <p>
+                                        RAHMA WORLDWIDE FOR AID & DEVELOPMENT IS
+                                        PROUD
+                                        TO RECEIVE THE OFFICIAL CHARITABLE SOLICITATION
+                                        REGISTRATION FROM THE STATE OF MICHIGAN’S
+                                        DEPARTMENT OF THE ATTORNEY GENERAL.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

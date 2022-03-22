@@ -58,10 +58,26 @@
                                 box-shadow: 5px 5px 5px gray 
                                 transition: all .2s ease-in-out 
                                 i
-                                    color: $main-blue
+                                    color: #707070
                                     font-weight: 600
                                 &:hover
                                     margin: 0.5rem
+                                    &:first-of-type
+                                        &:hover
+                                            i
+                                                color: #3b5998
+                                    &:nth-of-type(2)
+                                        &:hover
+                                            i
+                                                color: #bc2a8d
+                                    &:nth-of-type(3)
+                                        &:hover
+                                            i
+                                                color: #1DA1F2
+                                    &:last-of-type
+                                        &:hover
+                                            i
+                                                color: #FF0000
                                     i
                                         transition: all .2s ease-in-out
                                         color: $main-green
@@ -111,7 +127,7 @@
                     object-fit: cover
                     position: relative
                     z-index: 100
-                    border-radius: 2000px 0px 0px 1000px
+                    border-radius: 2000px 0px 0px 1200px
 
 .animation-remotecontrol
     margin-bottom: 3rem
@@ -322,6 +338,7 @@
 .best_moment
     background-color: #e3e3e3
     padding: 3rem
+    margin-top: -60rem
     .container
         .container.col-10
             display: flex
@@ -619,43 +636,104 @@
                     font-weight: 600
 
 .our-latest-news
-    padding: 10rem 0 2rem
+    padding: 10rem 0 12rem
     background-color: #e3e3e3
     .container
         .container.col-10
+            div
+                h1
+                    margin-bottom: 3rem
             .our-latest
                 display: flex
                 .img-slider
                     position: relative
                     right: 250px
+                    margin-top: -2rem
+                    button
+                        position: absolute
+                        bottom: 50px
+                        left: -80px
+                        padding: 1rem 3rem
+                        z-index: 100
+                        background: $main-blue
+                        border: 0
+                        color: white
+                        border-radius: 15px
+                        i
+                            transform: rotate(30deg)
+                            font-size: 20px
+                            margin-right: 0.5rem
                     .mySwiper
-                        height: 400px
+                        height: 550px
                         margin: 0
                         width: 350px
-                        border-radius: 40px 40px 0px 40px
                         overflow: visible !important
                         position: relative
-                        border-radius: 30px 30px 0 0
+                        .swiper-button-prev 
+                            background-color: white
+                            width: 60px !important
+                            height: 60px !important
+                            position: absolute
+                            left: 32.5%
+                            z-index: 10
+                            bottom: -60px
+                            box-shadow: 2px 2px 7px gray
+                            cursor: pointer
+                            &::before
+                                content: "<"
+                                text-align: center
+                                position: absolute
+                                left: 50%
+                                top: 45%
+                                transform: translate(-50%, -50%)
+                                font-size: 30px
+                                color: #707070
+                        .swiper-button-next 
+                            background-color: white
+                            width: 60px !important
+                            height: 60px !important
+                            position: absolute
+                            right: 32.5%
+                            bottom: -60px
+                            z-index: 10
+                            box-shadow: 2px 2px 7px gray
+                            cursor: pointer
+                            &::before
+                                content: ">"
+                                text-align: center
+                                position: absolute
+                                left: 50%
+                                top: 45%
+                                transform: translate(-50%, -50%)
+                                font-size: 30px
+                                color: #707070
                         .swiper-wrapper
                             div
                                 img
-                                    border-radius: 35px 35px 0 0
+                                    border-radius: 100px 100px 0 0
                 .context
-                    width: 25%
+                    width: 30%
                     margin-right: auto
                     h6
                         margin: 2rem 0
                     & > span
                             font-size: 12px
-                            // position: relative
-                            // &::before
-                            //     content: ""
-                            //     position: absolute
-                            //     top: 50%
-                            //     left: 0
-                            //     background: $main-green
-                            //     height: 2px
-                            //     width: 100px
+                            margin-left: 140px 
+                            position: relative
+                            color: #707070
+                            &::before
+                                content: ""
+                                position: absolute
+                                top: 50%
+                                left: -100px
+                                background: gray
+                                height: 2px
+                                width: 90px
+                            span
+                                color: $main-green
+                                font-weight: 600
+                    p
+                        margin-top: 1rem !important
                     figure
                         background: white
                         border-radius: 50%
@@ -671,16 +749,275 @@
                     .social-media
                         width: 70%
                         margin-left: auto
-                        div
+                        .social-icons
+                            display: flex
+                            div
+                                background-color: white
+                                border-radius: 50%
+                                text-align: center
+                                width: 40px
+                                height: 40px
+                                margin: 0.5rem
+                                line-height: 40px
+                                font-size: 20px
+                                cursor: pointer
+                                transition: all .5s ease-in-out
+                                i
+                                    color: gray
+                                    transition: all .5s ease-in-out
+                                &:first-of-type
+                                    &:hover
+                                        i
+                                            color: #3b5998
+                                &:nth-of-type(2)
+                                    &:hover
+                                        i
+                                            color: #1DA1F2
+                                &:nth-of-type(3)
+                                    &:hover
+                                        i
+                                            color: #bc2a8d
+                                &:last-of-type
+                                    &:hover
+                                        i
+                                            color: #FF0000
+                        .social-box
                             display: flex
                             justify-content: center
+                            height: auto
+                            padding: 1rem
+                            transition: all .5s ease-in-out
+                            &:hover
+                                background: #707070
+                                color: white
+                                border: white
+                                img
+                                    filter: grayscale(0%)
+                                & > div
+                                        div
+                                            &:first-of-type
+                                                span
+                                                    border: 1px solid white !important
+                                            &:last-of-type
+                                                button
+                                                    background: $main-green
+                                                    color: white
+                                                    border: 1px solid white !important
+                                                    i
+                                                        color: white !important
+                                                    i
+                                                        color: gray
                             img
                                 width: 586px
-                                height: 100px
+                                max-height: 125px
                                 object-fit: cover
+                                margin-right: 1rem
+                                filter: grayscale(100%)
+                                transition: all .5s ease-in-out
                             & > div
-                                    display: flex
                                     div
-                                        &:first-of-type
+                                        &:last-of-type
                                             display: flex
-                                            flex-direction: column !important
+                                            align-self: center
+                                            justify-content: space-between
+                                            span
+                                                text-decoration: underline
+                                            button
+                                                padding: 0 1rem 
+                                                background: none
+                                                border-radius: 5px
+                                                border: 1px solid gray
+                                                outline: none
+                                                transition: all .5s ease-in-out
+                                                &:hover
+                                                    background: $main-green
+                                                    i
+                                                        color: white
+                                                i
+                                                    color: gray
+                                        &:first-of-type
+                                            span
+                                                border: 1px solid $main-green
+                                                padding: 0 1rem
+                                            b
+                                                font-size: 12px
+                                            p
+                                                font-size: 12px
+                                                margin-bottom: 0
+
+.map-world
+    padding: 6rem 0 6rem
+    background-color: #e3e3e3
+    .container
+        .container.col-10
+            text-align: center
+            h3
+                color: #707070
+            h4
+                position: relative
+                color: #707070
+                margin: auto
+                max-width: 550px
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 100px 
+                    height: 2px 
+                    background-color: $main-green
+                    top: 50%
+                    left: 0
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 100px 
+                    height: 2px 
+                    background-color: $main-green
+                    top: 50%
+                    right: 0
+            h5
+                margin: 2.5rem 0
+                color: #707070
+                font-weight: 400
+            .map
+                margin-top: 6rem
+                display: flex
+                justify-content: space-between
+                .the-map
+                    width: 60%
+                    .video
+                        margin-top: 2rem
+                        display: flex
+                        align-items: center
+                        justify-content: flex-start 
+                        & > button
+                                background: transparent !important
+                                outline: none
+                                border: 2px solid $main-blue
+                                border-radius: 50%
+                                width: 80px
+                                height: 80px
+                                position: relative
+                                &::before
+                                    content: ''
+                                    position: absolute
+                                    top: 50%
+                                    right: 65px
+                                    background-color: $main-blue
+                                    width: 1000px
+                                    height: 2px
+                                i
+                                    color: $main-blue
+                                    font-size: 30px
+                                    text-align: center
+                        h6
+                            span
+                                border-bottom: 1px solid $main-blue
+                            display: inline-block
+                            font-size: 12px
+                            color: $main-blue
+                            margin-left: 1rem
+                .map-context
+                    width: 40%
+                    text-align: left
+                    margin-left: 5rem
+                    h1
+                        color: #707070
+                        font-weight: 700
+                        margin-left: -2rem
+                        margin-bottom: 3rem
+                    button
+                        background-color: $main-blue
+                        border-radius: 15px
+                        padding: 0.4rem 1.7rem
+                        color: white
+                        border: none
+                        outline: none
+                    & > div
+                            display: flex
+                            justify-content: space-between
+                            align-items: center
+                            margin-bottom: 2rem
+                            p
+                                margin-bottom: 0 !important
+                                font-size: 10px
+                            h5
+                                margin: 0 !important
+                                font-weight: 600
+                            svg
+                                width: 30px
+                                margin: 0 1rem
+                            .the-svg
+                                background: rgb(255,255,255)
+                                background: linear-gradient(32deg, rgba(255,255,255,1) 20%, rgba(184,184,184,1) 100%)
+                                padding: 0.2rem
+                                border-radius: 5px 
+                                box-shadow: -1px 1px 5px 1px $main-blue
+                                margin-right: 1rem !important
+                                svg
+                                    margin: 0 !important
+                                    width: 60px !important
+                                    path
+                                        fill: black !important
+
+.supported-by
+    padding: 5rem 0 
+    background-color: #e3e3e3
+    .container
+        .container.col-10
+            & > p
+                    margin: auto
+                    position: relative
+                    width: 200px     
+                    text-align: center 
+                    margin-bottom: 4rem          
+                    &::after
+                        content: ""
+                        background-color: $main-blue
+                        position: absolute
+                        height: 2px 
+                        width: 70px
+                        top: 50%
+                        left: 0
+                        // transform: translate(-50%)
+                    &::before
+                        content: ""
+                        background-color: $main-blue
+                        position: absolute
+                        height: 2px 
+                        width: 70px
+                        top: 50%
+                        right: 0
+                    i
+                        transform: rotate(-90deg)
+                        color: $main-blue
+            & > div
+                    margin-bottom: 2rem 0
+            .first-support
+                margin-bottom: 5rem
+                img
+                    width: 150px
+                    height: 150px
+                    margin-right: 1rem
+                    border-radius: 50%
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                h4
+                    width: 500px 
+                    margin-bottom: 1rem
+                p
+                    width: 500px
+            .secound-support
+                img
+                    width: 150px 
+                    height: 150px
+                    margin-right: 1rem
+                    border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                h4
+                    width: 500px 
+                    margin-bottom: 1rem
+                p
+                    width: 500px
