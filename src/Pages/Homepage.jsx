@@ -59,6 +59,7 @@ import Stack from '@mui/material/Stack';
 import MapChart from '../MapChart'
 import { ReactComponent as Map1icon } from '../Assets/svgs/all-icons/map-icons-01.svg'
 import { ReactComponent as Map2icon } from '../Assets/svgs/all-icons/map-icons-02.svg'
+import MapComponent from '../MapJs/MapComponent'
 
 const Homepage = () => {
 
@@ -751,16 +752,17 @@ const Homepage = () => {
                                     <h5>UNITED STATES – AFRICA – JORDAN – LEBANON – PALESTINE – SYRIA – TURKEY – YEMEN</h5>
                                 </div>
                                 <section className='map'>
-                                    <div className='the-map'>
-                                        <MapChart setTooltipContent={setContent} />
-                                        <Testcomp content={content} />
+                                    <div className='the-map' style={{position: 'relative'}}>
+                                        {/* <MapChart setTooltipContent={setContent} />
+                                        <Testcomp content={content} /> */}
+                                        <MapComponent />
                                         <div className='video'>
                                             <ModalVideo channel='youtube' autoplay isOpen={videoIsOpen} videoId="X9uLXfjpzho" onClose={() => setVideoIsOpen(false)} />
                                             <button className="btn-primary" onClick={()=> setVideoIsOpen(true)}><i className="fa-solid fa-circle-play"></i></button>
                                             <h6><span>Watch</span> demo <br /> video</h6>
                                         </div>
                                     </div>
-                                    <div className='map-context'>
+                                    {/* <div className='map-context'>
                                         <h1>AFRICA</h1>
                                         <div>
                                             <div className='the-svg'>
@@ -834,7 +836,7 @@ const Homepage = () => {
                                             </div>
                                         </div>
                                         <button><i class="fa-solid fa-arrow-right-long"></i></button>
-                                    </div>
+                                    </div> */}
                                 </section>
                             </div>
                         </div>

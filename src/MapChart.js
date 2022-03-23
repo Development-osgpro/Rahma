@@ -1,4 +1,8 @@
 import React, { memo } from "react";
+
+import { motion } from "framer-motion"
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import {
     ZoomableGroup,
     ComposableMap,
@@ -6,8 +10,7 @@ import {
     Geography
 } from "react-simple-maps";
 
-const geoUrl =
-    "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+const geoUrl =  "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
 const rounded = num => {
     if (num > 1000000000) {
@@ -22,6 +25,16 @@ const rounded = num => {
 const countries = ["United States of America", "Turkey", "Syria", "Yemen", "Kenya", "Jordan", "Palestine", "Sierra Leone", "Lebanon", "Sudan", "Chad", "Cameroon", "Ghana", "Mali"]
 
 const MapChart = ({ setTooltipContent }) => {
+
+    const mapAnimation = {
+        hidden: { opacity: 0},
+        visible: {
+            opacity: 1,
+            transition: { duration : 1.5},
+        }
+    }
+
+
     return (
         <>
             <ComposableMap data-tip="" projectionConfig={{ scale: 200 }}>
@@ -45,27 +58,30 @@ const MapChart = ({ setTooltipContent }) => {
                                                 style={{
                                                     default: {
                                                         fill: "white",
-                                                        stroke: "#e3e3e3"
+                                                        stroke: "#e3e3e3",
+                                                        outline: 'none'
                                                     },
                                                     hover: {
-                                                        fill: "#386ae8",
+                                                        fill: "#2b3990",
                                                         outline: "none"
                                                     },
                                                     pressed: {
-                                                        fill: "#E42",
-                                                        outline: "none"
+                                                        fill: "#2b7634",
+                                                        outline: "none",
+                                                        stroke: 'none'
                                                     }
                                                 }}
                                             />
                                         </>
                                     ) : (
                                         <>
-
+                                        {console.log(geo)}
                                             <Geography
                                                 key={geo.rsmKey}
                                                 geography={geo}
                                                 onMouseEnter={() => {
                                                     const { NAME, POP_EST } = geo.properties;
+                                                    console.log(NAME)
                                                     setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
                                                     // <Testcomp />
                                                 }}
@@ -80,16 +96,15 @@ const MapChart = ({ setTooltipContent }) => {
                                                         outline: "none"
                                                     },
                                                     hover: {
-                                                        fill: "#386ae8",
+                                                        fill: "#2b3990",
                                                         outline: "none",
                                                     },
                                                     pressed: {
-                                                        fill: "#E42",
+                                                        fill: "#29842a",
                                                         outline: "none"
                                                     }
                                                 }}
                                             >
-                                                {/* <h1>AAAAAAAAAAAAAA</h1> */}
                                             </Geography>
                                         </>
                                     )}

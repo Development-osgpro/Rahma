@@ -1409,7 +1409,7 @@ body {
 }
 .our-latest-news .container .container.col-10 .our-latest .social-media-filter .social-media .social-box img {
   width: 586px;
-  max-height: 125px;
+  max-height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: 1rem;
@@ -1498,7 +1498,58 @@ body {
   justify-content: space-between;
 }
 .map-world .container .container.col-10 .map .the-map {
-  width: 60%;
+  width: 100%;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer {
+  width: 100%;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg {
+  width: 100% !important;
+  stroke: gray !important;
+  fill: white !important;
+  stroke-width: 0.7 !important;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #US {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #JO {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #LB {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #PS {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SY {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TR {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #YE {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #ML {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #GH {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #CM {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TD {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SD {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #KE {
+  fill: #2b7634;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SL {
+  fill: #2b7634;
 }
 .map-world .container .container.col-10 .map .the-map .video {
   margin-top: 2rem;

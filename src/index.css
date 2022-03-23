@@ -76,3 +76,43 @@ body {
 .css-eg0mwd-MuiSlider-thumb {
   height: 0 !important;
 }
+
+#freack {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  background-color: red;
+}
+
+.mapHovercircle {
+  position: absolute;
+  background-color: gray;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapHovercircle1 {
+  background-color: transparent;
+  border: 1px solid gray;
+  padding: 0.7rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapHovercircle2 {
+  background-color: transparent;
+  border: 1px solid gray;
+  padding: 1.3rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
