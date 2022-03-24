@@ -1,41 +1,68 @@
 import React, { useEffect, useState } from 'react'
 import {ReactComponent as Map} from './Map.svg'
 import { motion } from "framer-motion"
+import useMouse from '@react-hook/mouse-position'
 
 const MapComponent = () => {
 
+    const [over, setOver] = useState(false)
+
+    const ref = React.useRef(null)
+    const mouse = useMouse(ref, {
+        enterDelay: 100,
+        leaveDelay: 100,
+    })
+
+    console.log(mouse.x)
+    console.log(mouse.y)
+
     useEffect(() => {
-        var mousePosition;
-        var offset = [0,0];
-        var isDown = true;
 
-        var circle = document.getElementById("mapHovercircle");
-        circle.style.position = "absolute";
-        circle.style.left = "0px";
-        circle.style.top = "0px";
-        
-        document.body.appendChild(circle);
-        
-        circle.addEventListener('mouseover', function(e) {
-            isDown = true;
-            offset = [
-                circle.offsetLeft - e.clientX,
-                circle.offsetTop - e.clientY
-            ];
-        }, true);
-        
-        document.addEventListener('mousemove', function(event) {
-            event.preventDefault();
-            if (isDown) {
-                mousePosition = {
-                    x : event.clientX,
-                    y : event.clientY
-                };
-                circle.style.left = (mousePosition.x + offset[0]) + 'px';
-                circle.style.top  = (mousePosition.y + offset[1]) + 'px';
-            }
-        }, true);
+        // var mousePosition;
+        // var offset = [0,0];
+        // var div;
+        // var isDown = true;
 
+        // div = document.createElement("div");
+        // div.setAttribute('class', 'testDiv')
+        // div.textContent = 'text'
+        // div.style.position = "absolute";
+        // div.style.left = "0px";
+        // div.style.top = "0px";
+        // div.style.width = "100px";
+        // div.style.height = "100px";
+        // div.style.background = "red";
+        // div.style.color = "blue";
+        // div.style.zIndex = '1000';
+
+        // parent.appendChild(div);
+
+        // div.addEventListener('mouseover', function(e) {
+        //     isDown = true;
+        //     offset = [
+        //         div.offsetLeft == e.clientX,
+        //         div.offsetTop == e.clientY
+        //     ];
+        // }, true);
+        
+        // document.addEventListener('mousemove', function(event) {
+        //     event.preventDefault();
+        //     if (isDown) {
+        //         mousePosition = {
+            
+        //             x : event.clientX,
+        //             y : event.clientY
+            
+        //         };
+        //         div.style.left = (mousePosition.x + offset[0]) + 'px';
+        //         div.style.top  = (mousePosition.y + offset[1]) + 'px';
+        //     }
+        // }, true);
+
+
+
+        const circle = document.getElementById('mapHovercircle')
+        
         const US = document.getElementById('US')
         const JO = document.getElementById('JO')
         const LB = document.getElementById('LB')
@@ -53,19 +80,41 @@ const MapComponent = () => {
 
         var AllCOUNTRYS = [US, JO, LB, PS, SY, TR, YE, ML, GH, TD, CM, SD, KE, SL]
 
-        // const circle = document.getElementById('mapHovercircle')
-
         AllCOUNTRYS.forEach(country => {
             country.addEventListener('mouseover', () => {
+                setOver(true)
+                console.log(true)
             })
             country.addEventListener('mouseleave', () => {
+                setOver(false)
             })
         })
+
+        if(over == true) {
+            var offset = [0,0];
+            // circle.style.display = 'block'
+            const mapContainer = document.getElementById('MapContainer')
+    
+            mapContainer.addEventListener('mouseover', (e) => {
+                offset = [
+                    circle.offsetLeft - e.clientX,
+                    circle.offsetTop - e.clientY
+                ]
+            })
+    
+            document.addEventListener('mousemove', function(event) {
+                event.preventDefault();
+                mouse.x = event.clientX
+                mouse.y = event.clientY
+                circle.style.left = (mouse.x + offset[0]) + 'px';
+                circle.style.top = (mouse.y + offset[0]) + 'px';
+            })
+        }
     }, [])
 
     return (
         <>  
-            <div className="MapContainer">
+            <div className="MapContainer" id='MapContainer' ref={ref}>
                 <Map />
                 <div className='mapHovercircle' id='mapHovercircle'>
                     <div className='mapHovercircle1'>

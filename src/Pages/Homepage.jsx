@@ -741,7 +741,7 @@ const Homepage = () => {
                         </div>
                     </div>
 
-                    <div className="map-world">
+                    <div className="map-world"  style={{position: 'relative'}}>
                         <div className="container">
                             <div className="container col-10">
                                 <div>
