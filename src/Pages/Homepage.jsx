@@ -49,26 +49,139 @@ import { FreeMode, Pagination } from "swiper";
 // importing mui 
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import SpeedDial from '@mui/material/SpeedDial';
-import SpeedDialIcon from '@mui/material/SpeedDialIcon';
-import SpeedDialAction from '@mui/material/SpeedDialAction';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+// import SpeedDial from '@mui/material/SpeedDial';
+// import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+// import SpeedDialAction from '@mui/material/SpeedDialAction';
+// import Button from '@mui/material/Button';
+// import Stack from '@mui/material/Stack';
 
 // importing the map
 import MapChart from '../MapChart'
 import { ReactComponent as Map1icon } from '../Assets/svgs/all-icons/map-icons-01.svg'
 import { ReactComponent as Map2icon } from '../Assets/svgs/all-icons/map-icons-02.svg'
 import MapComponent from '../MapJs/MapComponent'
+import DonateBtnAndsocialMedia from '../Components/DonateBtnAndsocialMedia'
+import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils'
 
 const Homepage = () => {
 
-    const FIRST_IMAGE = {
-        imageUrl: afterImg
-    };
-    const SECOND_IMAGE = {
-        imageUrl: beforeImg
-    };
+    const [clicked, setClicked] = useState(false)
+    const [clickedInfo, setClickedInfo] = useState(false)
+    const [showMapInfo, setShowMapInfo] = useState(false)
+    const [countyName, setCountyName] = useState('')
+    console.log(showMapInfo)
+
+    useEffect(() => {
+
+        const US = document.getElementById('US')
+        const JO = document.getElementById('JO')
+        const LB = document.getElementById('LB')
+        const PS = document.getElementById('PS')
+        const SY = document.getElementById('SY')
+        const TR = document.getElementById('TR')
+        const YE = document.getElementById('YE')
+        const ML = document.getElementById('ML')
+        const GH = document.getElementById('GH')
+        const CM = document.getElementById('CM')
+        const TD = document.getElementById('TD')
+        const SD = document.getElementById('SD')
+        const KE = document.getElementById('KE')
+        const SL = document.getElementById('SL')
+
+        var AllCOUNTRYS = [US, JO, LB, PS, SY, TR, YE, ML, GH, TD, CM, SD, KE, SL]
+
+        AllCOUNTRYS.forEach(country => {
+
+            country.addEventListener('click', () => {
+                AllCOUNTRYS.forEach(ele => {
+                    ele.classList.remove("active");
+                })
+                country.classList.add("active")
+            })
+
+            country.onclick = () => {
+                console.log(country.getAttribute('data-name'))
+                setClicked(true)
+                console.log(clicked)
+                setTimeout(() => {
+                    setShowMapInfo(true)
+                    setClickedInfo(true)
+                }, 1000);
+                setCountyName(country.getAttribute('data-name'))
+            }
+        })
+    }, [])
+
+    useEffect(() => {
+        setClickedInfo(false)
+        setTimeout(() => {
+            setClickedInfo(true)
+        }, 500);
+    }, [countyName])
+    
+
+    // all map variants
+    const MapContainerAnimate = {
+        hidden: { width: `${100}%`},
+        visible: {
+            width: `${55}%`,
+            transition: { duration : 1, ease: 'easeInOut', },
+        }
+    }
+
+    const maph1animation = {
+        hidden: { opacity: 0 , y: -50},
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration : 1, ease: 'easeInOut', },
+        }
+    }
+
+    const mapbuttonanimation = {
+        hidden: { opacity: 0 , y: 50},
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration : 1, ease: 'easeInOut', },
+        }
+    }
+    
+    const mapContextAnimation1 = {
+        hidden: { opacity: 0 , x: 100},
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { duration : .2, ease: 'easeInOut', },
+        }
+    }
+
+    const mapContextAnimation2 = {
+        hidden: { opacity: 0 , x: 100},
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { duration : .4, ease: 'easeInOut', },
+        }
+    }
+
+    const mapContextAnimation3 = {
+        hidden: { opacity: 0 , x: 100},
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { duration : .6, ease: 'easeInOut', },
+        }
+    }
+
+    const mapContextAnimation4 = {
+        hidden: { opacity: 0 , x: 100},
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { duration : .8, ease: 'easeInOut', },
+        }
+    }
 
     // framer motion variants
     const HandimageVariants = {
@@ -213,32 +326,22 @@ const Homepage = () => {
         )
     }
 
-    const actions = [
-        { icon: <a 
-                variants={facebookHeroVariants}
-                initial='hidden'
-                animate='visible'
-                href='https://www.facebook.com/RahmaWorldwide/' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-facebook-f" style={{color: '#3b5998'}}></i></a>},
-        { icon: <a 
-                variants={instaHeroVariants}
-                initial='hidden'
-                animate='visible'
-                href='https://www.instagram.com/rahmaworldwide/' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-instagram" style={{color: '#bc2a8d'}}></i></a>},
-        { icon: <a 
-                variants={twitterHeroVariants}
-                initial='hidden'
-                animate='visible'
-                href='https://twitter.com/rahmaworldwide' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-twitter" style={{color: '#1DA1F2'}}></i></a>},
-        { icon: <a 
-                variants={youtubeHeroVariants}
-                initial='hidden'
-                animate='visible'
-                href='https://www.youtube.com/c/RahmaWorldwide' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-youtube" style={{color: '#FF0000'}}></i></a>},
-    ];
+    const FIRST_IMAGE = {
+        imageUrl: afterImg
+    };
+    const SECOND_IMAGE = {
+        imageUrl: beforeImg
+    };
+
+    const [windosY, setWindowY] = useState()
+    window.addEventListener('scroll', () => {
+        setWindowY(window.scrollY)
+    })
 
     return (
         <>
             <NavBar />
+                {windosY >= 700 ? <DonateBtnAndsocialMedia /> : ""}
                 <div className="homepage">
                     <div className="hero-section">
                         <div className='animation-screen'>
@@ -441,22 +544,7 @@ const Homepage = () => {
                             </div>
                         </div>
                     </div>
-                    <Box sx={{height: 320, transform: 'translateZ(0px)', flexGrow: 1, position: 'absolute', zIndex: '2000', top: '0', left: '0', width: '320px' }}>
-                        <SpeedDial
-                            ariaLabel="SpeedDial basic example"
-                            sx={{ position: 'absolute', bottom: 16, right: 16 }}
-                            icon={<SpeedDialIcon />}
-                        >
-                            {actions.map((action) => (
-                            <SpeedDialAction
-                                icon={action.icon}
-                            />
-                            ))}
-                        </SpeedDial>
-                    </Box>
-                    <Stack direction="row" spacing={2}>
-                        <Button variant="contained">Contained</Button>
-                    </Stack>
+
                     <div className="best_moment">
                         <div className="container">
                             <div className="container col-10">
@@ -752,7 +840,13 @@ const Homepage = () => {
                                     <h5>UNITED STATES – AFRICA – JORDAN – LEBANON – PALESTINE – SYRIA – TURKEY – YEMEN</h5>
                                 </div>
                                 <section className='map'>
-                                    <div className='the-map' style={{position: 'relative'}}>
+                                    <motion.div
+                                    variants={MapContainerAnimate}
+                                    initial={'hidden'}
+                                    animate={clicked ? 'visible' : 'hidden'}
+                                    className='the-map'
+                                    id='MapContainer'
+                                    >
                                         {/* <MapChart setTooltipContent={setContent} />
                                         <Testcomp content={content} /> */}
                                         <MapComponent />
@@ -761,82 +855,103 @@ const Homepage = () => {
                                             <button className="btn-primary" onClick={()=> setVideoIsOpen(true)}><i className="fa-solid fa-circle-play"></i></button>
                                             <h6><span>Watch</span> demo <br /> video</h6>
                                         </div>
-                                    </div>
-                                    {/* <div className='map-context'>
-                                        <h1>AFRICA</h1>
-                                        <div>
-                                            <div className='the-svg'>
-                                                <HeroSvgicon2 />
-                                            </div>
-                                            <div>
-                                                <h5>2514</h5>
-                                                <h5>2514</h5>
-                                            </div>
-                                            <div>
-                                                <Map1icon />
-                                                <Map2icon />
-                                            </div>
-                                            <div>
-                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
-                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
-                                            </div>
+                                    </motion.div>
+                                    {showMapInfo ?
+                                    <div 
+                                    className='map-context'>
+                                    <motion.h1
+                                    variants={maph1animation}
+                                    initial={'hidden'}
+                                    animate={clickedInfo ? 'visible' : 'hidden'}>{countyName}</motion.h1>
+                                    <motion.div
+                                    variants={mapContextAnimation1}
+                                    initial={'hidden'}
+                                    animate={clickedInfo ? 'visible' : 'hidden'}
+                                    >
+                                        <div className='the-svg'>
+                                            <HeroSvgicon2 />
                                         </div>
+                                        <div>
+                                            <h5>2514</h5>
+                                            <h5>2514</h5>
+                                        </div>
+                                        <div>
+                                            <Map1icon />
+                                            <Map2icon />
+                                        </div>
+                                        <div>
+                                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                        </div>
+                                    </motion.div>
 
-                                        <div>
-                                            <div className='the-svg'>
-                                                <HeroSvgicon2 />
-                                            </div>
-                                            <div>
-                                                <h5>2514</h5>
-                                                <h5>2514</h5>
-                                            </div>
-                                            <div>
-                                                <Map1icon />
-                                                <Map2icon />
-                                            </div>
-                                            <div>
-                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
-                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
-                                            </div>
+                                    <motion.div
+                                    variants={mapContextAnimation2}
+                                    initial={'hidden'}
+                                    animate={clickedInfo ? 'visible' : 'hidden'}>
+                                        <div className='the-svg'>
+                                            <HeroSvgicon2 />
                                         </div>
+                                        <div>
+                                            <h5>2514</h5>
+                                            <h5>2514</h5>
+                                        </div>
+                                        <div>
+                                            <Map1icon />
+                                            <Map2icon />
+                                        </div>
+                                        <div>
+                                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                        </div>
+                                    </motion.div>
 
-                                        <div>
-                                            <div className='the-svg'>
-                                                <HeroSvgicon2 />
-                                            </div>
-                                            <div>
-                                                <h5>2514</h5>
-                                                <h5>2514</h5>
-                                            </div>
-                                            <div>
-                                                <Map1icon />
-                                                <Map2icon />
-                                            </div>
-                                            <div>
-                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
-                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
-                                            </div>
+                                    <motion.div
+                                    variants={mapContextAnimation3}
+                                    initial={'hidden'}
+                                    animate={clickedInfo ? 'visible' : 'hidden'}>
+                                        <div className='the-svg'>
+                                            <HeroSvgicon2 />
                                         </div>
+                                        <div>
+                                            <h5>2514</h5>
+                                            <h5>2514</h5>
+                                        </div>
+                                        <div>
+                                            <Map1icon />
+                                            <Map2icon />
+                                        </div>
+                                        <div>
+                                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                        </div>
+                                    </motion.div>
 
-                                        <div>
-                                            <div className='the-svg'>
-                                                <HeroSvgicon2 />
-                                            </div>
-                                            <div>
-                                                <h5>2514</h5>
-                                                <h5>2514</h5>
-                                            </div>
-                                            <div>
-                                                <Map1icon />
-                                                <Map2icon />
-                                            </div>
-                                            <div>
-                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
-                                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
-                                            </div>
+                                    <motion.div
+                                    variants={mapContextAnimation4}
+                                    initial={'hidden'}
+                                    animate={clickedInfo ? 'visible' : 'hidden'}>
+                                        <div className='the-svg'>
+                                            <HeroSvgicon2 />
                                         </div>
-                                        <button><i class="fa-solid fa-arrow-right-long"></i></button>
-                                    </div> */}
+                                        <div>
+                                            <h5>2514</h5>
+                                            <h5>2514</h5>
+                                        </div>
+                                        <div>
+                                            <Map1icon />
+                                            <Map2icon />
+                                        </div>
+                                        <div>
+                                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                                        </div>
+                                    </motion.div>
+                                    <motion.button
+                                    variants={mapbuttonanimation}
+                                    initial={'hidden'}
+                                    animate={clickedInfo ? 'visible' : 'hidden'}><i class="fa-solid fa-arrow-right-long"></i></motion.button>
+                                </div> : ''}
                                 </section>
                             </div>
                         </div>

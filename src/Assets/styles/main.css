@@ -18,6 +18,48 @@ body {
   padding: 0rem 0.5rem;
 }
 
+.donateBtnandsocialContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: fixed;
+  top: 0;
+  z-index: 7000;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+}
+.donateBtnandsocialContainer .MuiBox-root {
+  width: 100px !important;
+  flex-grow: 0 !important;
+  height: 100% !important;
+}
+.donateBtnandsocialContainer .css-e53awj-MuiStack-root {
+  height: 50px;
+  width: auto;
+  pointer-events: auto;
+  margin-bottom: 2rem;
+  margin-right: -3.3rem;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  z-index: 9000;
+}
+.donateBtnandsocialContainer .css-e53awj-MuiStack-root button span {
+  transition: all 0.5s ease-in-out;
+}
+.donateBtnandsocialContainer .css-e53awj-MuiStack-root:hover {
+  margin-right: 0rem;
+}
+.donateBtnandsocialContainer .css-e53awj-MuiStack-root:hover button span {
+  margin-left: 0.3rem;
+}
+.donateBtnandsocialContainer .css-e53awj-MuiStack-root button {
+  background-color: #2b3990;
+}
+.donateBtnandsocialContainer .css-e53awj-MuiStack-root button span {
+  margin-left: 1rem;
+}
+
 .rahma-nav {
   box-shadow: 0px 1px 10px #34598a;
   position: relative;
@@ -255,6 +297,8 @@ body {
 }
 
 .Footer {
+  position: relative;
+  z-index: 8000;
   padding: 3rem 0;
 }
 @media (max-width: 991px) {
@@ -461,6 +505,8 @@ body {
   background-color: #2b3990;
   padding: 1rem 0;
   text-align: center;
+  position: relative;
+  z-index: 8000;
 }
 .copyright p {
   margin-bottom: 0 !important;
@@ -893,7 +939,6 @@ body {
 .best_moment {
   background-color: #e3e3e3;
   padding: 3rem;
-  margin-top: -60rem;
 }
 .best_moment .container .container.col-10 {
   display: flex;
@@ -1511,45 +1556,143 @@ body {
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #US {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #US:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #US.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #JO {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #JO:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #JO.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #LB {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #LB:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #LB.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #PS {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #PS:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #PS.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #SY {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SY:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SY.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #TR {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TR:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TR.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #YE {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #YE:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #YE.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #ML {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #ML:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #ML.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #GH {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #GH:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #GH.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #CM {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #CM:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #CM.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #TD {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TD:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TD.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #SD {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SD:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SD.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #KE {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #KE:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #KE.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .MapContainer svg g #SL {
   fill: #2b7634;
+  cursor: pointer;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SL:hover {
+  fill: #2b3990;
+}
+.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SL.active {
+  fill: #2b3990;
 }
 .map-world .container .container.col-10 .map .the-map .video {
   margin-top: 2rem;
@@ -1592,13 +1735,22 @@ body {
 .map-world .container .container.col-10 .map .map-context {
   width: 40%;
   text-align: left;
-  margin-left: 5rem;
 }
 .map-world .container .container.col-10 .map .map-context h1 {
   color: #707070;
   font-weight: 700;
-  margin-left: -2rem;
+  position: relative;
+  display: inline-block;
   margin-bottom: 3rem;
+}
+.map-world .container .container.col-10 .map .map-context h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #707070;
 }
 .map-world .container .container.col-10 .map .map-context button {
   background-color: #2b3990;
