@@ -2,6 +2,7 @@ body {
   position: relative;
 }
 
+
 /* all background image in the site */
 .Footer {
   background-image: url('./Assets/images/footer-bg.jpg');
@@ -115,4 +116,164 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+}
+
+
+
+
+.form-label {
+  margin-bottom: 1.5rem !important; 
+}
+
+
+
+.form-control:focus {
+  box-shadow: none !important;
+ 
+}
+
+
+.inputName{
+  padding: 1.2rem !important;
+  background-color: #d9dbe6;
+  border-color: #bbc4ca;
+  border-width: 0.15rem;
+}
+.inputEmail {
+  
+  padding: 1.2rem !important;
+  background-color: #d9dbe6;
+  border-color: #bbc4ca;
+  border-width: 0.15rem;
+}
+
+.inputText {
+  padding: 1.2rem !important;
+  background-color: #d9dbe6;
+  border-color: #bbc4ca;
+  border-width: 0.15rem;
+}
+
+.formSubmit{
+
+  padding: 1rem 19rem ;
+}
+.contactTow{
+  padding: 0rem 19rem 0rem 0rem;
+}
+
+.weL{
+    padding: 0rem 20rem 1rem 0rem !important 
+  }
+.formSubmit {
+  background-color: #2b3990 !important;
+}
+
+.form-label{
+  color: #585858;
+
+}
+
+.row {
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+}
+
+.firstT{
+  color: #7078af !important;
+    font-size: 20px !important;
+  }
+
+
+@media screen and (max-width: 1550px){
+
+  .ContFormAndInfo {
+    padding: 6rem !important;
+}
+.contactTow{
+  padding: 0 !important;
+}
+
+.weL{
+  padding: 0 !important;
+
+}
+  .formSection{
+    padding: 1rem !important; 
+  }
+  .contactTitle h1 {
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color: #2b3990 !important;
+    text-align: center !important;
+    margin: 3rem 0rem !important;
+}
+
+}
+ 
+
+.btn-primary{
+  background-color: #2b3990;
+  border-color: #2b3990;
+}
+
+
+
+@media screen and (max-width: 1100px){
+
+  .formSection{
+    margin-top: 1rem;
+  }
+  .btn-primary{
+    font-size: 15px;
+  }
+
+  .secondT{
+    font-size: 6px !important;
+  }
+  .contactLinke{
+    font-size: 19px !important;
+  }
+  .ContFormAndInfo {
+    padding: 1rem !important;
+    display: flex !important;
+	flex-direction: column!important;
+	flex-wrap: nowrap !important;
+	justify-content: flex-start !important;
+	align-items: stretch !important;
+	align-content: stretch !important;
+  }
+  .GetIntoutchMainCont {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    align-content: stretch !important;
+  }
+  .contactTow{
+    padding: 0 !important;
+  }
+  .weL{
+    padding: 0 !important;
+
+  }
+  .GetIntoutchMainCont h2 {
+    font-size: 15px;
+    color: #848bb8;
+}
+.h3, h3 {
+  font-size: 20px;
+}
+
+.row {
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+}
+
+.firstT{
+  color: #7078af !important;
+    font-size: 13px !important;
+  }
+
 }
