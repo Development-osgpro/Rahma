@@ -34,15 +34,24 @@ body {
   flex-grow: 0 !important;
   height: 100% !important;
 }
+@media (max-width: 500px) {
+  .donateBtnandsocialContainer .MuiBox-root {
+    margin-bottom: 3rem !important;
+  }
+}
 .donateBtnandsocialContainer .css-e53awj-MuiStack-root {
   height: 50px;
   width: auto;
   pointer-events: auto;
-  margin-bottom: 2rem;
   margin-right: -3.3rem;
   transition: all 0.5s ease-in-out;
   position: relative;
-  z-index: 9000;
+  margin-bottom: 8rem !important;
+}
+@media (max-width: 500px) {
+  .donateBtnandsocialContainer .css-e53awj-MuiStack-root {
+    margin-bottom: 5rem !important;
+  }
 }
 .donateBtnandsocialContainer .css-e53awj-MuiStack-root button span {
   transition: all 0.5s ease-in-out;
@@ -63,7 +72,7 @@ body {
 .rahma-nav {
   box-shadow: 0px 1px 10px #34598a;
   position: relative;
-  z-index: 100;
+  z-index: 9000;
 }
 .rahma-nav .email-phone {
   background-color: #2b3990;
@@ -113,39 +122,38 @@ body {
   background-color: #e3e3e3;
 }
 .rahma-nav .prand-links .container .navbar {
+  justify-content: space-between;
   background-color: transparent !important;
   padding: 0 !important;
-}
-.rahma-nav .prand-links .container .navbar .container-fluid {
   flex-wrap: wrap;
 }
 @media (max-width: 991px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid {
+  .rahma-nav .prand-links .container .navbar {
     flex-wrap: nowrap;
     width: 100% !important;
   }
 }
-.rahma-nav .prand-links .container .navbar .container-fluid .navbar-brand img {
+.rahma-nav .prand-links .container .navbar .navbar-brand img {
   max-width: 110px;
   margin-top: 0.5rem;
 }
 @media (max-width: 991px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid .navbar-brand img {
+  .rahma-nav .prand-links .container .navbar .navbar-brand img {
     max-width: 90px !important;
   }
 }
 @media (max-width: 600px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid .navbar-brand img {
+  .rahma-nav .prand-links .container .navbar .navbar-brand img {
     max-width: 60px !important;
   }
 }
-.rahma-nav .prand-links .container .navbar .container-fluid .donate-btn {
+.rahma-nav .prand-links .container .navbar .donate-btn {
   width: 75%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.rahma-nav .prand-links .container .navbar .container-fluid .donate-btn button {
+.rahma-nav .prand-links .container .navbar .donate-btn button {
   background-color: #2b3990;
   width: 100px;
   color: white;
@@ -159,15 +167,15 @@ body {
   transition: all 0.5s ease-in-out;
 }
 @media (max-width: 991px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid .donate-btn button {
+  .rahma-nav .prand-links .container .navbar .donate-btn button {
     margin: -1.5rem 1rem 0 0 !important;
   }
 }
-.rahma-nav .prand-links .container .navbar .container-fluid .donate-btn button:hover {
+.rahma-nav .prand-links .container .navbar .donate-btn button:hover {
   background-color: #2b7634;
 }
 @media (max-width: 991px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid .donate-btn button {
+  .rahma-nav .prand-links .container .navbar .donate-btn button {
     width: 80px;
     font-size: 17px;
     padding: 2rem 0;
@@ -175,48 +183,48 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid .donate-btn button {
+  .rahma-nav .prand-links .container .navbar .donate-btn button {
     font-size: 15px;
     padding: 1.5rem 0;
   }
 }
 @media (max-width: 425px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid .donate-btn button {
+  .rahma-nav .prand-links .container .navbar .donate-btn button {
     width: 65px;
   }
 }
 @media (max-width: 350px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid .donate-btn button {
+  .rahma-nav .prand-links .container .navbar .donate-btn button {
     margin-right: 0.5rem !important;
   }
 }
-.rahma-nav .prand-links .container .navbar .container-fluid .donate-btn img {
+.rahma-nav .prand-links .container .navbar .donate-btn img {
   max-width: 150px;
   height: 60px;
 }
 @media (max-width: 991px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid .donate-btn img {
+  .rahma-nav .prand-links .container .navbar .donate-btn img {
     max-width: 100px !important;
     height: 45px;
     margin-right: 1rem;
   }
 }
 @media (max-width: 600px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid .donate-btn img {
+  .rahma-nav .prand-links .container .navbar .donate-btn img {
     max-width: 80px !important;
     height: 30px;
   }
 }
 @media (max-width: 350px) {
-  .rahma-nav .prand-links .container .navbar .container-fluid .donate-btn img {
+  .rahma-nav .prand-links .container .navbar .donate-btn img {
     margin-right: 0.5rem;
   }
 }
-.rahma-nav .prand-links .container .navbar .container-fluid .navbar-toggler {
+.rahma-nav .prand-links .container .navbar .navbar-toggler {
   padding: 0.25rem 0.5rem !important;
   box-shadow: none !important;
 }
-.rahma-nav .prand-links .container .navbar .container-fluid .navbar-toggler span {
+.rahma-nav .prand-links .container .navbar .navbar-toggler span {
   transition: all 0.2s ease-in-out;
 }
 @media (max-width: 991px) {
@@ -233,7 +241,7 @@ body {
 .rahma-nav .prand-links .container .navbar .navbar-collapse .navbar-nav {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   margin-bottom: 0.5rem !important;
 }
 @media (max-width: 991px) {
@@ -249,8 +257,18 @@ body {
   color: #414141;
   font-weight: 600;
   font-size: 20px;
-  margin: 0 1.5rem;
+  margin: 0 1rem !important;
   transition: all 0.5s ease-in-out;
+}
+@media (max-width: 1399px) {
+  .rahma-nav .prand-links .container .navbar .navbar-collapse .navbar-nav a {
+    margin: 0 1rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  .rahma-nav .prand-links .container .navbar .navbar-collapse .navbar-nav a {
+    margin: 0 0.5rem !important;
+  }
 }
 .rahma-nav .prand-links .container .navbar .navbar-collapse .navbar-nav a:hover {
   color: #2b7634;
@@ -294,6 +312,76 @@ body {
   .rahma-nav .prand-links .container .navbar .navbar-collapse .navbar-nav a {
     width: 60%;
   }
+}
+
+.dropdownMenu {
+  margin: 0 2rem !important;
+}
+@media (max-width: 1399px) {
+  .dropdownMenu {
+    margin: 0 1rem !important;
+  }
+}
+@media (max-width: 1199px) {
+  .dropdownMenu {
+    margin: 0 0.5rem !important;
+  }
+}
+.dropdownMenu button {
+  background-color: transparent !important;
+  color: #414141 !important;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: none !important;
+}
+.dropdownMenu button:hover {
+  color: #414141 !important;
+}
+@media (max-width: 991px) {
+  .dropdownMenu button {
+    background-color: #f1f1f1e1 !important;
+    margin: 0.2rem 0 !important;
+    border-radius: 15px;
+    width: 50%;
+  }
+}
+@media (max-width: 991px) and (max-width: 355px) {
+  .dropdownMenu button {
+    width: 60%;
+  }
+}
+@media (max-width: 991px) {
+  .dropdownMenu div {
+    background-color: transparent !important;
+    border: none !important;
+    width: 100% !important;
+  }
+}
+.dropdownMenu div #dropdown-item {
+  margin: 0rem !important;
+  padding: 4px 16px !important;
+  font-size: 14px;
+}
+@media (max-width: 991px) {
+  .dropdownMenu div #dropdown-item {
+    background-color: #f1f1f1e1;
+    margin: 0.2rem 0 !important;
+    text-align: center;
+    border-radius: 15px;
+    width: 100%;
+    margin-inline: auto !important;
+  }
+}
+.dropdownMenu.show {
+  color: #414141 !important;
+}
+.dropdownMenu.show button {
+  color: #414141 !important;
+}
+.dropdownMenu.show button:focus {
+  color: #414141 !important;
 }
 
 .Footer {
@@ -532,34 +620,48 @@ body {
 }
 .homepage .hero-section .animation-screen .container {
   height: 100% !important;
-}
-.homepage .hero-section .animation-screen .container .container {
   height: 100% !important;
   display: flex;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .homepage .hero-section .animation-screen .container .container {
+  .homepage .hero-section .animation-screen .container {
     width: 100% !important;
   }
 }
-.homepage .hero-section .animation-screen .container .container .donate-now h4 {
+@media (max-width: 550px) {
+  .homepage .hero-section .animation-screen .container {
+    align-items: flex-start;
+  }
+}
+.homepage .hero-section .animation-screen .container .donate-now h4 {
   width: 52%;
   font-weight: 600;
   color: #2b3990;
   font-size: 30px;
 }
 @media (max-width: 1400px) {
-  .homepage .hero-section .animation-screen .container .container .donate-now h4 {
+  .homepage .hero-section .animation-screen .container .donate-now h4 {
     width: 350px !important;
   }
 }
 @media (max-width: 1340px) {
-  .homepage .hero-section .animation-screen .container .container .donate-now h4 {
+  .homepage .hero-section .animation-screen .container .donate-now h4 {
     width: 300px !important;
   }
 }
-.homepage .hero-section .animation-screen .container .container .donate-now button {
+@media (max-width: 550px) {
+  .homepage .hero-section .animation-screen .container .donate-now h4 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 460px) {
+  .homepage .hero-section .animation-screen .container .donate-now h4 {
+    width: 100% !important;
+    font-size: 20px;
+  }
+}
+.homepage .hero-section .animation-screen .container .donate-now button {
   margin: 3rem 0;
   width: 220px;
   height: 70px;
@@ -573,13 +675,29 @@ body {
   font-size: 20px;
   transition: background 0.3s ease-out;
 }
-.homepage .hero-section .animation-screen .container .container .donate-now button:hover {
+.homepage .hero-section .animation-screen .container .donate-now button:hover {
   background-position-y: 70px;
 }
-.homepage .hero-section .animation-screen .container .container .donate-now div {
+@media (max-width: 550px) {
+  .homepage .hero-section .animation-screen .container .donate-now button {
+    width: 159px;
+    height: 42px;
+  }
+}
+@media (max-width: 460px) {
+  .homepage .hero-section .animation-screen .container .donate-now button {
+    margin: 1rem 0;
+  }
+}
+.homepage .hero-section .animation-screen .container .donate-now div {
   display: flex;
 }
-.homepage .hero-section .animation-screen .container .container .donate-now div a {
+@media (max-width: 460px) {
+  .homepage .hero-section .animation-screen .container .donate-now div {
+    display: none !important;
+  }
+}
+.homepage .hero-section .animation-screen .container .donate-now div a {
   background-color: white;
   margin: 1rem 0.5rem;
   text-align: center;
@@ -591,26 +709,26 @@ body {
   box-shadow: 5px 5px 5px gray;
   transition: all 0.2s ease-in-out;
 }
-.homepage .hero-section .animation-screen .container .container .donate-now div a i {
+.homepage .hero-section .animation-screen .container .donate-now div a i {
   color: #707070;
   font-weight: 600;
 }
-.homepage .hero-section .animation-screen .container .container .donate-now div a:hover {
+.homepage .hero-section .animation-screen .container .donate-now div a:hover {
   margin: 0.5rem;
 }
-.homepage .hero-section .animation-screen .container .container .donate-now div a:hover:first-of-type:hover i {
+.homepage .hero-section .animation-screen .container .donate-now div a:hover:first-of-type:hover i {
   color: #3b5998;
 }
-.homepage .hero-section .animation-screen .container .container .donate-now div a:hover:nth-of-type(2):hover i {
+.homepage .hero-section .animation-screen .container .donate-now div a:hover:nth-of-type(2):hover i {
   color: #bc2a8d;
 }
-.homepage .hero-section .animation-screen .container .container .donate-now div a:hover:nth-of-type(3):hover i {
+.homepage .hero-section .animation-screen .container .donate-now div a:hover:nth-of-type(3):hover i {
   color: #1DA1F2;
 }
-.homepage .hero-section .animation-screen .container .container .donate-now div a:hover:last-of-type:hover i {
+.homepage .hero-section .animation-screen .container .donate-now div a:hover:last-of-type:hover i {
   color: #FF0000;
 }
-.homepage .hero-section .animation-screen .container .container .donate-now div a:hover i {
+.homepage .hero-section .animation-screen .container .donate-now div a:hover i {
   transition: all 0.2s ease-in-out;
   color: #2b7634;
 }
@@ -619,6 +737,10 @@ body {
   z-index: 3000;
   right: 30%;
   bottom: 0 !important;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 @media (max-width: 1199px) {
   .homepage .hero-section .animation-screen .hero-hand-img {
@@ -631,9 +753,21 @@ body {
     margin-right: 1rem;
   }
 }
+@media (max-width: 550px) {
+  .homepage .hero-section .animation-screen .hero-hand-img {
+    height: 400px;
+  }
+}
+@media (max-width: 460px) {
+  .homepage .hero-section .animation-screen .hero-hand-img {
+    height: 355px !important;
+    width: 100%;
+  }
+}
 .homepage .hero-section .animation-screen .hero-hand-img img {
   height: 500px;
   max-width: 372px !important;
+  height: 95%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -655,6 +789,18 @@ body {
 @media (max-width: 768px) {
   .homepage .hero-section .animation-screen .hero-hand-img img {
     height: 400px;
+  }
+}
+@media (max-width: 767px) {
+  .homepage .hero-section .animation-screen .hero-hand-img img {
+    max-width: 200px !important;
+    height: 400px !important;
+  }
+}
+@media (max-width: 460px) {
+  .homepage .hero-section .animation-screen .hero-hand-img img {
+    height: 355px !important;
+    width: 100%;
   }
 }
 .homepage .hero-section .animation-screen .hero-main-img {
@@ -698,37 +844,49 @@ body {
   position: relative;
   z-index: 100;
   height: 200px !important;
-  margin-top: -2rem;
+  margin-top: -3rem;
 }
 .animation-remotecontrol .container {
-  height: 100%;
-}
-.animation-remotecontrol .container .container {
   height: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.animation-remotecontrol .container .container:scrollbar {
+@media (max-width: 1400px) {
+  .animation-remotecontrol .container {
+    min-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.animation-remotecontrol .container:scrollbar {
   display: none !important;
 }
-.animation-remotecontrol .container .container div {
+.animation-remotecontrol .container .swiper .swiper-wrapper {
+  justify-content: center !important;
+}
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide {
+  background-color: transparent !important;
+  width: auto !important;
+  margin-right: 0 !important;
+}
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div {
   transition: all 0.5s ease-in-out;
 }
-.animation-remotecontrol .container .container div.active svg {
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div.active svg {
   transform: scale(1.3);
   position: relative;
   z-index: 1;
 }
-.animation-remotecontrol .container .container div.active svg path {
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div.active svg path {
   fill: #2b7634 !important;
 }
-.animation-remotecontrol .container .container div.active div {
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div.active div {
   overflow: hidden;
   position: relative;
 }
-.animation-remotecontrol .container .container div.active div .circle {
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div.active div .circle {
   position: absolute;
   top: -50px;
   left: -50px;
@@ -739,29 +897,34 @@ body {
   opacity: 0.5;
   border-radius: 50%;
 }
-.animation-remotecontrol .container .container div:hover svg path {
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div:hover svg path {
   fill: #2b7634 !important;
 }
-.animation-remotecontrol .container .container div div:not(.circle) {
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div div:not(.circle) {
   box-shadow: 0px 0px 5px gray;
   height: 100px;
-  width: 87px !important;
+  width: 114px !important;
   margin: -2rem 0.5rem 0;
   padding: 0.5rem;
   border-radius: 30px 30px 0 0;
   cursor: pointer;
   background-color: white;
 }
-.animation-remotecontrol .container .container div svg {
+@media (max-width: 1400px) {
+  .animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div div:not(.circle) {
+    width: 100px !important;
+  }
+}
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div svg {
   height: 70px;
   width: 100%;
   margin: auto;
 }
-.animation-remotecontrol .container .container div svg path {
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div svg path {
   fill: #2b3990;
   transition: all 0.4s ease-in-out;
 }
-.animation-remotecontrol .container .container div p {
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div p {
   font-size: 11.5px;
   letter-spacing: 0px;
   margin-top: 1rem;
@@ -773,48 +936,68 @@ body {
   margin-bottom: 20rem;
   background-color: #e3e3e3;
 }
-.aboutus-section .container .container .about {
+@media (max-width: 767px) {
+  .aboutus-section {
+    margin-bottom: 15rem;
+  }
+}
+.aboutus-section .container .about {
   display: flex;
 }
-.aboutus-section .container .container .about .about-text-video {
+@media (max-width: 991px) {
+  .aboutus-section .container .about {
+    flex-direction: column !important;
+  }
+}
+.aboutus-section .container .about .about-text-video {
   width: 50%;
 }
-.aboutus-section .container .container .about .about-text-video h4 {
+@media (max-width: 991px) {
+  .aboutus-section .container .about .about-text-video {
+    width: 100%;
+  }
+}
+.aboutus-section .container .about .about-text-video h4 {
   color: #707070;
   font-weight: 700;
   margin: 2rem 0;
 }
-.aboutus-section .container .container .about .about-text-video p {
+.aboutus-section .container .about .about-text-video p {
   max-width: 700px;
 }
-.aboutus-section .container .container .about .about-text-video ul {
+.aboutus-section .container .about .about-text-video ul {
   list-style: none;
   margin: 0 !important;
   padding: 0 !important;
 }
-.aboutus-section .container .container .about .about-text-video ul li {
+.aboutus-section .container .about .about-text-video ul li {
   margin: 0 !important;
   padding: 0 !important;
 }
-.aboutus-section .container .container .about .about-text-video ul li i {
+@media (max-width: 555px) {
+  .aboutus-section .container .about .about-text-video ul li {
+    font-size: 13px !important;
+  }
+}
+.aboutus-section .container .about .about-text-video ul li i {
   color: #2b3990 !important;
 }
-.aboutus-section .container .container .about .about-text-video .video {
+.aboutus-section .container .about .about-text-video .video {
   margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.aboutus-section .container .container .about .about-text-video .video > button {
+.aboutus-section .container .about .about-text-video .video > button {
   background: transparent !important;
   outline: none;
   border: 2px solid #2b3990;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 80px !important;
+  height: 80px !important;
   position: relative;
 }
-.aboutus-section .container .container .about .about-text-video .video > button::before {
+.aboutus-section .container .about .about-text-video .video > button::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -823,62 +1006,85 @@ body {
   width: 1000px;
   height: 2px;
 }
-.aboutus-section .container .container .about .about-text-video .video > button i {
+.aboutus-section .container .about .about-text-video .video > button i {
   color: #2b3990;
   font-size: 30px;
   text-align: center;
 }
-.aboutus-section .container .container .about .about-text-video .video h6 {
+.aboutus-section .container .about .about-text-video .video h6 {
   display: inline-block;
   font-size: 12px;
   color: #2b3990;
   margin-left: 1rem;
 }
-.aboutus-section .container .container .about .about-text-video .video h6 span {
+.aboutus-section .container .about .about-text-video .video h6 span {
   border-bottom: 1px solid #2b3990;
 }
-.aboutus-section .container .container .about .about-images {
+.aboutus-section .container .about .about-images {
   display: flex;
   width: 70%;
   justify-content: flex-end;
   flex-wrap: wrap;
   margin-top: 5rem;
 }
-.aboutus-section .container .container .about .about-images div:first-of-type {
+@media (max-width: 991px) {
+  .aboutus-section .container .about .about-images {
+    width: 100%;
+  }
+}
+.aboutus-section .container .about .about-images div:first-of-type {
   flex-basis: 100%;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 2rem;
 }
-.aboutus-section .container .container .about .about-images div:first-of-type img {
+.aboutus-section .container .about .about-images div:first-of-type img {
   width: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 200px;
+  height: 220px;
   border-radius: 50px 0 50px 50px;
   box-shadow: 5px 5px 10px gray;
 }
-.aboutus-section .container .container .about .about-images div:nth-of-type(2) {
+@media (max-width: 555px) {
+  .aboutus-section .container .about .about-images div:first-of-type img {
+    width: 100%;
+  }
+}
+.aboutus-section .container .about .about-images div:nth-of-type(2) {
   flex-basis: 55%;
   margin-right: 2rem;
   display: flex;
   justify-content: center;
 }
-.aboutus-section .container .container .about .about-images div:nth-of-type(2) img {
+@media (max-width: 555px) {
+  .aboutus-section .container .about .about-images div:nth-of-type(2) {
+    margin-right: 0rem !important;
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
+}
+.aboutus-section .container .about .about-images div:nth-of-type(2) img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 200px;
+  height: 220px;
   border-radius: 50px 50px 50px 0px;
   box-shadow: 5px 5px 10px gray;
 }
-.aboutus-section .container .container .about .about-images div:last-of-type {
+.aboutus-section .container .about .about-images div:last-of-type {
   flex-basis: 37%;
   display: flex;
   justify-content: flex-end;
   height: 300px;
 }
-.aboutus-section .container .container .about .about-images div:last-of-type img {
+@media (max-width: 555px) {
+  .aboutus-section .container .about .about-images div:last-of-type {
+    flex-basis: 100%;
+    height: auto !important;
+  }
+}
+.aboutus-section .container .about .about-images div:last-of-type img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -886,26 +1092,59 @@ body {
   border-radius: 50px 50px 0px 50px;
   box-shadow: 5px 5px 10px gray;
 }
-.aboutus-section .container .container .success-stories {
+@media (max-width: 555px) {
+  .aboutus-section .container .about .about-images div:last-of-type img {
+    height: 220px !important;
+  }
+}
+.aboutus-section .container .success-stories {
   display: flex;
   justify-content: space-between;
   margin-top: 5rem;
   margin-bottom: -15rem;
 }
-.aboutus-section .container .container .success-stories .success-stories-text {
+@media (max-width: 767px) {
+  .aboutus-section .container .success-stories {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .aboutus-section .container .success-stories {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center;
+  }
+}
+.aboutus-section .container .success-stories .success-stories-text {
   width: 40%;
   height: 400px;
   display: flex;
   flex-direction: column;
 }
-.aboutus-section .container .container .success-stories .success-stories-text h1 {
+@media (max-width: 767px) {
+  .aboutus-section .container .success-stories .success-stories-text {
+    width: 100%;
+    height: 339px !important;
+  }
+}
+@media (max-width: 555px) {
+  .aboutus-section .container .success-stories .success-stories-text {
+    height: 342px !important;
+  }
+}
+.aboutus-section .container .success-stories .success-stories-text h1 {
   color: #707070;
   font-weight: 700;
 }
-.aboutus-section .container .container .success-stories .success-stories-text p {
+.aboutus-section .container .success-stories .success-stories-text p {
   margin: 3rem 0;
 }
-.aboutus-section .container .container .success-stories .success-stories-text button {
+@media (max-width: 767px) {
+  .aboutus-section .container .success-stories .success-stories-text p {
+    margin: 1.5rem 0;
+  }
+}
+.aboutus-section .container .success-stories .success-stories-text button {
   margin-top: auto;
   align-self: flex-end;
   border-radius: 50%;
@@ -916,48 +1155,110 @@ body {
   font-size: 12px;
   color: #2b3990;
 }
-.aboutus-section .container .container .success-stories .success-stories-text button i {
+.aboutus-section .container .success-stories .success-stories-text button i {
   color: #2b3990;
 }
-.aboutus-section .container .container .success-stories .success-stories-video {
+@media (max-width: 767px) {
+  .aboutus-section .container .success-stories .success-stories-text button {
+    margin-top: 0 !important;
+    align-self: flex-start;
+  }
+}
+.aboutus-section .container .success-stories .success-stories-video {
   width: 60%;
   display: flex;
   justify-content: center;
 }
-.aboutus-section .container .container .success-stories .success-stories-video div {
-  width: 70%;
+@media (max-width: 991px) {
+  .aboutus-section .container .success-stories .success-stories-video {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 767px) {
+  .aboutus-section .container .success-stories .success-stories-video {
+    justify-content: center;
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .aboutus-section .container .success-stories .success-stories-video {
+    width: 70%;
+  }
+}
+@media (max-width: 375px) {
+  .aboutus-section .container .success-stories .success-stories-video {
+    width: 85%;
+  }
+}
+.aboutus-section .container .success-stories .success-stories-video div {
+  width: 58%;
   padding: 3rem 1rem;
   background-color: white;
   box-shadow: 0px 0px 7px gray inset;
   border-radius: 30px;
 }
-.aboutus-section .container .container .success-stories .success-stories-video div video {
+@media (max-width: 1199px) {
+  .aboutus-section .container .success-stories .success-stories-video div {
+    width: 80% !important;
+  }
+}
+@media (max-width: 991px) {
+  .aboutus-section .container .success-stories .success-stories-video div {
+    width: 95% !important;
+  }
+}
+@media (max-width: 767px) {
+  .aboutus-section .container .success-stories .success-stories-video div {
+    width: 100% !important;
+  }
+}
+@media (max-width: 480px) {
+  .aboutus-section .container .success-stories .success-stories-video div {
+    padding: 2rem 1rem;
+  }
+}
+.aboutus-section .container .success-stories .success-stories-video div video {
   width: 100%;
   height: 500px;
+}
+@media (max-width: 480px) {
+  .aboutus-section .container .success-stories .success-stories-video div video {
+    height: 330px !important;
+  }
 }
 
 .best_moment {
   background-color: #e3e3e3;
   padding: 3rem;
 }
-.best_moment .container .container.col-10 {
+@media (max-width: 767px) {
+  .best_moment {
+    padding: 1rem 0 !important;
+  }
+}
+.best_moment .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.best_moment .container .container.col-10 h1 {
+.best_moment .container h1 {
   text-align: center;
   color: #707070;
   margin-bottom: 2rem;
   font-weight: 700;
 }
-.best_moment .container .container.col-10 p {
+@media (max-width: 767px) {
+  .best_moment .container h1 {
+    font-size: 20px;
+  }
+}
+.best_moment .container p {
   position: relative;
   width: 200px;
   text-align: center;
 }
-.best_moment .container .container.col-10 p::after {
+.best_moment .container p::after {
   content: "";
   background-color: #2b3990;
   position: absolute;
@@ -966,7 +1267,7 @@ body {
   top: 50%;
   left: 0;
 }
-.best_moment .container .container.col-10 p::before {
+.best_moment .container p::before {
   content: "";
   background-color: #2b3990;
   position: absolute;
@@ -975,29 +1276,44 @@ body {
   top: 50%;
   right: 0;
 }
-.best_moment .container .container.col-10 p i {
+.best_moment .container p i {
   transform: rotate(-90deg);
   color: #2b3990;
 }
-.best_moment .container .container.col-10 .before-after-slider {
-  height: 500px !important;
+.best_moment .container .before-after-slider {
+  height: 700px !important;
 }
-.best_moment .container .container.col-10 .before-after-slider img {
+@media (max-width: 767px) {
+  .best_moment .container .before-after-slider {
+    height: 300px !important;
+  }
+}
+.best_moment .container .before-after-slider img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.best_moment .container .container.col-10 .before-after-slider .before-after-slider__delimiter {
+.best_moment .container .before-after-slider .before-after-slider__delimiter {
   background-color: #2b3990 !important;
   width: 30px !important;
 }
-.best_moment .container .container.col-10 .before-after-slider .before-after-slider__delimiter > div .before-after-slider__delimiter-icon {
+@media (max-width: 767px) {
+  .best_moment .container .before-after-slider .before-after-slider__delimiter {
+    width: 10px !important;
+  }
+}
+.best_moment .container .before-after-slider .before-after-slider__delimiter > div .before-after-slider__delimiter-icon {
   border-radius: 0 0 0 0 !important;
   height: 100px !important;
   width: 30px !important;
   position: relative;
 }
-.best_moment .container .container.col-10 .before-after-slider .before-after-slider__delimiter > div .before-after-slider__delimiter-icon::before {
+@media (max-width: 767px) {
+  .best_moment .container .before-after-slider .before-after-slider__delimiter > div .before-after-slider__delimiter-icon {
+    width: 10px !important;
+  }
+}
+.best_moment .container .before-after-slider .before-after-slider__delimiter > div .before-after-slider__delimiter-icon::before {
   content: "";
   top: 50%;
   left: 50%;
@@ -1007,19 +1323,29 @@ body {
   background-color: #2b3990;
   transform: translate(-50%, -50%);
 }
+@media (max-width: 767px) {
+  .best_moment .container .before-after-slider .before-after-slider__delimiter > div .before-after-slider__delimiter-icon::before {
+    width: 5px;
+  }
+}
 
 .our-causes {
   background-color: #e3e3e3;
   padding: 3rem;
 }
-.our-causes .container .container .our-text h4 {
+@media (max-width: 423px) {
+  .our-causes {
+    padding: 0rem !important;
+  }
+}
+.our-causes .container .our-text h4 {
   color: #707070;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide {
+.our-causes .container .mySwiper .the-swiper-slide {
   margin: 2rem 0;
   border-radius: 30px;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause {
+.our-causes .container .mySwiper .the-swiper-slide .cause {
   border-radius: 30px;
   display: flex;
   justify-content: center;
@@ -1027,12 +1353,13 @@ body {
   flex-direction: column;
   box-shadow: 0px 0px 5px gray;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .image-holder {
+.our-causes .container .mySwiper .the-swiper-slide .cause .image-holder {
   width: 100%;
   position: relative;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .image-holder img {
+.our-causes .container .mySwiper .the-swiper-slide .cause .image-holder img {
   max-height: 270px;
+  min-height: 269px;
   border-radius: 30px;
   max-width: 100%;
   -o-object-fit: cover;
@@ -1040,7 +1367,7 @@ body {
   filter: grayscale(100%);
   transition: all 0.5s ease;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .image-holder span {
+.our-causes .container .mySwiper .the-swiper-slide .cause .image-holder span {
   position: absolute;
   bottom: 0;
   right: 30px;
@@ -1050,65 +1377,141 @@ body {
   transition: all 0.5s ease-in-out;
   color: white;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context {
+.our-causes .container .mySwiper .the-swiper-slide .cause .context {
   padding: 1rem;
   text-align: left;
+  height: 370px;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context h4 {
+@media (max-width: 1399px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 400px;
+  }
+}
+@media (max-width: 1199px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 420px;
+  }
+}
+@media (max-width: 1044px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 420px;
+  }
+}
+@media (max-width: 991px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 350px;
+  }
+}
+@media (max-width: 788px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 370px;
+  }
+}
+@media (max-width: 782px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 390px;
+  }
+}
+@media (max-width: 767px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 350px;
+  }
+}
+@media (max-width: 439px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 370px;
+  }
+}
+@media (max-width: 423px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 350px;
+  }
+}
+@media (max-width: 343px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    min-height: 360px;
+  }
+}
+.our-causes .container .mySwiper .the-swiper-slide .cause .context h4 {
   color: #707070;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context p {
+.our-causes .container .mySwiper .the-swiper-slide .cause .context p {
   color: #707070;
   font-size: 15px;
   width: 85%;
+  margin: 2rem 0 !important;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context .raised-goal {
+@media (max-width: 1199px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context p {
+    margin: 1rem 0 !important;
+  }
+}
+@media (max-width: 1044px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context p {
+    width: 100%;
+  }
+}
+.our-causes .container .mySwiper .the-swiper-slide .cause .context .MuiBox-root.css-1v5z18m {
+  width: 100% !important;
+}
+.our-causes .container .mySwiper .the-swiper-slide .cause .context .raised-goal {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context .raised-goal p {
+.our-causes .container .mySwiper .the-swiper-slide .cause .context .raised-goal p {
   margin-bottom: 0 !important;
   width: auto;
+  margin: 0rem 0 !important;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context .MuiBox-root.css-1v5z18m {
+.our-causes .container .mySwiper .the-swiper-slide .cause .context .MuiBox-root.css-1v5z18m {
   margin-top: 2rem !important;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context .MuiBox-root.css-1v5z18m span {
+.our-causes .container .mySwiper .the-swiper-slide .cause .context .MuiBox-root.css-1v5z18m span {
   color: #2b7634;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context .MuiBox-root.css-1v5z18m span .MuiSlider-valueLabelOpen {
+.our-causes .container .mySwiper .the-swiper-slide .cause .context .MuiBox-root.css-1v5z18m span .MuiSlider-valueLabelOpen {
   background: #2b7634;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context .MuiBox-root.css-1v5z18m span .MuiSlider-valueLabelOpen span {
+.our-causes .container .mySwiper .the-swiper-slide .cause .context .MuiBox-root.css-1v5z18m span .MuiSlider-valueLabelOpen span {
   color: white !important;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context .heddin-massage {
+.our-causes .container .mySwiper .the-swiper-slide .cause .context .heddin-massage {
   background-color: #b3d1b4;
   padding: 0.3rem 0.5rem;
   font-size: 14px;
-  height: 0px;
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide .cause .context .heddin-massage p {
+.our-causes .container .mySwiper .the-swiper-slide .cause .context .heddin-massage p {
   margin-bottom: 0 !important;
+  opacity: 0;
+  margin: 0rem 0 !important;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 1199px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context .heddin-massage p {
+    font-size: 13px;
+  }
 }
 
-.our-causes .container .container .mySwiper .the-swiper-slide:hover .cause::before {
+.our-causes .container .mySwiper .the-swiper-slide:hover .cause::before {
   opacity: 1 !important;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide:hover .cause .image-holder img {
+.our-causes .container .mySwiper .the-swiper-slide:hover .cause .image-holder img {
   filter: grayscale(0%);
 }
-.our-causes .container .container .mySwiper .the-swiper-slide:hover .cause .image-holder span {
+.our-causes .container .mySwiper .the-swiper-slide:hover .cause .image-holder span {
   background-color: #2b3990;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide:hover .cause .context .heddin-massage {
-  height: auto;
+.our-causes .container .mySwiper .the-swiper-slide:hover .cause .context .heddin-massage {
   opacity: 1;
 }
-.our-causes .container .container .mySwiper .the-swiper-slide:hover .cause .context .raised-goal p {
+.our-causes .container .mySwiper .the-swiper-slide:hover .cause .context .heddin-massage p {
+  opacity: 1 !important;
+  transition: all 0.5s ease-in-out;
+}
+.our-causes .container .mySwiper .the-swiper-slide:hover .cause .context .raised-goal p {
   margin-bottom: 0.5rem !important;
 }
 
@@ -1502,19 +1905,19 @@ body {
   padding: 6rem 0 6rem;
   background-color: #e3e3e3;
 }
-.map-world .container .container.col-10 {
+.map-world .container {
   text-align: center;
 }
-.map-world .container .container.col-10 h3 {
+.map-world .container h3 {
   color: #707070;
 }
-.map-world .container .container.col-10 h4 {
+.map-world .container h4 {
   position: relative;
   color: #707070;
   margin: auto;
   max-width: 550px;
 }
-.map-world .container .container.col-10 h4::after {
+.map-world .container h4::after {
   content: "";
   position: absolute;
   width: 100px;
@@ -1523,7 +1926,7 @@ body {
   top: 50%;
   left: 0;
 }
-.map-world .container .container.col-10 h4::before {
+.map-world .container h4::before {
   content: "";
   position: absolute;
   width: 100px;
@@ -1532,175 +1935,175 @@ body {
   top: 50%;
   right: 0;
 }
-.map-world .container .container.col-10 h5 {
+.map-world .container h5 {
   margin: 2.5rem 0;
   color: #707070;
   font-weight: 400;
 }
-.map-world .container .container.col-10 .map {
+.map-world .container .map {
   margin-top: 6rem;
   display: flex;
   justify-content: space-between;
 }
-.map-world .container .container.col-10 .map .the-map {
+.map-world .container .map .the-map {
   width: 100%;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer {
+.map-world .container .map .the-map .MapContainer {
   width: 100%;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg {
+.map-world .container .map .the-map .MapContainer svg {
   width: 100% !important;
   stroke: gray !important;
   fill: white !important;
   stroke-width: 0.7 !important;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #US {
+.map-world .container .map .the-map .MapContainer svg g #US {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #US:hover {
+.map-world .container .map .the-map .MapContainer svg g #US:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #US.active {
+.map-world .container .map .the-map .MapContainer svg g #US.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #JO {
+.map-world .container .map .the-map .MapContainer svg g #JO {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #JO:hover {
+.map-world .container .map .the-map .MapContainer svg g #JO:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #JO.active {
+.map-world .container .map .the-map .MapContainer svg g #JO.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #LB {
+.map-world .container .map .the-map .MapContainer svg g #LB {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #LB:hover {
+.map-world .container .map .the-map .MapContainer svg g #LB:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #LB.active {
+.map-world .container .map .the-map .MapContainer svg g #LB.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #PS {
+.map-world .container .map .the-map .MapContainer svg g #PS {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #PS:hover {
+.map-world .container .map .the-map .MapContainer svg g #PS:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #PS.active {
+.map-world .container .map .the-map .MapContainer svg g #PS.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SY {
+.map-world .container .map .the-map .MapContainer svg g #SY {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SY:hover {
+.map-world .container .map .the-map .MapContainer svg g #SY:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SY.active {
+.map-world .container .map .the-map .MapContainer svg g #SY.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TR {
+.map-world .container .map .the-map .MapContainer svg g #TR {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TR:hover {
+.map-world .container .map .the-map .MapContainer svg g #TR:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TR.active {
+.map-world .container .map .the-map .MapContainer svg g #TR.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #YE {
+.map-world .container .map .the-map .MapContainer svg g #YE {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #YE:hover {
+.map-world .container .map .the-map .MapContainer svg g #YE:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #YE.active {
+.map-world .container .map .the-map .MapContainer svg g #YE.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #ML {
+.map-world .container .map .the-map .MapContainer svg g #ML {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #ML:hover {
+.map-world .container .map .the-map .MapContainer svg g #ML:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #ML.active {
+.map-world .container .map .the-map .MapContainer svg g #ML.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #GH {
+.map-world .container .map .the-map .MapContainer svg g #GH {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #GH:hover {
+.map-world .container .map .the-map .MapContainer svg g #GH:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #GH.active {
+.map-world .container .map .the-map .MapContainer svg g #GH.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #CM {
+.map-world .container .map .the-map .MapContainer svg g #CM {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #CM:hover {
+.map-world .container .map .the-map .MapContainer svg g #CM:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #CM.active {
+.map-world .container .map .the-map .MapContainer svg g #CM.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TD {
+.map-world .container .map .the-map .MapContainer svg g #TD {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TD:hover {
+.map-world .container .map .the-map .MapContainer svg g #TD:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #TD.active {
+.map-world .container .map .the-map .MapContainer svg g #TD.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SD {
+.map-world .container .map .the-map .MapContainer svg g #SD {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SD:hover {
+.map-world .container .map .the-map .MapContainer svg g #SD:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SD.active {
+.map-world .container .map .the-map .MapContainer svg g #SD.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #KE {
+.map-world .container .map .the-map .MapContainer svg g #KE {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #KE:hover {
+.map-world .container .map .the-map .MapContainer svg g #KE:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #KE.active {
+.map-world .container .map .the-map .MapContainer svg g #KE.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SL {
+.map-world .container .map .the-map .MapContainer svg g #SL {
   fill: #2b7634;
   cursor: pointer;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SL:hover {
+.map-world .container .map .the-map .MapContainer svg g #SL:hover {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .MapContainer svg g #SL.active {
+.map-world .container .map .the-map .MapContainer svg g #SL.active {
   fill: #2b3990;
 }
-.map-world .container .container.col-10 .map .the-map .video {
+.map-world .container .map .the-map .video {
   margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.map-world .container .container.col-10 .map .the-map .video > button {
+.map-world .container .map .the-map .video > button {
   background: transparent !important;
   outline: none;
   border: 2px solid #2b3990;
@@ -1709,7 +2112,7 @@ body {
   height: 80px;
   position: relative;
 }
-.map-world .container .container.col-10 .map .the-map .video > button::before {
+.map-world .container .map .the-map .video > button::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1718,32 +2121,32 @@ body {
   width: 1000px;
   height: 2px;
 }
-.map-world .container .container.col-10 .map .the-map .video > button i {
+.map-world .container .map .the-map .video > button i {
   color: #2b3990;
   font-size: 30px;
   text-align: center;
 }
-.map-world .container .container.col-10 .map .the-map .video h6 {
+.map-world .container .map .the-map .video h6 {
   display: inline-block;
   font-size: 12px;
   color: #2b3990;
   margin-left: 1rem;
 }
-.map-world .container .container.col-10 .map .the-map .video h6 span {
+.map-world .container .map .the-map .video h6 span {
   border-bottom: 1px solid #2b3990;
 }
-.map-world .container .container.col-10 .map .map-context {
+.map-world .container .map .map-context {
   width: 40%;
   text-align: left;
 }
-.map-world .container .container.col-10 .map .map-context h1 {
+.map-world .container .map .map-context h1 {
   color: #707070;
   font-weight: 700;
   position: relative;
   display: inline-block;
   margin-bottom: 3rem;
 }
-.map-world .container .container.col-10 .map .map-context h1::before {
+.map-world .container .map .map-context h1::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -1752,7 +2155,7 @@ body {
   left: 0;
   background-color: #707070;
 }
-.map-world .container .container.col-10 .map .map-context button {
+.map-world .container .map .map-context button {
   background-color: #2b3990;
   border-radius: 15px;
   padding: 0.4rem 1.7rem;
@@ -1760,25 +2163,25 @@ body {
   border: none;
   outline: none;
 }
-.map-world .container .container.col-10 .map .map-context > div {
+.map-world .container .map .map-context > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
 }
-.map-world .container .container.col-10 .map .map-context > div p {
+.map-world .container .map .map-context > div p {
   margin-bottom: 0 !important;
   font-size: 10px;
 }
-.map-world .container .container.col-10 .map .map-context > div h5 {
+.map-world .container .map .map-context > div h5 {
   margin: 0 !important;
   font-weight: 600;
 }
-.map-world .container .container.col-10 .map .map-context > div svg {
+.map-world .container .map .map-context > div svg {
   width: 30px;
   margin: 0 1rem;
 }
-.map-world .container .container.col-10 .map .map-context > div .the-svg {
+.map-world .container .map .map-context > div .the-svg {
   background: white;
   background: linear-gradient(32deg, white 20%, #b8b8b8 100%);
   padding: 0.2rem;
@@ -1786,11 +2189,11 @@ body {
   box-shadow: -1px 1px 5px 1px #2b3990;
   margin-right: 1rem !important;
 }
-.map-world .container .container.col-10 .map .map-context > div .the-svg svg {
+.map-world .container .map .map-context > div .the-svg svg {
   margin: 0 !important;
   width: 60px !important;
 }
-.map-world .container .container.col-10 .map .map-context > div .the-svg svg path {
+.map-world .container .map .map-context > div .the-svg svg path {
   fill: black !important;
 }
 
