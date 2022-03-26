@@ -16,9 +16,9 @@ import bulls from '../Assets/svgs/all-icons/bulls.svg'
 import girl from '../Assets/images/girlmage.jpg'
 import support3 from '../Assets/images/supportedBy-03.jpg'
 import support4 from '../Assets/images/supportedBy-04.jpg'
-import pngTestIMage from '../Assets/images/pngTestIMage.png'
+import pngTestIMage from '../Assets/images/orphan.png'
 
-import { FreeMode, Pagination } from "swiper";
+import { FreeMode, Pagination, Navigation } from "swiper";
 // importing hero svgs
 import { ReactComponent as HeroSvgicon2 } from '../Assets/svgs/all-icons/icon-02.svg'
 import { ReactComponent as HeroSvgicon3 } from '../Assets/svgs/all-icons/newIcons-06.svg'
@@ -38,7 +38,7 @@ import { ReactComponent as Icon4 } from '../Assets/svgs/all-icons/socialIcons-08
 
 // importing framer motion 
 import { motion } from "framer-motion"
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide  } from "swiper/react";
 import ModalVideo from 'react-modal-video'
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
@@ -812,6 +812,161 @@ const Homepage = () => {
                             </Swiper>
                         </div>
                     </div>
+
+                    <div className="campaingns">
+                        <div className="container">
+                            <section className='campaingns-container'>
+                                <div className='campaingns-img-slider'>
+                                    <h3>CAMPAIGNS</h3>
+                                    <Swiper
+                                        cssMode={true}
+                                        navigation={true}
+                                        pagination={true}
+                                        mousewheel={true}
+                                        keyboard={true}
+                                        modules={[Pagination, Navigation]}
+                                        className="mySwiper"
+                                    >
+                                        <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
+                                        <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
+                                        <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
+                                    </Swiper>
+                                </div>
+                                <div className='context'>
+                                    <img src={bulls} alt="small bulls img" />
+                                    <h2>WEALTH AND HEALTH</h2>
+                                    <p>MONTREAL, QC.</p>
+                                    <p>Donec varius sodales orci. Class aptent taciti
+                                    sociosqu torquent, per inceptos himenaeos.
+                                    End of content. Aenean arcu viverra varius
+                                    sodales sociosqu torquent, per inceptos
+                                    himenaeos.</p>
+                                    <p>Aenean arcu viverra varius sodales sociosqu
+                                    torquent, per inceptos himenaeos.Donec
+                                    varius sodales orci. Class aptent taciti
+                                    sociosqu torquent, per inceptos himenaeos.
+                                    End of content.</p>
+                                    <div>
+                                        <div>
+                                            <p><i class="fa-solid fa-location-dot"></i> JORDAN</p>
+                                            <p><i class="fa-solid fa-calendar-days"></i> 26 Oct at 3:32 pm</p>
+                                        </div>
+                                        <button>Learn More</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    {/* <div className="our-latest-news">
+                        <div className="container">
+                            <div>
+                                <h1 className='h1-styles'>OUR LATEST <span>NEWS</span></h1>
+                            </div>
+                            <section className='our-latest'>
+                                <div className='context'>
+                                    <h6>“SKILLS OF EVALUATING FOREIGN
+                                    FUNDING” COURSES HELD IN
+                                    JORDAN</h6>
+                                    <span><span>JORDAN</span> - 26 Oct at 3:32 pm</span>
+                                    <p>Rahma Worldwide collaborated with
+                                    the Department of Foreign Societies
+                                    at the Jordanian 
+                                    Ministry of Social Development, held
+                                    a workshop entitled “Skills of
+                                    Evaluating Foreign Funding”
+                                    which revolved around the
+                                    legislation and governing foreign 
+                                    funding and the mechanism 
+                                    of its application for organizations
+                                    operating in Jordan. Rahma
+                                    Worldwide’s Representative
+                                    in Jordan…</p>
+                                    <figure></figure>
+                                </div>
+                                <div className="img-slider">
+                                    <Swiper
+                                        cssMode={true}
+                                        navigation={true}
+                                        pagination={true}
+                                        mousewheel={true}
+                                        keyboard={true}
+                                        modules={[Navigation, Pagination]}
+                                        className="mySwiper"
+                                    >
+                                        <SwiperSlide><img src={girl} alt="child img" /></SwiperSlide>
+                                        <SwiperSlide><img src={girl} alt="child img" /></SwiperSlide>
+                                        <SwiperSlide><img src={girl} alt="child img" /></SwiperSlide>
+                                    </Swiper>
+                                    <button><i class="fa-solid fa-arrow-right"></i> READ MORE</button>
+                                </div>
+                                <div className='social-media-filter'>
+                                <div className='social-media'>
+                                    <div className='social-icons'>
+                                        <div><i className="fa-brands fa-facebook-f"></i></div>
+                                        <div><i className="fa-brands fa-twitter"></i></div>
+                                        <div><i className="fa-brands fa-instagram"></i></div>
+                                        <div><i className="fa-brands fa-youtube"></i></div>
+                                    </div>
+                                        <div className='social-box'>
+                                            <img src={child} alt="img"/>
+                                            <div>
+                                                <div>
+                                                    <span>SYRIA</span>
+                                                    <br />
+                                                    <b>Agricultural Nursery Project Continues in Syria</b>
+                                                    <p>Rahma Worldwide collaborated with the Department of Foreign 
+                                                    Societies at the Jordanian Ministry of Social Development, 
+                                                    held a workshop entitled “Skills of Evaluating Foreign Funding” 
+                                                    which revolved</p>
+                                                </div>
+                                                <div>
+                                                    <span>26 Oct at 3:32 pm</span>
+                                                    <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='social-box'>
+                                            <img src={child} alt="img"/>
+                                            <div>
+                                                <div>
+                                                    <span>SYRIA</span>
+                                                    <br />
+                                                    <b>Agricultural Nursery Project Continues in Syria</b>
+                                                    <p>Rahma Worldwide collaborated with the Department of Foreign 
+                                                    Societies at the Jordanian Ministry of Social Development, 
+                                                    held a workshop entitled “Skills of Evaluating Foreign Funding” 
+                                                    which revolved </p>
+                                                </div>
+                                                <div>
+                                                    <span>26 Oct at 3:32 pm</span>
+                                                    <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='social-box'>
+                                            <img src={child} alt="img"/>
+                                            <div>
+                                                <div>
+                                                    <span>SYRIA</span>
+                                                    <br />
+                                                    <b>Agricultural Nursery Project Continues in Syria</b>
+                                                    <p>Rahma Worldwide collaborated with the Department of Foreign 
+                                                    Societies at the Jordanian Ministry of Social Development, 
+                                                    held a workshop entitled “Skills of Evaluating Foreign Funding” 
+                                                    which revolved </p>
+                                                </div>
+                                                <div>
+                                                    <span>26 Oct at 3:32 pm</span>
+                                                    <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div> */}
 
                     {/* <div className="map-world"  style={{position: 'relative'}}>
                         <div className="container">

@@ -97,14 +97,14 @@
             .hero-hand-img
                 position: absolute
                 z-index: 3000
-                right: 30%
+                right: 40%
                 bottom: 0 !important
                 height: 100%
                 display: flex
                 align-items: flex-end
                 justify-content: center
                 @media ( max-width: 1199px )
-                    right: 30%
+                    right: 40%
                 @media ( max-width: 1023px )
                     right: 0
                     margin-right: 1rem
@@ -115,9 +115,9 @@
                     width: 100%
                 img
                     height: 500px
-                    max-width: 372px !important
+                    max-width: 100% !important
                     height: 95%
-                    object-fit: cover
+                    object-fit: cover !important
                     @media ( max-width: 1200px )
                         right: 28%
                     @media ( max-width: 1199px )
@@ -127,7 +127,7 @@
                     @media ( max-width: 768px )
                         height: 400px
                     @media ( max-width: 767px )
-                        max-width: 200px !important
+                        // max-width: 200px !important
                         height: 400px !important
                     @media ( max-width: 460px )
                         height: 355px !important
@@ -698,121 +698,173 @@
     padding: 3rem
     position: relative
     height: 600px
+    @media ( max-width: 991px )
+        height: auto !important
+        padding: 0rem !important
     .container
         height: 100%
-        .container.col-10
-            .campaingns-container
+        .campaingns-container
+            height: 100%
+            .campaingns-img-slider
+                width: 50%
                 height: 100%
-                .campaingns-img-slider
-                    width: 50% 
-                    height: 100%
-                    display: flex
-                    justify-content: space-around
-                    align-items: center 
-                    flex-direction: column
-                    h3
-                        align-self: flex-start
-                        color: #707070
-                    .mySwiper
-                        height: 400px
-                        margin: 0
-                        width: 350px
-                        border-radius: 40px 40px 0px 40px
-                        overflow: visible !important
-                        position: relative
+                display: flex
+                justify-content: space-around
+                align-items: center 
+                flex-direction: column
+                @media ( max-width: 1400px )
+                    width: 38% !important
+                @media ( max-width: 991px )
+                    margin: auto !important
+                    width: 100% !important
+                    margin-bottom: 3rem !important
+                h3
+                    align-self: flex-start
+                    color: #707070
+                    @media ( max-width: 991px )
+                        margin-bottom: 3rem
+                        align-self: center
+                .mySwiper
+                    height: 400px
+                    margin: 0
+                    width: 350px
+                    border-radius: 40px 40px 0px 40px
+                    overflow: visible !important
+                    position: relative
+                    @media ( max-width: 1100px )
+                        width: 273px !important
+                    @media ( max-width: 420px )
+                        width: 260px !important
+                    @media screen and ( max-width: 398px )
+                        width: 250px !important
+                        height: 300px
+                    @media screen and ( max-width: 378px )
+                        width: 230px !important
+                    @media screen and ( max-width: 364px )
+                        width: 220px !important
+                    @media screen and ( max-width: 356px )
+                        width: 210px !important
+                    @media ( max-width: 338px )
+                        width: 179px !important
+                        height: 230px !important
+                    &::before
+                        content: ""
+                        background-color: white
+                        width: 100px !important
+                        height: 100px !important
+                        border-radius: 50%
+                        position: absolute
+                        left: -40px
+                        z-index: 0
+                        transform: translate(0%, -50%)
+                        top: 30px
+                        box-shadow: 2px 2px 7px gray
+                    .swiper-button-prev 
+                        background-color: white
+                        width: 50px !important
+                        height: 50px !important
+                        border-radius: 50%
+                        position: absolute
+                        left: -60px
+                        z-index: 10
+                        transform: translate(0%, -50%)
+                        top: 50%
+                        box-shadow: 2px 2px 7px gray
+                        cursor: pointer
                         &::before
-                            content: ""
-                            background-color: white
-                            width: 100px !important
-                            height: 100px !important
-                            border-radius: 50%
+                            content: "<"
+                            text-align: center
                             position: absolute
-                            left: -40px
-                            z-index: 0
-                            transform: translate(0%, -50%)
-                            top: 30px
-                            box-shadow: 2px 2px 7px gray
-                        .swiper-button-prev 
-                            background-color: white
-                            width: 50px !important
-                            height: 50px !important
-                            border-radius: 50%
+                            left: 50%
+                            top: 45%
+                            transform: translate(-50%, -50%)
+                            font-size: 30px
+                            color: #707070
+                    .swiper-button-next 
+                        background-color: white
+                        width: 50px !important
+                        height: 50px !important
+                        border-radius: 50%
+                        position: absolute
+                        right: -60px
+                        top: 50%
+                        transform: translate(0%, -50%)
+                        z-index: 10
+                        box-shadow: 2px 2px 7px gray
+                        cursor: pointer
+
+                        &::before
+                            content: ">"
+                            text-align: center
                             position: absolute
-                            left: -60px
-                            z-index: 10
-                            transform: translate(0%, -50%)
-                            top: 50%
-                            box-shadow: 2px 2px 7px gray
-                            cursor: pointer
-                            &::before
-                                content: "<"
-                                text-align: center
-                                position: absolute
-                                left: 50%
-                                top: 45%
-                                transform: translate(-50%, -50%)
-                                font-size: 30px
-                                color: #707070
-                        .swiper-button-next 
-                            background-color: white
-                            width: 50px !important
-                            height: 50px !important
-                            border-radius: 50%
-                            position: absolute
-                            right: -60px
-                            top: 50%
-                            transform: translate(0%, -50%)
-                            z-index: 10
-                            box-shadow: 2px 2px 7px gray
-                            cursor: pointer
-                            &::before
-                                content: ">"
-                                text-align: center
-                                position: absolute
-                                left: 50%
-                                top: 45%
-                                transform: translate(-50%, -50%)
-                                font-size: 30px
-                                color: #707070
-                        .swiper-wrapper
-                            border-radius: 30px 30px 0 30px
-                            & > div
-                                width: 100% !important
+                            left: 50%
+                            top: 45%
+                            transform: translate(-50%, -50%)
+                            font-size: 30px
+                            color: #707070
+                    .swiper-wrapper
+                        border-radius: 30px 30px 0 30px
+                        & > div
+                            width: 100% !important
     .context
         position: absolute
         max-width: 900px 
-        height: 100%
+        height: auto
         background-color: white
         right: 0
         border-radius: 0 0 0px 60px
         padding: 1rem
         padding-left: 4rem
         top: 0 
+        @media ( max-width: 991px )
+            top: 0px !important 
+            position: static !important
+            width: 100% !important
+            margin: auto
+            padding-left: 1rem
+        @media ( max-width: 1710px )
+            max-width: 750px 
+        @media ( max-width: 1340px )
+            max-width: 650px 
+        @media ( max-width: 1200px )
+            max-width: 550px
         img 
             width: 200px 
             height: 200px
             position: absolute
             right: 30px 
+            @media ( max-width: 991px )
+                display: none !important
         h2
             padding-top: 7rem
             font-weight: 700
             font-size: 40px 
             margin-bottom: 1rem
+            @media ( max-width: 991px )
+                padding-top: 1rem
+            @media screen and ( max-width: 500px )
+                font-size: 30px
         & > p
                 width: 50%
                 color: #707070
+                @media ( max-width: 1318px )
+                    width: 100% !important
         & > div
                 display: flex
                 justify-content: space-between
                 div
                     display: flex
                     justify-content: space-between
+                    @media ( max-width: 423px )
+                        flex-direction: column !important
                     p
                         color: #707070
+                        @media ( max-width: 423px )
+                            margin-bottom: 0 !important
                         i
                             margin: 0.5rem
                 button
-                    margin: 0rem 5rem 0 0 
+                    margin: 0rem 0rem 0 0 
                     padding: 1rem
                     background-color: transparent
                     border: 1px solid $main-blue
@@ -821,216 +873,236 @@
                     width: 100px
                     height: 100px
                     font-weight: 600
+                    @media ( max-width: 991px )
+                        width: 60px !important
+                        height: 60px !important
+                        font-size: 12px !important
+                        font-weight: 400
+                        padding: .5rem
 
+// 1304
 .our-latest-news
     padding: 10rem 0 12rem
     background-color: #e3e3e3
     .container
-        .container.col-10
-            div
-                h1
-                    margin-bottom: 3rem
-            .our-latest
-                display: flex
-                .img-slider
-                    position: relative
-                    right: 250px
-                    margin-top: -2rem
-                    button
-                        position: absolute
-                        bottom: 50px
-                        left: -80px
-                        padding: 1rem 3rem
-                        z-index: 100
-                        background: $main-blue
-                        border: 0
-                        color: white
-                        border-radius: 15px
-                        i
-                            transform: rotate(30deg)
-                            font-size: 20px
-                            margin-right: 0.5rem
-                    .mySwiper
-                        height: 550px
-                        margin: 0
-                        width: 350px
-                        overflow: visible !important
-                        position: relative
-                        .swiper-button-prev 
-                            background-color: white
-                            width: 60px !important
-                            height: 60px !important
-                            position: absolute
-                            left: 32.5%
-                            z-index: 10
-                            bottom: -60px
-                            box-shadow: 2px 2px 7px gray
-                            cursor: pointer
-                            &::before
-                                content: "<"
-                                text-align: center
-                                position: absolute
-                                left: 50%
-                                top: 45%
-                                transform: translate(-50%, -50%)
-                                font-size: 30px
-                                color: #707070
-                        .swiper-button-next 
-                            background-color: white
-                            width: 60px !important
-                            height: 60px !important
-                            position: absolute
-                            right: 32.5%
-                            bottom: -60px
-                            z-index: 10
-                            box-shadow: 2px 2px 7px gray
-                            cursor: pointer
-                            &::before
-                                content: ">"
-                                text-align: center
-                                position: absolute
-                                left: 50%
-                                top: 45%
-                                transform: translate(-50%, -50%)
-                                font-size: 30px
-                                color: #707070
-                        .swiper-wrapper
-                            div
-                                img
-                                    border-radius: 100px 100px 0 0
-                .context
-                    width: 30%
-                    margin-right: auto
-                    h6
-                        margin: 2rem 0
-                    & > span
-                            font-size: 12px
-                            margin-left: 140px 
-                            position: relative
-                            color: #707070
-                            &::before
-                                content: ""
-                                position: absolute
-                                top: 50%
-                                left: -100px
-                                background: gray
-                                height: 2px
-                                width: 90px
-                            span
-                                color: $main-green
-                                font-weight: 600
-                    p
-                        margin-top: 1rem !important
-                    figure
-                        background: white
-                        border-radius: 50%
-                        width: 80px
-                        height: 80px
-                        box-shadow: 5px 5px 10px gray
-                .social-media-filter
+        div
+            h1
+                margin-bottom: 3rem
+        .our-latest
+            display: flex
+            .img-slider
+                position: relative
+                right: 36%
+                margin-top: 3.2rem
+                @media screen and ( max-width: 1304px )
+                    right: 40% !important
+                @media screen and ( max-width: 1199px )
+                    right: 38% !important
+                button
                     position: absolute
-                    background-color: #f3f0ea
-                    right: 0
-                    width: 900px
-                    padding: 2rem 0
-                    .social-media
-                        width: 70%
-                        margin-left: auto
-                        .social-icons
-                            display: flex
-                            div
-                                background-color: white
-                                border-radius: 50%
-                                text-align: center
-                                width: 40px
-                                height: 40px
-                                margin: 0.5rem
-                                line-height: 40px
-                                font-size: 20px
-                                cursor: pointer
-                                transition: all .5s ease-in-out
-                                i
-                                    color: gray
-                                    transition: all .5s ease-in-out
-                                &:first-of-type
-                                    &:hover
-                                        i
-                                            color: #3b5998
-                                &:nth-of-type(2)
-                                    &:hover
-                                        i
-                                            color: #1DA1F2
-                                &:nth-of-type(3)
-                                    &:hover
-                                        i
-                                            color: #bc2a8d
-                                &:last-of-type
-                                    &:hover
-                                        i
-                                            color: #FF0000
-                        .social-box
-                            display: flex
-                            justify-content: center
-                            height: auto
-                            padding: 1rem
+                    bottom: 50px
+                    left: -80px
+                    padding: 1rem 3rem
+                    z-index: 100
+                    background: $main-blue
+                    border: 0
+                    color: white
+                    border-radius: 15px
+                    @media screen and ( max-width: 1199px )
+                        padding: 1rem 2rem !important 
+                    i
+                        transform: rotate(30deg)
+                        font-size: 20px
+                        margin-right: 0.5rem
+                .mySwiper
+                    height: 550px
+                    margin: 0
+                    width: 350px
+                    overflow: visible !important
+                    position: relative
+                    @media screen and ( max-width: 1199px )
+                        width: 300px !important
+                    .swiper-button-prev 
+                        background-color: white
+                        width: 60px !important
+                        height: 60px !important
+                        position: absolute
+                        left: 32.5%
+                        z-index: 10
+                        bottom: -60px
+                        box-shadow: 2px 2px 7px gray
+                        cursor: pointer
+                        @media screen and ( max-width: 1199px )
+                            left: 28% !important
+                        &::before
+                            content: "<"
+                            text-align: center
+                            position: absolute
+                            left: 50%
+                            top: 45%
+                            transform: translate(-50%, -50%)
+                            font-size: 30px
+                            color: #707070
+                    .swiper-button-next 
+                        background-color: white
+                        width: 60px !important
+                        height: 60px !important
+                        position: absolute
+                        right: 32.5%
+                        bottom: -60px
+                        z-index: 10
+                        box-shadow: 2px 2px 7px gray
+                        cursor: pointer
+                        @media screen and ( max-width: 1199px )
+                            right: 31.5% !important
+                        &::before
+                            content: ">"
+                            text-align: center
+                            position: absolute
+                            left: 50%
+                            top: 45%
+                            transform: translate(-50%, -50%)
+                            font-size: 30px
+                            color: #707070
+                    .swiper-wrapper
+                        border-radius: 100px 100px 0 0
+            .context
+                width: 30%
+                margin-right: auto
+                @media screen and ( max-width: 1304px )
+                    width: 27% !important
+                h6
+                    margin: 2rem 0
+                & > span
+                        font-size: 12px
+                        margin-left: 140px 
+                        position: relative
+                        color: #707070
+                        &::before
+                            content: ""
+                            position: absolute
+                            top: 50%
+                            left: -100px
+                            background: gray
+                            height: 2px
+                            width: 90px
+                        span
+                            color: $main-green
+                            font-weight: 600
+                p
+                    margin-top: 1rem !important
+                figure
+                    background: white
+                    border-radius: 50%
+                    width: 80px
+                    height: 80px
+                    box-shadow: 5px 5px 10px gray
+            .social-media-filter
+                position: absolute
+                background-color: #f3f0ea
+                right: 0
+                width: 53%
+                padding: 2rem 0
+                .social-media
+                    width: 70%
+                    margin-left: auto
+                    @media screen and ( max-width: 1304px )
+                        width: 76% !important
+                    .social-icons
+                        display: flex
+                        div
+                            background-color: white
+                            border-radius: 50%
+                            text-align: center
+                            width: 40px
+                            height: 40px
+                            margin: 0.5rem
+                            line-height: 40px
+                            font-size: 20px
+                            cursor: pointer
                             transition: all .5s ease-in-out
-                            &:hover
-                                background: #707070
-                                color: white
-                                border: white
-                                img
-                                    filter: grayscale(0%)
-                                & > div
-                                        div
-                                            &:first-of-type
-                                                span
-                                                    border: 1px solid white !important
-                                            &:last-of-type
-                                                button
-                                                    background: $main-green
-                                                    color: white
-                                                    border: 1px solid white !important
-                                                    i
-                                                        color: white !important
-                                                    i
-                                                        color: gray
-                            img
-                                width: 586px
-                                max-height: 150px
-                                object-fit: cover
-                                margin-right: 1rem
-                                filter: grayscale(100%)
+                            i
+                                color: gray
                                 transition: all .5s ease-in-out
+                            &:first-of-type
+                                &:hover
+                                    i
+                                        color: #3b5998
+                            &:nth-of-type(2)
+                                &:hover
+                                    i
+                                        color: #1DA1F2
+                            &:nth-of-type(3)
+                                &:hover
+                                    i
+                                        color: #bc2a8d
+                            &:last-of-type
+                                &:hover
+                                    i
+                                        color: #FF0000
+                    .social-box
+                        display: flex
+                        justify-content: center
+                        height: auto
+                        padding: 1rem
+                        transition: all .5s ease-in-out
+                        &:hover
+                            background: #707070
+                            color: white
+                            border: white
+                            img
+                                filter: grayscale(0%)
                             & > div
                                     div
-                                        &:last-of-type
-                                            display: flex
-                                            align-self: center
-                                            justify-content: space-between
-                                            span
-                                                text-decoration: underline
-                                            button
-                                                padding: 0 1rem 
-                                                background: none
-                                                border-radius: 5px
-                                                border: 1px solid gray
-                                                outline: none
-                                                transition: all .5s ease-in-out
-                                                &:hover
-                                                    background: $main-green
-                                                    i
-                                                        color: white
-                                                i
-                                                    color: gray
                                         &:first-of-type
                                             span
-                                                border: 1px solid $main-green
-                                                padding: 0 1rem
-                                            b
-                                                font-size: 12px
-                                            p
-                                                font-size: 12px
-                                                margin-bottom: 0
+                                                border: 1px solid white !important
+                                        &:last-of-type
+                                            button
+                                                background: $main-green
+                                                color: white
+                                                border: 1px solid white !important
+                                                i
+                                                    color: white !important
+                                                i
+                                                    color: gray
+                        img
+                            width: 586px
+                            max-height: 150px
+                            object-fit: cover
+                            margin-right: 1rem
+                            filter: grayscale(100%)
+                            transition: all .5s ease-in-out
+                        & > div
+                                div
+                                    &:last-of-type
+                                        display: flex
+                                        align-self: center
+                                        justify-content: space-between
+                                        span
+                                            text-decoration: underline
+                                        button
+                                            padding: 0 1rem 
+                                            background: none
+                                            border-radius: 5px
+                                            border: 1px solid gray
+                                            outline: none
+                                            transition: all .5s ease-in-out
+                                            &:hover
+                                                background: $main-green
+                                                i
+                                                    color: white
+                                            i
+                                                color: gray
+                                    &:first-of-type
+                                        span
+                                            border: 1px solid $main-green
+                                            padding: 0 1rem
+                                        b
+                                            font-size: 12px
+                                        p
+                                            font-size: 12px
+                                            margin-bottom: 0
 
 .map-world
     padding: 6rem 0 6rem

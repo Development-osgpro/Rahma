@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <>
-            <div className="Footer">
+            <div className="Footer" style={{marginTop: '50rem'}}>
                 <div className='container'>
                 <div className="container col-10">
                     <div className='footer-children'>
