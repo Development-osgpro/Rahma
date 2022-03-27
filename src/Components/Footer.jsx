@@ -7,9 +7,8 @@ const Footer = () => {
 
     return (
         <>
-            <div className="Footer" style={{marginTop: '50rem'}}>
+            <div className="Footer">
                 <div className='container'>
-                <div className="container col-10">
                     <div className='footer-children'>
                         <div className='usful-links'>
                             <ul>
@@ -63,7 +62,6 @@ const Footer = () => {
                             </form>
                         </div>
                 </div>
-            </div>
             </div>
 
             <div className='copyright'>

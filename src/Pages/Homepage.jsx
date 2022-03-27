@@ -3,6 +3,9 @@ import React, { useState, useRef, useEffect } from 'react'
 // import navbar and footer
 import NavBar from '../Components/NavBar'
 import Footer from '../Components/Footer'
+import Zoom from 'react-img-zoom'
+import supportlogo from '../Assets/images/unnamed.jpg'
+
 
 // importing some testing images
 import hand from '../Assets/images/handimg.png'
@@ -73,46 +76,46 @@ const Homepage = () => {
     const [countyName, setCountyName] = useState('')
     console.log(showMapInfo)
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     const US = document.getElementById('US')
-    //     const JO = document.getElementById('JO')
-    //     const LB = document.getElementById('LB')
-    //     const PS = document.getElementById('PS')
-    //     const SY = document.getElementById('SY')
-    //     const TR = document.getElementById('TR')
-    //     const YE = document.getElementById('YE')
-    //     const ML = document.getElementById('ML')
-    //     const GH = document.getElementById('GH')
-    //     const CM = document.getElementById('CM')
-    //     const TD = document.getElementById('TD')
-    //     const SD = document.getElementById('SD')
-    //     const KE = document.getElementById('KE')
-    //     const SL = document.getElementById('SL')
+        const US = document.getElementById('US')
+        const JO = document.getElementById('JO')
+        const LB = document.getElementById('LB')
+        const PS = document.getElementById('PS')
+        const SY = document.getElementById('SY')
+        const TR = document.getElementById('TR')
+        const YE = document.getElementById('YE')
+        const ML = document.getElementById('ML')
+        const GH = document.getElementById('GH')
+        const CM = document.getElementById('CM')
+        const TD = document.getElementById('TD')
+        const SD = document.getElementById('SD')
+        const KE = document.getElementById('KE')
+        const SL = document.getElementById('SL')
 
-    //     var AllCOUNTRYS = [US, JO, LB, PS, SY, TR, YE, ML, GH, TD, CM, SD, KE, SL]
+        var AllCOUNTRYS = [US, JO, LB, PS, SY, TR, YE, ML, GH, TD, CM, SD, KE, SL]
 
-    //     AllCOUNTRYS.forEach(country => {
+        AllCOUNTRYS.forEach(country => {
 
-    //         country.addEventListener('click', () => {
-    //             AllCOUNTRYS.forEach(ele => {
-    //                 ele.classList.remove("active");
-    //             })
-    //             country.classList.add("active")
-    //         })
+            country.addEventListener('click', () => {
+                AllCOUNTRYS.forEach(ele => {
+                    ele.classList.remove("active");
+                })
+                country.classList.add("active")
+            })
 
-    //         country.onclick = () => {
-    //             console.log(country.getAttribute('data-name'))
-    //             setClicked(true)
-    //             console.log(clicked)
-    //             setTimeout(() => {
-    //                 setShowMapInfo(true)
-    //                 setClickedInfo(true)
-    //             }, 1000);
-    //             setCountyName(country.getAttribute('data-name'))
-    //         }
-    //     })
-    // }, [])
+            country.onclick = () => {
+                console.log(country.getAttribute('data-name'))
+                setClicked(true)
+                console.log(clicked)
+                setTimeout(() => {
+                    setShowMapInfo(true)
+                    setClickedInfo(true)
+                }, 1000);
+                setCountyName(country.getAttribute('data-name'))
+            }
+        })
+    }, [])
 
     useEffect(() => {
         setClickedInfo(false)
@@ -399,6 +402,24 @@ const Homepage = () => {
         setWindowY(window.scrollY)
     })
 
+    // campaigns
+    const [slideIndex, setSlideIndex] = useState(null)
+    const camp_h2 = useRef()
+    const camp_p_first = useRef()
+    const camp_p_second = useRef()
+    const camp_p_third = useRef()
+    const camp_p_country = useRef()
+    const camp_p_date = useRef()
+
+    const handleCampaignsSlideChanges = () => {
+        if(slideIndex === 0) {
+            camp_h2.current.textContent = camp_h2.current.getAttribute('data-h2-camp-one')
+        } else if (slideIndex === 1) {
+            camp_h2.current.textContent = camp_h2.current.getAttribute('data-h2-camp-tow')
+        }
+    }
+    handleCampaignsSlideChanges()
+
     return (
         <>
             <NavBar />
@@ -668,11 +689,10 @@ const Homepage = () => {
                             <Swiper
                                 slidesPerView={3}
                                 spaceBetween={30}
-                                // freeMode={true}
                                 pagination={{
-                                clickable: true,
+                                    clickable: true,
                                 }}
-                                modules={[ Pagination]}
+                                modules={[Pagination]}
                                 className="mySwiper"
                                 breakpoints={{
                                     // when window width is >= 640px
@@ -826,6 +846,7 @@ const Homepage = () => {
                                         keyboard={true}
                                         modules={[Pagination, Navigation]}
                                         className="mySwiper"
+                                        onSlideChange={(swiper) => setSlideIndex(swiper.realIndex)}
                                     >
                                         <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
                                         <SwiperSlide><img src={child} alt="child img" /></SwiperSlide>
@@ -834,22 +855,54 @@ const Homepage = () => {
                                 </div>
                                 <div className='context'>
                                     <img src={bulls} alt="small bulls img" />
-                                    <h2>WEALTH AND HEALTH</h2>
-                                    <p>MONTREAL, QC.</p>
-                                    <p>Donec varius sodales orci. Class aptent taciti
+                                    <h2
+                                        data-h2-camp-one='WEALTH AND HEALTH 111'
+                                        data-h2-camp-tow='WEALTH AND HEALTH 222'
+                                        ref={camp_h2}
+                                    >WEALTH AND HEALTH</h2>
+                                    <p
+                                        data-first-p-camp-one='MONTREAL, QC. 111'
+                                        data-first-p-camp-tow='MONTREAL, QC. 222'
+                                        ref={camp_p_first}
+                                    >MONTREAL, QC.</p>
+                                    <p
+                                        data-second-p-camp-one='WEALTH AND HEALTH 111'
+                                        data-second-p-camp-tow='WEALTH AND HEALTH 222'
+                                        ref={camp_p_second}
+                                    >Donec varius sodales orci. Class aptent taciti
                                     sociosqu torquent, per inceptos himenaeos.
                                     End of content. Aenean arcu viverra varius
                                     sodales sociosqu torquent, per inceptos
                                     himenaeos.</p>
-                                    <p>Aenean arcu viverra varius sodales sociosqu
+                                    <p
+                                        data-third-p-camp-one='Aenean arcu viverra varius sodales sociosqu
+                                                                torquent, per inceptos himenaeos.Donec
+                                                                varius sodales orci. Class aptent taciti
+                                                                sociosqu torquent, per inceptos himenaeos.
+                                                                End of content. 111'
+                                        data-third-p-camp-tow='Aenean arcu viverra varius sodales sociosqu
+                                                                torquent, per inceptos himenaeos.Donec
+                                                                varius sodales orci. Class aptent taciti
+                                                                sociosqu torquent, per inceptos himenaeos.
+                                                                End of content. 222'
+                                        ref={camp_p_third}
+                                    >Aenean arcu viverra varius sodales sociosqu
                                     torquent, per inceptos himenaeos.Donec
                                     varius sodales orci. Class aptent taciti
                                     sociosqu torquent, per inceptos himenaeos.
                                     End of content.</p>
                                     <div>
                                         <div>
-                                            <p><i class="fa-solid fa-location-dot"></i> JORDAN</p>
-                                            <p><i class="fa-solid fa-calendar-days"></i> 26 Oct at 3:32 pm</p>
+                                            <p
+                                                data-country-p-camp-one='JORDAN 111'
+                                                data-country-p-camp-tow='JORDAN 222'
+                                                ref={camp_p_country}
+                                            ><i class="fa-solid fa-location-dot"></i> JORDAN</p>
+                                            <p
+                                                data-date-p-camp-one='26 Oct at 3:32 pm 111'
+                                                data-date-p-camp-tow='26 Oct at 3:32 pm 222'
+                                                ref={camp_p_date}
+                                            ><i class="fa-solid fa-calendar-days"></i> 26 Oct at 3:32 pm</p>
                                         </div>
                                         <button>Learn More</button>
                                     </div>
@@ -858,7 +911,7 @@ const Homepage = () => {
                         </div>
                     </div>
 
-                    {/* <div className="our-latest-news">
+                    <div className="our-latest-news">
                         <div className="container">
                             <div>
                                 <h1 className='h1-styles'>OUR LATEST <span>NEWS</span></h1>
@@ -966,9 +1019,9 @@ const Homepage = () => {
                                 </div>
                             </section>
                         </div>
-                    </div> */}
+                    </div>
 
-                    {/* <div className="map-world"  style={{position: 'relative'}}>
+                    <div className="map-world"  style={{position: 'relative'}}>
                         <div className="container">
                             <div>
                                 <h3>WORLD MAP SHOWS SOME OF OUR CURRENT</h3>
@@ -1062,7 +1115,6 @@ const Homepage = () => {
                                         <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
                                     </div>
                                 </motion.div>
-s
                                 <motion.div
                                 variants={mapContextAnimation4}
                                 initial={'hidden'}
@@ -1090,7 +1142,48 @@ s
                             </div> : ''}
                             </section>
                         </div>
-                    </div> */}
+                    </div>
+
+                    <div className="supported-by">
+                        <div className="container">
+                            <p><i class="fa-solid fa-chevron-right"></i></p>
+                            <div className='first-support'>
+                                <img src={support3} alt="" />
+                                <div>
+                                    <h4>GOLD SEAL OF TRANSPARENCY AWARD</h4>
+                                    <p>
+                                        THE 2019 GUIDESTAR GOLD SEAL OF TRANSPARENCY
+                                        GIVEN TO RAHMA. WE HOLD THE TRUST OF OUR DONORS
+                                        IN HIGH REGARD. THIS SEAL DEMONSTRATES OUR
+                                        COMMITMENT TO PROVIDING THE MOST UP-TO-DATE
+                                        INFORMATION ABOUT THE WORK WE DO.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className='secound-support'>
+                                <img src={support4} alt="" />
+                                <div>
+                                    <h4>STATE OF MICHIGAN’S CHARITABLE SOLICITATION</h4>
+                                    <p>
+                                    RAHMA WORLDWIDE FOR AID & DEVELOPMENT IS
+                                    PROUD
+                                    TO RECEIVE THE OFFICIAL CHARITABLE SOLICITATION
+                                    REGISTRATION FROM THE STATE OF MICHIGAN’S
+                                    DEPARTMENT OF THE ATTORNEY GENERAL.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className='third-support'>
+                                <img src={supportlogo} alt="" />
+                                <div>
+                                    <h4>CHARITY NAVIGATOR</h4>
+                                    <p>Your Guide To Intllingent Giving</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             <Footer />
         </>
