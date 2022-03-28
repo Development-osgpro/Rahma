@@ -121,3 +121,30 @@ body {
 .css-4reedn-MuiSpeedDial-root {
   bottom: 29px !important;
 }
+
+.our-latest .swiper-button-next::before {
+  content: "" !important;
+  background: url(./Assets/images/latestnewsarrows-02.png);
+  width: 40px;
+  height: 20px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 0.2rem;
+}
+
+.our-latest .swiper-button-disabled {
+  background-color: #f3f0ea  !important;
+  box-shadow: none !important;
+}
+
+.our-latest .swiper-button-prev::before {
+  content: "" !important;
+  margin-top: 0.2rem;
+  background: url(./Assets/images/latestnewsarrows-01.png);
+  width: 40px;
+  height: 20px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

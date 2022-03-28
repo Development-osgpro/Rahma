@@ -618,50 +618,50 @@ body {
   height: 65vh;
   background-color: #e3e3e3;
 }
-.homepage .hero-section .animation-screen .container {
+.homepage .hero-section .animation-screen .container-fluid {
   height: 100% !important;
   height: 100% !important;
   display: flex;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .homepage .hero-section .animation-screen .container {
+  .homepage .hero-section .animation-screen .container-fluid {
     width: 100% !important;
   }
 }
 @media (max-width: 550px) {
-  .homepage .hero-section .animation-screen .container {
+  .homepage .hero-section .animation-screen .container-fluid {
     align-items: flex-start;
   }
 }
-.homepage .hero-section .animation-screen .container .donate-now h4 {
+.homepage .hero-section .animation-screen .container-fluid .donate-now h4 {
   width: 52%;
   font-weight: 600;
   color: #2b3990;
   font-size: 30px;
 }
 @media (max-width: 1400px) {
-  .homepage .hero-section .animation-screen .container .donate-now h4 {
+  .homepage .hero-section .animation-screen .container-fluid .donate-now h4 {
     width: 350px !important;
   }
 }
 @media (max-width: 1340px) {
-  .homepage .hero-section .animation-screen .container .donate-now h4 {
+  .homepage .hero-section .animation-screen .container-fluid .donate-now h4 {
     width: 300px !important;
   }
 }
 @media (max-width: 550px) {
-  .homepage .hero-section .animation-screen .container .donate-now h4 {
+  .homepage .hero-section .animation-screen .container-fluid .donate-now h4 {
     font-size: 25px;
   }
 }
 @media (max-width: 460px) {
-  .homepage .hero-section .animation-screen .container .donate-now h4 {
+  .homepage .hero-section .animation-screen .container-fluid .donate-now h4 {
     width: 100% !important;
     font-size: 20px;
   }
 }
-.homepage .hero-section .animation-screen .container .donate-now button {
+.homepage .hero-section .animation-screen .container-fluid .donate-now button {
   margin: 3rem 0;
   width: 220px;
   height: 70px;
@@ -675,29 +675,29 @@ body {
   font-size: 20px;
   transition: background 0.3s ease-out;
 }
-.homepage .hero-section .animation-screen .container .donate-now button:hover {
+.homepage .hero-section .animation-screen .container-fluid .donate-now button:hover {
   background-position-y: 70px;
 }
 @media (max-width: 550px) {
-  .homepage .hero-section .animation-screen .container .donate-now button {
+  .homepage .hero-section .animation-screen .container-fluid .donate-now button {
     width: 159px;
     height: 42px;
   }
 }
 @media (max-width: 460px) {
-  .homepage .hero-section .animation-screen .container .donate-now button {
+  .homepage .hero-section .animation-screen .container-fluid .donate-now button {
     margin: 1rem 0;
   }
 }
-.homepage .hero-section .animation-screen .container .donate-now div {
+.homepage .hero-section .animation-screen .container-fluid .donate-now div {
   display: flex;
 }
 @media (max-width: 460px) {
-  .homepage .hero-section .animation-screen .container .donate-now div {
+  .homepage .hero-section .animation-screen .container-fluid .donate-now div {
     display: none !important;
   }
 }
-.homepage .hero-section .animation-screen .container .donate-now div a {
+.homepage .hero-section .animation-screen .container-fluid .donate-now div a {
   background-color: white;
   margin: 1rem 0.5rem;
   text-align: center;
@@ -709,26 +709,26 @@ body {
   box-shadow: 5px 5px 5px gray;
   transition: all 0.2s ease-in-out;
 }
-.homepage .hero-section .animation-screen .container .donate-now div a i {
+.homepage .hero-section .animation-screen .container-fluid .donate-now div a i {
   color: #707070;
   font-weight: 600;
 }
-.homepage .hero-section .animation-screen .container .donate-now div a:hover {
+.homepage .hero-section .animation-screen .container-fluid .donate-now div a:hover {
   margin: 0.5rem;
 }
-.homepage .hero-section .animation-screen .container .donate-now div a:hover:first-of-type:hover i {
+.homepage .hero-section .animation-screen .container-fluid .donate-now div a:hover:first-of-type:hover i {
   color: #3b5998;
 }
-.homepage .hero-section .animation-screen .container .donate-now div a:hover:nth-of-type(2):hover i {
+.homepage .hero-section .animation-screen .container-fluid .donate-now div a:hover:nth-of-type(2):hover i {
   color: #bc2a8d;
 }
-.homepage .hero-section .animation-screen .container .donate-now div a:hover:nth-of-type(3):hover i {
+.homepage .hero-section .animation-screen .container-fluid .donate-now div a:hover:nth-of-type(3):hover i {
   color: #1DA1F2;
 }
-.homepage .hero-section .animation-screen .container .donate-now div a:hover:last-of-type:hover i {
+.homepage .hero-section .animation-screen .container-fluid .donate-now div a:hover:last-of-type:hover i {
   color: #FF0000;
 }
-.homepage .hero-section .animation-screen .container .donate-now div a:hover i {
+.homepage .hero-section .animation-screen .container-fluid .donate-now div a:hover i {
   transition: all 0.2s ease-in-out;
   color: #2b7634;
 }
@@ -860,6 +860,16 @@ body {
 }
 .animation-remotecontrol .container:scrollbar {
   display: none !important;
+}
+@media screen and (max-width: 1400px) {
+  .animation-remotecontrol .container .swiper .swiper-wrapper {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .animation-remotecontrol .container .swiper .swiper-wrapper {
+    justify-content: flex-start;
+  }
 }
 .animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide {
   background-color: transparent !important;
@@ -1878,7 +1888,6 @@ body {
   left: 32.5%;
   z-index: 10;
   bottom: -60px;
-  box-shadow: 2px 2px 7px gray;
   cursor: pointer;
 }
 @media screen and (max-width: 1199px) {
@@ -1909,7 +1918,6 @@ body {
   right: 32.5%;
   bottom: -60px;
   z-index: 10;
-  box-shadow: 2px 2px 7px gray;
   cursor: pointer;
 }
 @media screen and (max-width: 1199px) {
@@ -2277,6 +2285,7 @@ body {
   stroke: gray !important;
   fill: white !important;
   stroke-width: 0.7 !important;
+  border-radius: 30px;
 }
 @media screen and (max-width: 600px) {
   .map-world .container .map .the-map .MapContainer svg {
@@ -2285,15 +2294,23 @@ body {
     transform: translateX(50px) scale(2.5) translateY(-30px);
   }
 }
+.map-world .container .map .the-map .MapContainer svg g {
+  transform: scale(3) translate(-329px, -291px);
+  stroke-width: 0.2;
+}
 .map-world .container .map .the-map .MapContainer svg g #US {
   fill: #2b7634;
   cursor: pointer;
+  transform: translate(293px, 229px) scale(0.5);
 }
 .map-world .container .map .the-map .MapContainer svg g #US:hover {
   fill: #2b3990;
 }
 .map-world .container .map .the-map .MapContainer svg g #US.active {
   fill: #2b3990;
+}
+.map-world .container .map .the-map .MapContainer svg g #CA {
+  stroke-width: 0.5;
 }
 .map-world .container .map .the-map .MapContainer svg g #JO {
   fill: #2b7634;

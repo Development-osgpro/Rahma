@@ -11,7 +11,7 @@
             padding: 2rem 0
             height: 65vh
             background-color: #e3e3e3
-            .container
+            .container-fluid
                 height: 100% !important
                 height: 100% !important
                 display: flex
@@ -177,6 +177,10 @@
             display: none !important
         .swiper
             .swiper-wrapper
+                @media screen and ( max-width: 1400px )
+                    justify-content: center
+                @media screen and ( max-width: 1199px )
+                    justify-content: flex-start
                 .swiper-slide 
                     background-color: transparent !important
                     width: auto !important
@@ -895,7 +899,6 @@
                         left: 32.5%
                         z-index: 10
                         bottom: -60px
-                        box-shadow: 2px 2px 7px gray
                         cursor: pointer
                         @media screen and ( max-width: 1199px )
                             left: 33% !important
@@ -918,7 +921,6 @@
                         right: 32.5%
                         bottom: -60px
                         z-index: 10
-                        box-shadow: 2px 2px 7px gray
                         cursor: pointer
                         @media screen and ( max-width: 1199px )
                             right: 32.5% !important
@@ -1173,18 +1175,24 @@
                         stroke: gray !important
                         fill: white !important
                         stroke-width: 0.7 !important
+                        border-radius: 30px
                         @media screen and ( max-width: 600px )
                             height: 200px !important
                             width: 100% !important
                             transform: translateX(50px) scale(2.5) translateY(-30px)
                         g
+                            transform: scale(3) translate(-329px, -291px)
+                            stroke-width: 0.2
                             #US
                                 fill: $main-green
                                 &:hover
                                     fill: $main-blue
-                                &.active
+                                &.active 
                                     fill: $main-blue
                                 cursor: pointer
+                                transform: translate(293px, 229px) scale(0.5)
+                            #CA
+                                stroke-width: 0.5
                             #JO
                                 fill: $main-green
                                 &:hover
