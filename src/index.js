@@ -6,10 +6,12 @@ import "./Assets/styles/sass/layout/modal-video.css"
 import "./Assets/styles/sass/layout/swiper.css"
 import './Assets/styles/main.css'
 
+import { Provider } from 'react-redux'
+import store from './store'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
