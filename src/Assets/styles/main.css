@@ -2731,4 +2731,175 @@ body {
   .supported-by .container .third-support p {
     width: 100%;
   }
+}
+
+.Chart {
+  padding: 1rem 0;
+}
+.Chart .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 991px) {
+  .Chart .container {
+    flex-direction: column !important;
+  }
+}
+.Chart .container .firstsection {
+  display: flex;
+  background-color: white;
+}
+@media screen and (max-width: 991px) {
+  .Chart .container .firstsection {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 497px) {
+  .Chart .container .firstsection {
+    flex-direction: column !important;
+  }
+}
+.Chart .container .firstsection > div {
+  background-color: white;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 300px !important;
+  font-weight: 600;
+  margin: 0 0.5rem;
+}
+@media screen and (max-width: 1199px) {
+  .Chart .container .firstsection > div {
+    min-width: 217px !important;
+  }
+}
+.Chart .container .firstsection > div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Chart .container .firstsection > div div svg {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0.5rem;
+}
+.Chart .container .firstsection > div .text {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+.Chart .container .chartcontainer {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 991px) {
+  .Chart .container .chartcontainer {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 497px) {
+  .Chart .container .chartcontainer {
+    flex-direction: column !important;
+  }
+}
+.Chart .container .chartcontainer .chartitself {
+  width: 250px;
+  height: 250px;
+}
+.Chart .container .chartcontainer .chartitself h4 {
+  text-align: center;
+  font-weight: 700 !important;
+  margin-top: 1rem;
+  color: #414141;
+}
+.Chart .container .chartcontainer .chartitself svg {
+  margin-top: -1rem;
+}
+.Chart .container .chartcontainer .chartitself svg g {
+  transform: translate(0, -43px) scale(1.2) !important;
+}
+.Chart .container .chartcontainer .chartitself svg g path:first-of-type {
+  fill: black !important;
+}
+.Chart .container .chartcontainer .chartitself svg g path:nth-of-type(2) {
+  fill: gray !important;
+}
+.Chart .container .chartcontainer .chartitself svg g path:last-of-type {
+  fill: #2b3990 !important;
+}
+.Chart .container .chartcontainer .chartitself svg g tspan {
+  display: none !important;
+}
+.Chart .container .chartinfo {
+  margin-left: 2.5rem;
+}
+@media screen and (max-width: 1399px) {
+  .Chart .container .chartinfo {
+    margin-left: 0.5rem !important;
+  }
+}
+.Chart .container .chartinfo div {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.Chart .container .chartinfo .ProgramServices figure {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #2b3990;
+  margin-bottom: 0 !important;
+}
+.Chart .container .chartinfo .ProgramServices b {
+  margin: 0 0.5rem;
+}
+.Chart .container .chartinfo .ProgramServices p {
+  margin-bottom: 0 !important;
+  font-weight: 600;
+}
+.Chart .container .chartinfo .MangmentGeneral figure {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: black;
+  margin-bottom: 0 !important;
+}
+.Chart .container .chartinfo .MangmentGeneral b {
+  margin: 0 0.5rem;
+}
+.Chart .container .chartinfo .MangmentGeneral p {
+  margin-bottom: 0 !important;
+  font-weight: 600;
+}
+.Chart .container .chartinfo .Fundraising figure {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-bottom: 0 !important;
+}
+.Chart .container .chartinfo .Fundraising b {
+  margin: 0 0.5rem;
+}
+.Chart .container .chartinfo .Fundraising p {
+  margin-bottom: 0 !important;
+  font-weight: 600;
+}
+.Chart .container .chartinfo button {
+  background-color: #2b3990;
+  color: white !important;
+  width: 80%;
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  border-radius: 30px;
+}
+.Chart .container .chartinfo button svg {
+  min-width: 30px !important;
+  min-height: 30px !important;
+  max-width: 30px !important;
+  max-height: 30px !important;
 }/*# sourceMappingURL=main.css.map */

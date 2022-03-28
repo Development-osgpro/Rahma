@@ -67,6 +67,7 @@ import DonateBtnAndsocialMedia from '../Components/DonateBtnAndsocialMedia'
 import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils'
 
 import SwiperCore, { Autoplay } from 'swiper'
+import ChartComponent from '../Components/ChartComponent'
 
 const Homepage = () => {
 
@@ -1281,6 +1282,7 @@ const Homepage = () => {
                         </div>
                     </div>
                 </div>
+            <ChartComponent />
             <Footer />
         </>
     )
