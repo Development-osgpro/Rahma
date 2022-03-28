@@ -8,6 +8,10 @@ import Zoom from 'react-img-zoom'
 import supportlogo from '../Assets/images/unnamed.jpg'
 
 
+
+import videomp4 from "../Assets/videos/insta.mp4"
+import thumbnail from "../Assets/videos/videothumb.png"
+
 // importing some testing images
 import hand from '../Assets/images/handimg.png'
 import mainHeroimg from '../Assets/images/hero-main-img.png'
@@ -422,6 +426,12 @@ const Homepage = () => {
     }
     handleCampaignsSlideChanges()
 
+    const [smType, setSmType] = useState("id-fb");
+
+    const handleNewsChange = (id) => {
+        setSmType(id)
+    }
+
     return (
         <>
             <NavBar />
@@ -757,8 +767,10 @@ const Homepage = () => {
                                 </div>
                                 <div className='success-stories-video'>
                                     <div>
-                                        <video controls >
-                                            <source src="https://www.youtube.com/watch?v=X9uLXfjpzho" type="video/mp4"/>
+                                        <video controlslist="nodownload" controls poster={thumbnail} >
+                                            <source src={videomp4} />
+                                            {/* <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" /> */}
+                                            Your browser does not support the video element.
                                         </video>
                                     </div>
                                 </div>
@@ -1053,65 +1065,242 @@ const Homepage = () => {
                                 <div className='social-media-filter'>
                                 <div className='social-media'>
                                     <div className='social-icons'>
-                                        <div><i className="fa-brands fa-facebook-f"></i></div>
-                                        <div><i className="fa-brands fa-twitter"></i></div>
-                                        <div><i className="fa-brands fa-instagram"></i></div>
-                                        <div><i className="fa-brands fa-youtube"></i></div>
+                                        <div onClick={() => handleNewsChange("id-fb")}><i style={{ color: smType === "id-fb" && "#3b5998" }} className="fa-brands fa-facebook-f"></i></div>
+                                        <div onClick={() => handleNewsChange("id-tw")}><i style={{ color: smType === "id-tw" && "#1DA1F2" }} className="fa-brands fa-twitter"></i></div>
+                                        <div onClick={() => handleNewsChange("id-ins")}><i style={{ color: smType === "id-ins" && "#bc2a8d" }} className="fa-brands fa-instagram"></i></div>
+                                        <div onClick={() => handleNewsChange("id-yt")}><i style={{ color: smType === "id-yt" && "#FF0000" }} className="fa-brands fa-youtube"></i></div>
                                     </div>
-                                        <div className='social-box'>
-                                            <img src={child} alt="img"/>
-                                            <div>
-                                                <div>
-                                                    <span>SYRIA</span>
-                                                    <br />
-                                                    <b>Agricultural Nursery Project Continues in Syria</b>
-                                                    <p>Rahma Worldwide collaborated with the Department of Foreign 
-                                                    Societies at the Jordanian Ministry of Social Development, 
-                                                    held a workshop entitled “Skills of Evaluating Foreign Funding” 
-                                                    which revolved</p>
+                                    {smType === "id-fb" ? (
+                                            <>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved</p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <span>26 Oct at 3:32 pm</span>
-                                                    <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved </p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div className='social-box'>
-                                            <img src={child} alt="img"/>
-                                            <div>
-                                                <div>
-                                                    <span>SYRIA</span>
-                                                    <br />
-                                                    <b>Agricultural Nursery Project Continues in Syria</b>
-                                                    <p>Rahma Worldwide collaborated with the Department of Foreign 
-                                                    Societies at the Jordanian Ministry of Social Development, 
-                                                    held a workshop entitled “Skills of Evaluating Foreign Funding” 
-                                                    which revolved </p>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved </p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <span>26 Oct at 3:32 pm</span>
-                                                    <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                            </>
+                                        ) : smType === "id-tw" ? (
+                                            <>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>TWITTER SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved</p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div className='social-box'>
-                                            <img src={child} alt="img"/>
-                                            <div>
-                                                <div>
-                                                    <span>SYRIA</span>
-                                                    <br />
-                                                    <b>Agricultural Nursery Project Continues in Syria</b>
-                                                    <p>Rahma Worldwide collaborated with the Department of Foreign 
-                                                    Societies at the Jordanian Ministry of Social Development, 
-                                                    held a workshop entitled “Skills of Evaluating Foreign Funding” 
-                                                    which revolved </p>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved </p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <span>26 Oct at 3:32 pm</span>
-                                                    <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved </p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            </>
+                                        ) : smType === "id-ins" ? (
+                                            <>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>INSTA SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved</p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved </p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved </p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        ) : smType === "id-yt" ? (
+                                            <>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>YT SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved</p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved </p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='social-box'>
+                                                    <img src={child} alt="img" />
+                                                    <div>
+                                                        <div>
+                                                            <span>SYRIA</span>
+                                                            <br />
+                                                            <b>Agricultural Nursery Project Continues in Syria</b>
+                                                            <p>Rahma Worldwide collaborated with the Department of Foreign
+                                                                Societies at the Jordanian Ministry of Social Development,
+                                                                held a workshop entitled “Skills of Evaluating Foreign Funding”
+                                                                which revolved </p>
+                                                        </div>
+                                                        <div>
+                                                            <span>26 Oct at 3:32 pm</span>
+                                                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        ) : (
+                                            <></>
+                                        )}
                                     </div>
                                 </div>
                             </section>
