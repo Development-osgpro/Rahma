@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import SLider from "react-slick"
 
 // import navbar and footer
 import NavBar from '../Components/NavBar'
@@ -525,6 +526,7 @@ const Homepage = () => {
                                 freeMode={false}
                                 modules={[FreeMode]}
                                 className="mySwiper"
+                                simulateTouch={false}
                             >
                                 <SwiperSlide>
                                     <div className={iconId === 1 ? "boxbeforestyle environment active" : "environment box-style"} onClick={() => (handleIconClick(1),  setHandleAnimate(false))} id='donate-option'>
@@ -618,6 +620,100 @@ const Homepage = () => {
                                     </div>
                                 </SwiperSlide>
                             </Swiper>
+
+                            {/* <SLider {...settings}>
+                                <div>
+                                    <div className={iconId === 1 ? "boxbeforestyle environment active" : "environment box-style"} onClick={() => (handleIconClick(1),  setHandleAnimate(false))} id='donate-option'>
+                                        <div>
+                                            <div className='circle'></div>
+                                            <HeroSvgicon2 />
+                                        </div>
+                                        <p>Environment</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className={iconId === 2 ? "boxbeforestyle protection active" : "protection box-style"} onClick={() => (handleIconClick(2),  setHandleAnimate(false))} id='donate-option'>
+                                        <div>
+                                            <div className='circle'></div>
+                                            <HeroSvgicon3 />
+                                        </div>
+                                        <p>Protection</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className={iconId === 3 ? "boxbeforestyle shelter active" : "shelter box-style"} onClick={() => handleIconClick(3)} id='donate-option'>
+                                        <div>
+                                            <div className='circle'></div>
+                                            <HeroSvgicon4 />
+                                        </div>
+                                        <p>Shelter</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className={iconId === 4 ? "boxbeforestyle nutrition active" : "nutrition box-style"} onClick={() => handleIconClick(4)} id='donate-option'>
+                                        <div>
+                                            <div className='circle'></div>
+                                            <HeroSvgicon5 />
+                                        </div>
+                                        <p>Nutrition</p>
+                                    </div>
+                                </div>  
+                                <div>
+                                    <div className={iconId === 5 ? "boxbeforestyle orphan-sponsorship active" : "orphan-sponsorship box-style"} onClick={() => handleIconClick(5)} id='donate-option'>
+                                        <div>
+                                            <div className='circle'></div>
+                                            <HeroSvgicon6 />
+                                        </div>
+                                        <p>Orphan 
+                                        sponsorship</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className={iconId === 6 ? "boxbeforestyle food active" : "food box-style"} onClick={() => handleIconClick(6)} id='donate-option'>
+                                        <div>
+                                            <div className='circle'></div>
+                                            <HeroSvgicon7 />
+                                        </div>
+                                        <p>Food</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className={iconId === 7 ? "boxbeforestyle health active" : "health box-style"} onClick={() => handleIconClick(7)} id='donate-option'>
+                                        <div>
+                                            <div className='circle'></div>
+                                            <HeroSvgicon8 />
+                                        </div>
+                                        <p>Health</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className={iconId === 8 ? "boxbeforestyle education active" : "education box-style"} onClick={() => handleIconClick(8)} id='donate-option'>
+                                        <div>
+                                            <div className='circle'></div>
+                                            <HeroSvgicon9 />
+                                        </div>
+                                        <p>Education</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className={iconId === 9 ? "boxbeforestyle w-a-s-h active" : "w-a-s-h box-style"} onClick={() => handleIconClick(9)} id='donate-option'>
+                                        <div>
+                                            <div className='circle'></div>
+                                            <HeroSvgicon10 />
+                                        </div>
+                                        <p>W.A.S.H</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className={iconId === 10 ? "boxbeforestyle non-food-items active" : "non-food-items box-style"} onClick={() => handleIconClick(10)} id='donate-option'>
+                                        <div>
+                                            <div className='circle'></div>
+                                            <HeroSvgicon11 />
+                                        </div>
+                                        <p>Non-Food Items</p>
+                                    </div>
+                                </div>
+                            </SLider> */}
                         </div>
                     </div>
 
