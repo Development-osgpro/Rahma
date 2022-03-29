@@ -1,5 +1,6 @@
 import Homepage from "./Pages/Homepage";
 import OurWork from './Pages/OurWork'
+import ProgramsPage from "./Pages/ProgramsPage";
 
 import {
   HashRouter as Router,
@@ -12,6 +13,7 @@ function App() {
       <Router>
         <Route exact path="/homepage" component={Homepage} />
         <Route path="/our_work" component={OurWork} />
+        <Route exact path="/programs" component={ProgramsPage} />
       </Router>
     </div>
   );

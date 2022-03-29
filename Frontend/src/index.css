@@ -150,3 +150,103 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+
+.Accordion-body .row p {
+  text-align: left !important;
+}
+
+.accordion-button {
+  border-color: #f3911e !important;
+  color: #f3911e !important;
+}
+
+.accordion-button.collapsed::after {
+  background-image: url('./Assets/svgs/plus.png') !important;
+}
+
+.accordion-button.collapsed::after svg path {
+color: rebeccapurple;
+}
+
+.accordion-button::after {
+background-image: url('./Assets/svgs/minus.png') !important;
+}
+
+.accordion-button::after svg path {
+color: red;
+}
+
+.accordion-button {
+  /* border: 3px solid #f4911d !important; */
+  /* border-bottom: 8px solid #f4911d !important; */
+  box-shadow: none;
+  /* border-radius: 10px; */
+}
+
+.accordion-button:focus {
+box-shadow: none !important;
+/* border-radius: 15px; */
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: white !important;
+}
+
+.accordion-button:not(.collapsed) h4 {
+box-shadow: none !important;
+/* border-radius: 15px; */
+color: white;
+font-weight: 300 !important;
+}
+
+.arAccordion .accordion-button {
+flex-direction: row-reverse;
+justify-content: space-between;
+border-radius: 15px;
+}
+
+.arAccordion .accordion-button::after {
+/* border-radius: 15px; */
+margin-left: 0;
+}
+
+
+.accordion-button:focus {
+background-color: #ffffff !important;
+/* border-radius: 10px; */
+border-bottom: 1px solid black !important;
+}
+
+.accordion-button {
+  /* background-color: #f9cb8f !important; */
+  border-radius: 10px !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: scale(1.5) rotate(180deg);
+}
+
+.accordion-button:not(.collapsed) > * {
+  color: black !important;
+}
+
+.accordion-button.collapsed {
+  border: none !important;
+}
+
+.accordion-button.collapsed::after {
+  transform: scale(1.5);
+}
+
+.accordion-button.collapsed {
+  background-color: white !important;
+}
+
+.accordion-collapse.collapse.show {
+  width: 100% !important;
+}
+
+.accordion-collapse.collapse, .accordion-collapse.collapsing {
+  width: 100% !important;
+}

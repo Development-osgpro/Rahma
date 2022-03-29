@@ -102,7 +102,7 @@ const Homepage = () => {
     // }, [])
 
     const mapFunction = () => {
-        const US = document.getElementById('US')
+            const US = document.getElementById('US')
             const JO = document.getElementById('JO')
             const LB = document.getElementById('LB')
             const PS = document.getElementById('PS')
@@ -454,6 +454,7 @@ const Homepage = () => {
 
     // ourlatestnews
     const [slideIndexNews, setSlideIndexNews] = useState(null)
+    console.log(slideIndexNews)
     const news_h6 = useRef()
     const news_span_date = useRef()
     const news_span_country = useRef()
@@ -461,10 +462,22 @@ const Homepage = () => {
     const handleNewsSlideChanges = () => {
         if(slideIndexNews === 0) {
             news_h6.current.textContent = news_h6.current.getAttribute('data-h6-news-one')
+            news_span_date.current.textContent = news_span_date.current.getAttribute('data-span-news-date-one')
+            news_span_country.current.textContent = news_span_country.current.getAttribute('data-span-news-country-one')
+            news_p_title.current.textContent = news_p_title.current.getAttribute('data-p-news-title-one')
         } else if (slideIndexNews === 1) {
             news_h6.current.textContent = news_h6.current.getAttribute('data-h6-news-tow')
+            news_span_date.current.textContent = news_span_date.current.getAttribute('data-span-news-date-tow')
+            news_span_country.current.textContent = news_span_country.current.getAttribute('data-span-news-country-tow')
+            news_p_title.current.textContent = news_p_title.current.getAttribute('data-p-news-title-tow')
+        } else if (slideIndexNews === 2) {
+            news_h6.current.textContent = news_h6.current.getAttribute('data-h6-news-three')
+            news_span_date.current.textContent = news_span_date.current.getAttribute('data-span-news-date-three')
+            news_span_country.current.textContent = news_span_country.current.getAttribute('data-span-news-country-three')
+            news_p_title.current.textContent = news_p_title.current.getAttribute('data-p-news-title-three')
         }
     }
+    handleNewsSlideChanges()
 
     const [smType, setSmType] = useState("id-fb");
 
@@ -870,50 +883,58 @@ const Homepage = () => {
                             <section className='our-latest'>
                                 <div className='context'>
                                     <h6
-                                    data-h6-news-one='“SKILLS OF EVALUATING FOREIGN FUNDING” COURSES HELD IN JORDAN 111'
-                                    data-h6-news-tow='“SKILLS OF EVALUATING FOREIGN FUNDING” COURSES HELD IN JORDAN 222'
-                                    // ref={news_h6}
+                                    // data-h6-news-one='“SKILLS OF EVALUATING FOREIGN FUNDING” COURSES HELD IN JORDAN 111'
+                                    // data-h6-news-tow='“SKILLS OF EVALUATING FOREIGN FUNDING” COURSES HELD IN JORDAN 222'
+                                    data-h6-news-one={data['news'][0]?.title}
+                                    data-h6-news-tow={data['news'][1]?.title}
+                                    data-h6-news-three={data['news'][2]?.title}
+                                    ref={news_h6}
                                     >“SKILLS OF EVALUATING FOREIGN
                                     FUNDING” COURSES HELD IN
                                     JORDAN</h6>
                                     <span
-                                    data-span-news-date-one='- 26 Oct at 3:32 pm 111'
-                                    data-span-news-date-tow='- 26 Oct at 3:32 pm 222'
-                                    // ref={news_span_date}
+                                    data-span-news-date-one={data['news'][0]?.created_at}
+                                    data-span-news-date-tow={data['news'][1]?.created_at}
+                                    data-span-news-date-three={data['news'][2]?.created_at}
+                                    ref={news_span_date}
                                     >
                                     <span
-                                    data-span-news-country-one='- 26 Oct at 3:32 pm 111'
-                                    data-span-news-country-tow='- 26 Oct at 3:32 pm 222'
-                                    // ref={news_span_country}
+                                    data-span-news-country-one={data['news'][0]?.region.country}
+                                    data-span-news-country-tow={data['news'][1]?.region.country}
+                                    data-span-news-country-three={data['news'][2]?.region.country}
+                                    ref={news_span_country}
                                     >JORDAN</span> - 26 Oct at 3:32 pm</span>
                                     <p
-                                    data-p-news-title-one='Rahma Worldwide collaborated with
-                                    the Department of Foreign Societies
-                                    at the Jordanian 
-                                    Ministry of Social Development, held
-                                    a workshop entitled “Skills of
-                                    Evaluating Foreign Funding”
-                                    which revolved around the
-                                    legislation and governing foreign 
-                                    funding and the mechanism 
-                                    of its application for organizations
-                                    operating in Jordan. Rahma
-                                    Worldwide’s Representative
-                                    in Jordan… 111'
-                                    data-p-news-title-tow='Rahma Worldwide collaborated with
-                                    the Department of Foreign Societies
-                                    at the Jordanian 
-                                    Ministry of Social Development, held
-                                    a workshop entitled “Skills of
-                                    Evaluating Foreign Funding”
-                                    which revolved around the
-                                    legislation and governing foreign 
-                                    funding and the mechanism 
-                                    of its application for organizations
-                                    operating in Jordan. Rahma
-                                    Worldwide’s Representative
-                                    in Jordan… 222'
-                                    // ref={news_p_title}
+                                    // data-p-news-title-one='Rahma Worldwide collaborated with
+                                    // the Department of Foreign Societies
+                                    // at the Jordanian 
+                                    // Ministry of Social Development, held
+                                    // a workshop entitled “Skills of
+                                    // Evaluating Foreign Funding”
+                                    // which revolved around the
+                                    // legislation and governing foreign 
+                                    // funding and the mechanism 
+                                    // of its application for organizations
+                                    // operating in Jordan. Rahma
+                                    // Worldwide’s Representative
+                                    // in Jordan… 111'
+                                    // data-p-news-title-tow='Rahma Worldwide collaborated with
+                                    // the Department of Foreign Societies
+                                    // at the Jordanian 
+                                    // Ministry of Social Development, held
+                                    // a workshop entitled “Skills of
+                                    // Evaluating Foreign Funding”
+                                    // which revolved around the
+                                    // legislation and governing foreign 
+                                    // funding and the mechanism 
+                                    // of its application for organizations
+                                    // operating in Jordan. Rahma
+                                    // Worldwide’s Representative
+                                    // in Jordan… 222'
+                                    data-p-news-title-one={data['news'][0]?.content}
+                                    data-p-news-title-tow={data['news'][0]?.content}
+                                    data-p-news-title-three={data['news'][0]?.content}
+                                    ref={news_p_title}
                                     >Rahma Worldwide collaborated with
                                     the Department of Foreign Societies
                                     at the Jordanian 
