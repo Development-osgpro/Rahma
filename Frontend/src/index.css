@@ -465,3 +465,18 @@ border-bottom: 1px solid black !important;
 .rahma-nav .active {
   color: #2b3990 !important;
 }
+
+
+.donateBtnFix {
+  position: relative;
+}
+
+
+.donateBtnFix .MuiButton-root {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  height: 55px;
+  /* background-color: transparent !important; */
+  pointer-events: none !important;
+}

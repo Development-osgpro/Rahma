@@ -19,6 +19,8 @@ const DonateBtnAndsocialMedia = () => {
             href='https://www.youtube.com/c/RahmaWorldwide' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-youtube" style={{color: '#FF0000'}}></i></a>},
     ];
 
+
+
     return (
         <>
             <div className='donateBtnandsocialContainer'>
@@ -35,7 +37,8 @@ const DonateBtnAndsocialMedia = () => {
                         ))}
                     </SpeedDial>
                 </Box>
-                <Stack direction="row" spacing={2}>
+                <Stack direction="row" spacing={2} className='donateBtnFix'>
+                    <a href="#XEFPGLLC"></a>
                     <Button variant="contained">Donate <span> Now</span></Button>
                 </Stack>
             </div>

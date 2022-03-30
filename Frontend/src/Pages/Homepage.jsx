@@ -523,9 +523,11 @@ const Homepage = () => {
                                 >{data['heros'][0]?.title}</motion.h4>
                                     <motion.button
                                         variants={buttonHeroVariants}
+                                        className='donateBtnHomeHero'
                                         initial='hidden'
+                                        style={{width: '220px', height: '70px'}}
                                         animate='visible'
-                                    >DONATE NOW</motion.button>
+                                    ><a href="https://rahmaww.donorsupport.co/-/XGDAEUZV"> DONATE NOW</a></motion.button>
                                     <div> 
                                         <motion.a 
                                         variants={facebookHeroVariants}

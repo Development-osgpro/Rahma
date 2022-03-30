@@ -55,7 +55,7 @@ const NavBar = () => {
                         <Navbar bg="light" expand="lg">
                             <Navbar.Brand href="#"><NavLink to='/homepage'><img src={logo} alt="Rahma Logo" /></NavLink></Navbar.Brand>
                             <div className='donate-btn'>
-                                <button onMouseOver={() => handleTopColor()} onMouseLeave={() => handleTopColorBack()}>Donate</button>
+                                <a href='https://rahmaww.donorsupport.co/-/XGDAEUZV' onMouseOver={() => handleTopColor()} className='donateBtnLink' onMouseLeave={() => handleTopColorBack()}>Donate</a>
                                 <a href="https://www.mhanational.org/" target='_blank' rel='noopener noreferrer'><img src={MHAlogo} alt="MHA Logo" /></a>
                             </div>                            
                             <Navbar.Toggle aria-controls="navbarScroll"/>

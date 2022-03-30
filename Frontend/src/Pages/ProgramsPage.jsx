@@ -110,9 +110,30 @@ const ProgramsPage = ({ history }) => {
                         </div>
                     </section> */}
 
-                        <div className="orphans">
-                            
-                        </div>
+                        <section className="orphans">
+                            <img src={orphanBg} alt="" />
+                            <div className="container">
+                                <div className='orphan_sponsorship'>
+                                    <h1>ORPHAN SPONSORSHIP</h1>
+                                    <div>
+                                        <div>
+                                            <img src={orphanContent} alt="" />
+                                        </div>
+                                        <p>
+                                            LOREM IPSUM, DIZGI VE BASKI ENDÜSTRISINDE KULLANILAN
+                                            MIGIR METINLERDIR. LOREM IPSUM, ADI BILINMEYEN BIR
+                                            MATBAACININ BIR HURUFAT NUMUNE KITABI OLUŞTURMAK
+                                            ÜZERE BIR YAZI GALERISINI ALARAK KARIŞTIRDIĞI
+                                            1500'LERDEN BERI ENDÜSTRI STANDARDI SAHTE METINLER
+                                            OLARAK KULLANILMIŞTIR. BEŞYÜZ YIL BOYUNCA VARLIĞINI
+                                            SÜRDÜRMEKLE KALMAMIŞ, AYNI ZAMANDA PEK DEĞIŞMEDEN
+                                            ELEKTRONIK DIZGIYE DE SIÇRAMIŞTIR
+                                        </p>
+                                    </div>
+                                    <button>Orphan Sponsorship</button>
+                                </div>
+                            </div>
+                        </section>
 
                         <section className="programsPage-body">
                             <h1>MENTAL HEALTH & WELLNESS</h1>
