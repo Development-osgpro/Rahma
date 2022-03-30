@@ -26,6 +26,7 @@ import support4 from '../Assets/images/supportedBy-04.jpg'
 import pngTestIMage from '../Assets/images/orphan.png'
 
 import { FreeMode, Pagination, Navigation } from "swiper";
+
 // importing hero svgs
 import { ReactComponent as HeroSvgicon2 } from '../Assets/svgs/all-icons/icon-02.svg'
 import { ReactComponent as HeroSvgicon3 } from '../Assets/svgs/all-icons/newIcons-06.svg'

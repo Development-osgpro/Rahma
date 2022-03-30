@@ -81,7 +81,7 @@ const ProgramsPage = ({ history }) => {
                         </div>
                     </section>
 
-                    <section className="orphan-section">
+                    {/* <section className="orphan-section">
                         <div className="section-header">
                             <img src={orphanBg} />
                             <div className='container'>
@@ -108,6 +108,11 @@ const ProgramsPage = ({ history }) => {
                                 </div>
                             </div>
                         </div>
+                    </section> */}
+
+                        <div className="orphans">
+                            
+                        </div>
 
                         <section className="programsPage-body">
                             <h1>MENTAL HEALTH & WELLNESS</h1>
@@ -133,7 +138,7 @@ const ProgramsPage = ({ history }) => {
                                 <div className="row row3">
                                     <h1 className='h1-styles'>PROGRAMS <span>OFFERED</span></h1>
 
-                                    <Accordion className="Accordion" style={{ borderRadius: '10px' }}>
+                                    <Accordion className="Accordion" style={{ borderRadius: '10px', marginBottom: '5rem'}}>
                                         <Accordion.Item eventKey='prgjerpgerpgoj' style={{ borderRadius: '10px', width: "100%" }}>
                                             <Accordion.Header style={{ fontSize: "28px", borderRadius: '10px', width: "100%" }}><h4 style={{ color: "gray", letterSpacing: "0", textAlign: 'right', fontWeight: '300' }}>Covid-19 Effort</h4></Accordion.Header>
                                             <Accordion.Body style={{ borderRadius: '10px', width: "100%" }}>
@@ -146,7 +151,6 @@ const ProgramsPage = ({ history }) => {
                                 </div>
                             </div>
                         </section>
-                    </section>
                     <ChartComponent />
                     <Footer />
                 </>

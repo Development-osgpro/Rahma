@@ -2770,6 +2770,7 @@ body {
   min-width: 300px !important;
   font-weight: 600;
   margin: 0 0.5rem;
+  margin-top: -3rem;
 }
 @media screen and (max-width: 1199px) {
   .Chart .container .firstsection > div {
@@ -2897,10 +2898,25 @@ body {
   max-height: 30px !important;
 }
 
+.ourWorkPage {
+  background-color: #f3f0ea !important;
+}
+.ourWorkPage div {
+  position: relative;
+}
+.ourWorkPage div .firsth1 {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+}
 .ourWorkPage img {
   max-width: 100% !important;
   -o-object-fit: cover;
      object-fit: cover;
+  min-width: 100%;
 }
 @media screen and (max-width: 991px) {
   .ourWorkPage img {
@@ -2912,6 +2928,85 @@ body {
   .ourWorkPage img {
     height: 200px !important;
   }
+}
+.ourWorkPage .container .work-items {
+  padding-bottom: 3rem;
+}
+.ourWorkPage .container .work-items h4 {
+  background-color: #d2d5e5;
+  padding: 1rem 2rem;
+  color: #707070;
+  text-align: center;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+.ourWorkPage .container .work-items .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ourWorkPage .container .work-items .items a {
+  width: 113px !important;
+  border: none !important;
+  outline: none !important;
+  text-decoration: none !important;
+  box-shadow: 5px 5px 5px gray;
+  margin: 50px 70px;
+  background-color: white;
+  border-radius: 30px 30px 0 0;
+  color: black;
+}
+.ourWorkPage .container .work-items .items a svg {
+  height: 70px;
+  width: 100%;
+}
+.ourWorkPage .container .work-items .items a p {
+  text-align: center;
+  margin-bottom: 0 !important;
+}
+
+.seasonal_campaigns {
+  background-color: #e3e3e3;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+.seasonal_campaigns .container .seasonal-p {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  max-width: 450px;
+  color: gray !important;
+}
+.seasonal_campaigns .container .seasonal_campaigns_box {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-around;
+}
+.seasonal_campaigns .container .seasonal_campaigns_box div {
+  width: 300px;
+  margin: 2rem;
+}
+.seasonal_campaigns .container .seasonal_campaigns_box div img {
+  max-width: 300px;
+  min-width: 299px;
+  max-height: 180px;
+  min-height: 179px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50px 50px 0 0;
+}
+.seasonal_campaigns .container .seasonal_campaigns_box div h5 {
+  background-color: #2b3990;
+  padding: 1.5rem 0.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 0 !important;
+}
+.seasonal_campaigns .container .seasonal_campaigns_box div p {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0 0 50px 50px;
+  font-size: 12px;
+  color: gray;
 }
 
 .programsPage-header {
@@ -2929,6 +3024,7 @@ body {
   max-width: 100% !important;
   -o-object-fit: cover;
      object-fit: cover;
+  min-width: 100%;
 }
 @media screen and (max-width: 991px) {
   .programsPage-header img {
@@ -3103,4 +3199,98 @@ body {
   border-radius: 15px;
   padding: 1rem;
   align-self: end;
+}
+
+.allpagesourwork div {
+  position: relative;
+}
+.allpagesourwork div .firsth1 {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+}
+.allpagesourwork img {
+  max-width: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 100% !important;
+}
+@media screen and (max-width: 991px) {
+  .allpagesourwork img {
+    height: 400px !important;
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 681px) {
+  .allpagesourwork img {
+    height: 200px !important;
+  }
+}
+.allpagesourwork .video_section h4 {
+  padding: 1rem 2rem;
+  color: #707070;
+  text-align: center;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.all {
+  background-color: #f3f0ea;
+  margin: 0rem 0rem;
+}
+
+.contactTitle {
+  background-color: #e3e3e3;
+}
+.contactTitle h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #2b3990;
+  text-align: center;
+  margin: 3rem 0rem;
+}
+
+.formSection {
+  background-color: #d9dbe6;
+  padding: 3rem;
+}
+
+.ContFormAndInfo {
+  padding: 11rem;
+}
+
+.GetIntoutchMainCont h2 {
+  font-size: 22px;
+  color: #848bb8;
+}
+
+.secondT {
+  font-size: 60px;
+  color: #848483;
+}
+
+.contactLinke {
+  color: #848483;
+  text-decoration: none;
+  font-size: 30px;
+}
+.contactLinke i {
+  color: #2b3990;
+}
+
+.thirdT {
+  font-size: 25px;
+  color: #848483;
+}
+
+.weL {
+  padding: 0rem 20rem 1rem 0rem !important;
+}
+@media screen and (max-width: 1100px) {
+  .weL {
+    padding: 0 !important;
+  }
 }/*# sourceMappingURL=main.css.map */
