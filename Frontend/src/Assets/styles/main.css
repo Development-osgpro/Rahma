@@ -1394,7 +1394,47 @@ body {
 .our-causes .container .mySwiper .the-swiper-slide .cause .context {
   padding: 1rem;
   text-align: left;
-  height: auto;
+  height: 410px;
+}
+@media (max-width: 1399px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 440px;
+  }
+}
+@media (max-width: 1199px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 425px;
+  }
+}
+@media (max-width: 991px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 383px;
+  }
+}
+@media (max-width: 788px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 400px;
+  }
+}
+@media (max-width: 767px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 340px;
+  }
+}
+@media (max-width: 511px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 358px;
+  }
+}
+@media (max-width: 510px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 377px;
+  }
+}
+@media (max-width: 439px) {
+  .our-causes .container .mySwiper .the-swiper-slide .cause .context {
+    height: 396px;
+  }
 }
 .our-causes .container .mySwiper .the-swiper-slide .cause .context h4 {
   color: #707070;
@@ -2826,6 +2866,8 @@ body {
   font-weight: 700 !important;
   margin-top: 1rem;
   color: #414141;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
 }
 .Chart .container .chartcontainer .chartitself svg {
   margin-top: -1rem;
@@ -3341,8 +3383,16 @@ body {
   padding-top: 10rem;
   margin: auto !important;
 }
+@media screen and (max-width: 472px) {
+  .allpagesourwork .video_section .container .text_box_all {
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+  }
+}
 .allpagesourwork .video_section .container .text_box_all h6 {
-  color: #4d4d4d;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 .allpagesourwork .video_section .container .text_box_all h6 figure {
   display: inline-block !important;
