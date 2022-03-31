@@ -85,7 +85,7 @@
 }
 
 .MainTitlediv{
-    padding: 5rem 0rem;
+    padding: 2rem 0rem;
 }
 .smallTitlePa{
     padding: 1rem;
@@ -99,8 +99,10 @@
     color: #3c4a99;
 }
 .videoBox{
-    width:650px;
-    height:400px
+    max-width: 650px !important;
+    height: 400px !important;
+    z-index: 100;
+    position: relative;
 }
 @media (max-width: 770px) {
     .videoBox{

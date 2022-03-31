@@ -5,6 +5,9 @@ import NavBar from '../Components/NavBar'
 import Footer from '../Components/Footer'
 import Contactform from '../Components/Contactform'
 
+import { ReactComponent as Icon1 } from '../Assets/svgs/all-icons/footerIcons-01.svg'
+import { ReactComponent as Icon2 } from '../Assets/svgs/all-icons/footerIcons-02.svg'
+import { ReactComponent as Icon3 } from '../Assets/svgs/all-icons/footerIcons-03.svg'
 
 const GetInTouchWithUs = () => {
 
@@ -27,14 +30,13 @@ const GetInTouchWithUs = () => {
                     <div className='contactTow'>
                         <br />
                         <a className="contactLinke" href="mailto:info@rahmaww.org" rel='noopener noreferrer'>
-                            <i className="fa-solid fa-envelope"></i> info@rahmaww.org</a>
+                            <Icon1 /> info@rahmaww.org</a>
                         <br />
                         <a className="contactLinke" href="tel:+2485663111" rel='noopener noreferrer'>
-                            <i className="fa-solid fa-phone-volume"></i> +(248) 566 3111</a>
-
+                            <Icon2 /> +(248) 566 3111</a>
                         <br />
                         <a className="contactLinke" href="https://www.google.ru/maps/place/Google+Building+41,+Mountain+View,+CA+94043,+USA/@37.4224082,-122.0877973,17z/data=!3m1!4b1!4m5!3m4!1s0x808fba02f3d60bc5:0x6bc3b76cb42de9de!8m2!3d37.4224082!4d-122.0856086" rel='noopener noreferrer'>
-                            <i className="fa-solid fa-location-dot"></i> 31333 Southfield Rd. STE 100
+                            <Icon3 /> 31333 Southfield Rd. STE 100
                             Beverly Hills, MI 48025
                         </a>
 

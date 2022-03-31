@@ -458,9 +458,11 @@ body {
   color: white;
   text-decoration: none;
 }
-.Footer .container .footer-children .contact a i {
+.Footer .container .footer-children .contact a svg {
   margin-right: 0.5rem;
-  margin-top: 1rem;
+  width: 25px;
+  height: 25px;
+  margin: 0.4rem;
 }
 @media (max-width: 991px) {
   .Footer .container .footer-children .contact {
@@ -610,6 +612,9 @@ body {
   }
 }
 
+.homepage {
+  background-color: #f3f0ea;
+}
 .homepage .hero-section {
   position: relative;
   z-index: 10;
@@ -639,9 +644,10 @@ body {
 }
 .homepage .hero-section .animation-screen .container .donate-now h4 {
   width: 52%;
-  font-weight: 600;
+  font-weight: 700;
   color: #2b3990;
   font-size: 30px;
+  text-transform: uppercase !important;
 }
 @media (max-width: 1400px) {
   .homepage .hero-section .animation-screen .container .donate-now h4 {
@@ -830,7 +836,7 @@ body {
   background-color: #d2d5e5;
   height: 110%;
   width: 130%;
-  border-radius: 2000px 0px 0px 900px;
+  border-radius: 1952px 0px 0px 743px;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -843,7 +849,7 @@ body {
      object-fit: cover;
   position: relative;
   z-index: 100;
-  border-radius: 2000px 0px 0px 1200px;
+  border-radius: 1952px 0px 0px 900px;
 }
 
 .animation-remotecontrol {
@@ -888,10 +894,15 @@ body {
 .animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div {
   transition: all 0.5s ease-in-out;
 }
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div div .circle {
+  left: -100px;
+  left-transition: all 0.5s ease-in-out;
+}
 .animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div.active svg {
   transform: scale(1.3);
   position: relative;
   z-index: 1;
+  transition: all 0.5s ease-in-out;
 }
 .animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div.active svg path {
   fill: #2b7634 !important;
@@ -899,6 +910,8 @@ body {
 .animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div.active div {
   overflow: hidden;
   position: relative;
+  height: 113px !important;
+  transition: all 0.5s ease-in-out;
 }
 .animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div.active div .circle {
   position: absolute;
@@ -910,6 +923,11 @@ body {
   background-color: #2b7634;
   opacity: 0.5;
   border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+.animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div.active p {
+  color: #2b3990;
+  font-weight: 600;
 }
 .animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div:hover svg path {
   fill: #2b7634 !important;
@@ -933,6 +951,7 @@ body {
   height: 70px;
   width: 100%;
   margin: auto;
+  transition: all 0.5s ease-in-out;
 }
 .animation-remotecontrol .container .swiper .swiper-wrapper .swiper-slide > div svg path {
   fill: #2b3990;
@@ -1011,6 +1030,11 @@ body {
   height: 80px !important;
   position: relative;
 }
+.aboutus-section .container .about .about-text-video .video > button > svg {
+  width: 30px;
+  margin-left: 0.5rem;
+  height: 30px;
+}
 .aboutus-section .container .about .about-text-video .video > button::before {
   content: "";
   position: absolute;
@@ -1039,7 +1063,7 @@ body {
   width: 70%;
   justify-content: flex-end;
   flex-wrap: wrap;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 @media (max-width: 991px) {
   .aboutus-section .container .about .about-images {
@@ -1052,11 +1076,17 @@ body {
   justify-content: flex-end;
   margin-bottom: 2rem;
 }
+@media (max-width: 555px) {
+  .aboutus-section .container .about .about-images div:first-of-type {
+    height: 300px !important;
+    margin-bottom: 0rem !important;
+  }
+}
 .aboutus-section .container .about .about-images div:first-of-type img {
-  width: 50%;
+  width: 48%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 220px;
+  height: 266px;
   border-radius: 50px 0 50px 50px;
   box-shadow: 5px 5px 10px gray;
 }
@@ -1075,14 +1105,14 @@ body {
   .aboutus-section .container .about .about-images div:nth-of-type(2) {
     margin-right: 0rem !important;
     flex-basis: 100%;
-    margin-bottom: 2rem;
+    height: 300px !important;
   }
 }
 .aboutus-section .container .about .about-images div:nth-of-type(2) img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 220px;
+  height: 262px;
   border-radius: 50px 50px 50px 0px;
   box-shadow: 5px 5px 10px gray;
 }
@@ -1090,12 +1120,17 @@ body {
   flex-basis: 37%;
   display: flex;
   justify-content: flex-end;
-  height: 300px;
+  height: 361px;
 }
 @media (max-width: 555px) {
   .aboutus-section .container .about .about-images div:last-of-type {
     flex-basis: 100%;
-    height: auto !important;
+    height: 300px !important;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .aboutus-section .container .about .about-images div:last-of-type {
+    height: 283px !important;
   }
 }
 .aboutus-section .container .about .about-images div:last-of-type img {
@@ -1105,11 +1140,6 @@ body {
   height: 100%;
   border-radius: 50px 50px 0px 50px;
   box-shadow: 5px 5px 10px gray;
-}
-@media (max-width: 555px) {
-  .aboutus-section .container .about .about-images div:last-of-type img {
-    height: 220px !important;
-  }
 }
 .aboutus-section .container .success-stories {
   display: flex;
@@ -1152,6 +1182,8 @@ body {
 }
 .aboutus-section .container .success-stories .success-stories-text p {
   margin: 3rem 0;
+  font-size: 16px !important;
+  max-width: 700px;
 }
 @media (max-width: 767px) {
   .aboutus-section .container .success-stories .success-stories-text p {
@@ -1540,6 +1572,7 @@ body {
   padding: 3rem;
   position: relative;
   height: 600px;
+  padding-top: 0 !important;
 }
 @media (max-width: 991px) {
   .campaingns {
@@ -1557,7 +1590,7 @@ body {
   width: 50%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
@@ -1590,6 +1623,12 @@ body {
   border-radius: 40px 40px 0px 40px;
   overflow: visible !important;
   position: relative;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 991px) {
+  .campaingns .container .campaingns-container .campaingns-img-slider .mySwiper {
+    margin-bottom: 0 !important;
+  }
 }
 @media (max-width: 1100px) {
   .campaingns .container .campaingns-container .campaingns-img-slider .mySwiper {
@@ -2513,10 +2552,10 @@ body {
     right: 47px;
   }
 }
-.map-world .container .map .the-map .video > button i {
-  color: #2b3990;
-  font-size: 30px;
-  text-align: center;
+.map-world .container .map .the-map .video > button svg {
+  width: 30px;
+  margin-left: 0.5rem;
+  height: 30px;
 }
 .map-world .container .map .the-map .video h6 {
   display: inline-block;
@@ -2784,6 +2823,7 @@ body {
 
 .Chart {
   padding: 1rem 0;
+  background-color: #f3f0ea;
 }
 .Chart .container {
   display: flex;
@@ -2796,7 +2836,6 @@ body {
 }
 .Chart .container .firstsection {
   display: flex;
-  background-color: white;
 }
 @media screen and (max-width: 991px) {
   .Chart .container .firstsection {
@@ -2988,6 +3027,9 @@ body {
   text-align: center;
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  letter-spacing: 1px !important;
 }
 .ourWorkPage .container .work-items .items {
   display: flex;
@@ -2996,6 +3038,9 @@ body {
 }
 .ourWorkPage .container .work-items .items a {
   width: 113px !important;
+  max-width: 113px !important;
+  height: 118px !important;
+  max-height: 118px !important;
   border: none !important;
   outline: none !important;
   text-decoration: none !important;
@@ -3004,6 +3049,9 @@ body {
   background-color: white;
   border-radius: 30px 30px 0 0;
   color: black;
+}
+.ourWorkPage .container .work-items .items a:hover svg path {
+  fill: #2b7634 !important;
 }
 .ourWorkPage .container .work-items .items a svg {
   height: 70px;
@@ -3093,6 +3141,9 @@ body {
 .programsPage-body h1 {
   text-align: center;
   letter-spacing: 0.2rem;
+  padding: 2rem 0 !important;
+  color: #707070;
+  font-weight: 700;
 }
 .programsPage-body div {
   display: flex;
@@ -3109,20 +3160,21 @@ body {
   height: fit-content;
   z-index: 2;
 }
-.programsPage-body div .row.row1 div img {
+.programsPage-body div .row.row1 div .videoDiv {
   max-width: 90% !important;
   height: 350px !important;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: -3rem !important;
 }
 @media screen and (max-width: 991px) {
-  .programsPage-body div .row.row1 div img {
+  .programsPage-body div .row.row1 div .videoDiv {
     height: 400px !important;
     width: 100% !important;
   }
 }
 @media screen and (max-width: 681px) {
-  .programsPage-body div .row.row1 div img {
+  .programsPage-body div .row.row1 div .videoDiv {
     height: 200px !important;
   }
 }
@@ -3134,16 +3186,20 @@ body {
 .programsPage-body div .row.row2 {
   justify-content: center;
   background: #d2d5e5;
-  width: 75% !important;
+  padding-top: 3rem;
 }
 .programsPage-body div .row.row2 p {
   text-align: center;
   margin-top: 3rem;
   padding: 1rem;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 .programsPage-body div .row.row3 {
   margin: 5rem 0 0.5rem;
   width: 77% !important;
+  margin-bottom: 3rem;
 }
 .programsPage-body div .row.row3 h1 {
   text-align: left;
@@ -3177,6 +3233,8 @@ body {
 .programsPage-body div .row.row3 .row div p {
   text-align: left;
   margin: 0;
+  margin-right: auto;
+  padding-left: 1rem;
 }
 
 .orphan-section .section-header {
@@ -3298,11 +3356,23 @@ body {
 .orphans .container .orphan_sponsorship div div {
   width: 320px !important;
   height: 300px !important;
+  position: relative;
 }
 @media screen and (max-width: 1000px) {
   .orphans .container .orphan_sponsorship div div {
     margin-bottom: 1rem !important;
   }
+}
+.orphans .container .orphan_sponsorship div div p {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  color: #707070;
+  font-weight: 700;
+  top: 20px !important;
+  max-width: 70%;
+  font-size: 13px;
+  margin: auto !important;
 }
 .orphans .container .orphan_sponsorship div div img {
   width: 100% !important;
@@ -3330,6 +3400,9 @@ body {
   color: white;
 }
 
+.allpagesourwork {
+  background-color: #f3f0ea;
+}
 .allpagesourwork div {
   position: relative;
 }
@@ -3375,7 +3448,7 @@ body {
   box-shadow: 5px 5px 5px gray;
 }
 .allpagesourwork .video_section .container .text_box_all {
-  z-index: -1;
+  z-index: 0;
   position: relative;
   background-color: #d2d5e5 !important;
   max-width: 1200px;
@@ -3494,9 +3567,14 @@ body {
   margin: 0 !important;
   margin-top: -0.5rem !important;
 }
-.videos_section .container > div video {
-  max-width: 450px;
+.videos_section .container > div iframe {
+  width: 450px;
   height: 300px;
+}
+@media screen and (max-width: 652px) {
+  .videos_section .container > div iframe {
+    max-width: 290px !important;
+  }
 }
 
 .text_box_all_page {
@@ -3512,6 +3590,9 @@ body {
   color: #4d4d4d;
   margin-top: none !important;
   margin-bottom: none !important;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 .text_box_all_page .container h5 figure {
   display: inline-block !important;
@@ -3717,6 +3798,14 @@ body {
   background-color: #d9dbe6;
   padding: 3rem;
 }
+.formSection .d-grid.gap-2 button {
+  font-weight: 600;
+}
+
+.row .secondT h3 {
+  font-size: 25px;
+  max-width: 500px;
+}
 
 .ContFormAndInfo {
   padding: 11rem;
@@ -3735,10 +3824,16 @@ body {
 .contactLinke {
   color: #848483;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
 }
-.contactLinke i {
-  color: #2b3990;
+.contactLinke svg {
+  margin-right: 0.5rem;
+  width: 25px !important;
+  height: 25px !important;
+  margin: 0.4rem;
+}
+.contactLinke svg path {
+  fill: #2b3990 !important;
 }
 
 .thirdT {

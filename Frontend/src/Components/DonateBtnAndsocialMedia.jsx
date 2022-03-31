@@ -24,7 +24,7 @@ const DonateBtnAndsocialMedia = () => {
     return (
         <>
             <div className='donateBtnandsocialContainer'>
-                <Box sx={{height: 320, transform: 'translateZ(0px)', flexGrow: 1}}>
+                <Box sx={{height: 320, transform: 'translateZ(0px)', flexGrow: 1}} className='MuiBoxBtnTest'>
                     <SpeedDial
                         ariaLabel="SpeedDial basic example"
                         sx={{ position: 'absolute', bottom: 16, right: 16 }}
@@ -33,6 +33,7 @@ const DonateBtnAndsocialMedia = () => {
                         {actions.map((action) => (
                         <SpeedDialAction
                             icon={action.icon}
+                            style={{backgroundColor: '#2b3990'}}
                         />
                         ))}
                     </SpeedDial>

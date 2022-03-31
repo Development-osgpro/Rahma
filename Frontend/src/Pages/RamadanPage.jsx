@@ -17,7 +17,9 @@ const Ramadan = () => {
     })
     return (
         <>
-            <NavBar />
+        <div style={{backgroundColor: '#f3f0ea'}}>
+
+        <NavBar />
             {windosY >= 700 ? <DonateBtnAndsocialMedia /> : ""}
 
             <div className="Imgcontainer">
@@ -29,9 +31,7 @@ const Ramadan = () => {
             <Container className="textCon" style={{marginBottom: '2rem'}}>
 
                 <div className="videoDiv">
-                    <video className="videoBox" controls >
-                        <source src="#" type="video/mp4" />
-                    </video>
+                    <iframe className="videoBox videoBox1" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
                 </div>
                 <div className="videoDiscDiv">
                     <p className="videoDiscHead">RAMADAN HAS COME TO YOU. (IT IS) A MONTH OF BLESSING, IN WHICH GOD COVERS YOU WITH
@@ -100,8 +100,9 @@ const Ramadan = () => {
                     <p className="smallTitlePa">1 RAMADAN FOOD BASKET FOR 1 FAMILY OF FIVE FOR 1 WEEKS: <span className="bluefont">$30.00</span></p>
                 </div>
             </Container>
-            <ChartComponent />
+            <ChartComponent bgColor="#e3e3e3"/>
             <Footer />
+        </div>
 
         </>
     )

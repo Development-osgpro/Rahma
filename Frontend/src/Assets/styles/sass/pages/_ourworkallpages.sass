@@ -1,5 +1,6 @@
 @import '../layout/variables'
-.allpagesourwork   
+.allpagesourwork  
+    background-color: #f3f0ea 
     div
         position: relative
         .firsth1
@@ -35,7 +36,7 @@
                 .videoBox
                     box-shadow: 5px 5px 5px gray
             .text_box_all
-                z-index: -1
+                z-index: 0
                 position: relative
                 background-color: #d2d5e5 !important
                 max-width: 1200px 
@@ -127,9 +128,11 @@
                     background-color: #008e89
                     margin: 0 !important
                     margin-top: -0.5rem !important
-                video
-                    max-width: 450px
+                iframe
+                    width: 450px
                     height: 300px
+                    @media screen and ( max-width: 652px )
+                        max-width: 290px !important
 
 .text_box_all_page
     margin-top: 5rem
@@ -142,6 +145,9 @@
             color: #4d4d4d
             margin-top: none !important
             margin-bottom: none !important
+            font-size: 20px
+            font-weight: 400
+            letter-spacing: 1px
             figure
                 display: inline-block !important
                 width: 10px !important

@@ -2,6 +2,67 @@ body {
   position: relative;
 }
 
+/* donate btn and social media styel */
+.donateBtnandsocialContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: fixed;
+  top: 0;
+  z-index: 7000;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+}
+
+.donateBtnandsocialContainer .MuiBoxBtnTest {
+  width: 100px !important;
+  flex-grow: 0 !important;
+  height: 100% !important;
+}
+
+@media (max-width: 500px) {
+  .donateBtnandsocialContainer .MuiBoxBtnTest {
+    margin-bottom: 3rem !important
+  }
+}
+
+.donateBtnandsocialContainer .donateBtnFix {
+  height: 50px;
+  width: auto;
+  pointer-events: auto;
+  margin-right: -3.3rem;
+  transition: all .5s ease-in-out;
+  position: relative;
+  margin-bottom: 8rem !important;
+}
+
+.donateBtnandsocialContainer .donateBtnFix button {
+  /* background-color: #2b3990 ! */
+}
+
+.donateBtnandsocialContainer .donateBtnFix button span {
+  margin-left: 1rem
+}
+
+.donateBtnandsocialContainer .donateBtnFix:hover button {
+  margin-right: 0rem
+}
+
+.donateBtnandsocialContainer .donateBtnFix:hover button span {
+  margin-left: 0.3rem
+}
+
+.donateBtnandsocialContainer .donateBtnFix button span {
+  transition: all .5s ease-in-out;
+}
+
+@media (max-width: 500px) {
+  .donateBtnandsocialContainer .donateBtnFix {
+    margin-bottom: 5rem !important
+  }
+}
+
 /* all background image in the site */
 .Footer {
   background-image: url('./Assets/images/footer-bg.jpg');
@@ -213,11 +274,14 @@ body {
 }
 
 }
- 
 
-.btn-primary{
+
+.formSection .btn-primary {
   background-color: #2b3990;
   border-color: #2b3990;
+  padding: 1rem 0 !important;
+  border-radius: 15px !important;
+  box-shadow: none !important;
 }
 
 
@@ -361,28 +425,32 @@ color: white;
 font-weight: 300 !important;
 }
 
-.arAccordion .accordion-button {
-flex-direction: row-reverse;
-justify-content: space-between;
-border-radius: 15px;
+.accordion-button {
+  flex-direction: row-reverse !important;
+  justify-content: space-between;
 }
 
-.arAccordion .accordion-button::after {
-/* border-radius: 15px; */
-margin-left: 0;
+.accordion-button h4 {
+  margin-right: auto !important;
+  margin-left: 2rem !important;
+  font-weight: 700 !important;
 }
 
+.accordion-button::after {
+  /* margin-right: auto !important; */
+  margin-left: 0 !important;
+}
+
+.accordion-button:not(.collapsed) h4 {
+  font-weight: 700 !important;
+  color: gray !important;
+
+}
 
 .accordion-button:focus {
-background-color: #ffffff !important;
-/* border-radius: 10px; */
-border-bottom: 1px solid black !important;
+  box-shadow: 0px 2px 5px #2d3c8eaf !important;
 }
 
-.accordion-button {
-  /* background-color: #f9cb8f !important; */
-  border-radius: 10px !important;
-}
 
 .accordion-button:not(.collapsed)::after {
   transform: scale(1.5) rotate(180deg);
@@ -480,3 +548,21 @@ border-bottom: 1px solid black !important;
   /* background-color: transparent !important; */
   pointer-events: none !important;
 }
+
+.videoBox1 {
+  width: 650px !important;
+  max-width: 651px !important;
+  height: 365px !important;
+  max-height: 366px !important;
+}
+
+@media (max-width: 721px) {
+  .videoBox1 {
+    width: 100% !important;
+    max-width: 651px !important;
+  }
+}
+
+.super-colors.dropdown-menu.show {
+  width: 100% !important
+} 

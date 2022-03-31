@@ -30,12 +30,20 @@ const NavBar = () => {
     }
 
     const [show, setShow] = useState(false)
+    const [show1, setShow1] = useState(false)
 
     const showDropdown = (e) => {
         setShow(true)
     }
     const hideDropdown = (e) => {
         setShow(false)
+    }
+
+    const showDropdown1 = (e) => {
+        setShow1(true)
+    }
+    const hideDropdown1 = (e) => {
+        setShow1(false)
     }
 
     return (
@@ -66,12 +74,18 @@ const NavBar = () => {
                                 navbarScroll
                             >
                                 <Nav.Link href=""><NavLink to="/homepage" style={{textDecoration: 'none'}}>Home</NavLink></Nav.Link>
-                                <Dropdown className='dropdownMenu'>
-                                    <Nav.Link href="/our_work"><NavLink to="/our_work" style={{textDecoration: 'none'}}>OurWork</NavLink></Nav.Link>
-                                    {/* <Dropdown.Toggle>
-                                        Our Work
+                                {windosYmenue >= 992 ?
+                                    <Dropdown className='dropdownMenu'
+                                    show={show1}
+                                    onMouseOver={showDropdown1}
+                                    onMouseLeave={hideDropdown1}>
+                                    {/* <Nav.Link><NavLink to="/our_work" style={{textDecoration: 'none'}}>OurWork</NavLink></Nav.Link> */}
+                                    <Dropdown.Toggle>
+                                        <NavLink to='/our_work' style={{textDecoration: 'none'}}>Our Work</NavLink>
                                     </Dropdown.Toggle>
-                                    <Dropdown.Menu>
+                                    <Dropdown.Menu
+                                    onMouseOver={showDropdown1}
+                                    onMouseLeave={hideDropdown1}>
                                         <Dropdown.Item href="#/action-1" id='dropdown-item'>Environment</Dropdown.Item>
                                         <Dropdown.Item href="#/action-2" id='dropdown-item'>Another action</Dropdown.Item>
                                         <Dropdown.Item href="#/action-3" id='dropdown-item'>W.A.S.H</Dropdown.Item>
@@ -83,8 +97,26 @@ const NavBar = () => {
                                         <Dropdown.Item href="#/action-3" id='dropdown-item'>Shelter</Dropdown.Item>
                                         <Dropdown.Item href="#/action-3" id='dropdown-item'>Nutrition</Dropdown.Item>
                                         <Dropdown.Item href="#/action-3" id='dropdown-item'>food security</Dropdown.Item>
-                                    </Dropdown.Menu> */}
+                                    </Dropdown.Menu>
                                 </Dropdown>
+                                : 
+                                <Dropdown as={ButtonGroup}>
+                                        <Button variant="info"><Link to='/our_work' style={{textDecoration: 'none'}}>Our Work</Link></Button>
+                                        <Dropdown.Toggle split variant="success" id="dropdown-custom-2" />
+                                        <Dropdown.Menu className="super-colors">
+                                            <Dropdown.Item href="#/action-1" id='dropdown-item'>Environment</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2" id='dropdown-item'>Another action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3" id='dropdown-item'>W.A.S.H</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3" id='dropdown-item'>Education</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3" id='dropdown-item'>Health</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3" id='dropdown-item'>Seasonal Campaigns</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3" id='dropdown-item'>Non-Food Items </Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3" id='dropdown-item'>Protection</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3" id='dropdown-item'>Shelter</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3" id='dropdown-item'>Nutrition</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3" id='dropdown-item'>food security</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>}
                                 {/* <Nav.Link href="#action2">Where We Work</Nav.Link> */}
                                 <Nav.Link> <NavLink to='/ramadan' style={{textDecoration: 'none'}}>Ramadan</NavLink> </Nav.Link>
                                 {windosYmenue >= 992 ? 

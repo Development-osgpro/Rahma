@@ -1,14 +1,24 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { ReactComponent as Chart} from '../Assets/svgs/all-icons/chart.svg'
 
 import { ReactComponent as HeroSvgicon7 } from '../Assets/svgs/all-icons/icon-07.svg'
 import { ReactComponent as HeroSvgicon8 } from '../Assets/svgs/all-icons/newIcons-10.svg'
 import { ReactComponent as HartIcon } from '../Assets/svgs/all-icons/donatehartIcon.svg'
+import { useState } from 'react'
 
-const ChartComponent = () => {
+const ChartComponent = ({bgColor}) => {
+    console.log(bgColor)
+
+    const [color, setColor] = useState('')
+
+    useEffect(() => {
+        setColor(bgColor)
+    }, [color])
+    console.log(color)
+    
     return (
         <>
-            <div className='Chart'>
+            <div className='Chart' style={{backgroundColor: `${color}`}}>
                 <div className="container">
                     <div className='firstsection'>
                         <div className='allcampaigns'>

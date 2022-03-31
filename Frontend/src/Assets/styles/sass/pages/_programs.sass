@@ -24,6 +24,9 @@
     h1
         text-align: center
         letter-spacing: 0.2rem
+        padding: 2rem 0 !important
+        color: #707070
+        font-weight: 700
     div
         display: flex
         flex-direction: column
@@ -34,10 +37,11 @@
             div
                 height: fit-content
                 z-index: 2
-                img
+                .videoDiv
                     max-width: 90% !important
                     height: 350px !important
                     object-fit: cover
+                    margin-bottom: -3rem !important
                     @media screen and ( max-width: 991px )
                         height: 400px !important
                         width: 100% !important
@@ -50,14 +54,18 @@
         .row.row2
             justify-content: center
             background: #d2d5e5
-            width: 75% !important
+            padding-top: 3rem
             p
                 text-align: center
                 margin-top: 3rem
                 padding: 1rem
+                font-size: 20px
+                font-weight: 400
+                letter-spacing: 1px
         .row.row3
             margin: 5rem 0 0.5rem
             width: 77% !important
+            margin-bottom: 3rem
             h1
                 text-align: left
             .row
@@ -78,6 +86,8 @@
                     p
                         text-align: left
                         margin: 0
+                        margin-right: auto
+                        padding-left: 1rem 
 
 .orphan-section
     .section-header
@@ -168,8 +178,19 @@
                 div
                     width: 320px !important
                     height: 300px !important
+                    position: relative
                     @media screen and ( max-width: 1000px )
                         margin-bottom: 1rem !important
+                    p
+                        position: absolute
+                        left: 50%
+                        transform: translate(-50%)
+                        color: #707070
+                        font-weight: 700
+                        top: 20px !important
+                        max-width: 70%
+                        font-size: 13px
+                        margin: auto !important
                     img
                         width: 100% !important
                         height: 100% !important

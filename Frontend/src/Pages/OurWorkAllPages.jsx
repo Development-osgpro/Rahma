@@ -34,9 +34,7 @@ const OurWorkAllPages = () => {
                         <h4>Rahma Worldwide launched an educational campaign for refugees 
                         nd displaced children we want you to be part of it!</h4>
                         <div className="videoDiv">
-                            <video className="videoBox" controls >
-                                <source src="#" type="video/mp4" />
-                            </video>
+                            <iframe className="videoBox videoBox1" width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
                         </div>
                         <div className="text_box_all">
                             <h6>RAHMA WORLDWIDE, ONE OF THE LEADING CHARITIES FOR CHILDREN’S EDUCATION, STARTED
@@ -82,30 +80,22 @@ const OurWorkAllPages = () => {
                         <div className="container">
                             <div className='theVideoitSelf'>
                                 <div>SYRIA</div>
-                                <video className="videoBox" controls >
-                                    <source src="#" type="video/mp4" />
-                                </video>
+                                <iframe className="videoBox" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
                                 <figure></figure>
                             </div>
                             <div className='theVideoitSelf'>
                                 <div>PALESTINE</div>
-                                <video className="videoBox" controls >
-                                    <source src="#" type="video/mp4" />
-                                </video>
+                                <iframe className="videoBox" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
                                 <figure></figure>
                             </div>
                             <div className='theVideoitSelf'>
                                 <div>TURKEY</div>
-                                <video className="videoBox" controls >
-                                    <source src="#" type="video/mp4" />
-                                </video>
+                                <iframe className="videoBox" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
                                 <figure></figure>
                             </div>
                             <div className='theVideoitSelf'>
                                 <div>LEBANON</div>
-                                <video className="videoBox" controls >
-                                    <source src="#" type="video/mp4" />
-                                </video>
+                                <iframe className="videoBox" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
                                 <figure></figure>
                             </div>
                         </div>
@@ -200,7 +190,7 @@ const OurWorkAllPages = () => {
                                 ))}
                             </Swiper> */}
                         </div>
-                        <ChartComponent />
+                        <ChartComponent bgColor="#e3e3e3"/>
                         <Footer />
                     </div>
                 </div>

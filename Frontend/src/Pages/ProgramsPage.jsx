@@ -46,36 +46,36 @@ const ProgramsPage = ({ history }) => {
                         <div className="container">
                             <div className="row row1">
                                 <div className="col-md-6">
-                                    <img src={headerImg} />
+                                    <div className="videoDiv">
+                                        <iframe className="videoBox videoBox1" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                    </div>
                                     {/* <button className="btn-primary programs-video-cta" onClick={() => setVideoIsOpen(true)}><i className="fa-solid fa-circle-play"></i></button> */}
                                 </div>
                             </div>
                             <div className="row row2">
-                                <div className="col-md-8">
                                     <p>RAHMA INTERNATIONAL ACADEMY OFFERS THE HIGHEST QUALITY EDUCATION AND CHALLENGING
-                                        PROGRAMS FOR A WORLDWIDE COMMUNITY THAT AIMS AT CREATING A WELL-EDUCATED, MORE
-                                        PEACEFUL WORLD. RAHMA INTERNATIONAL ACADEMY KNOWS NO BORDERS. WE GO BEYOND BORDERS
-                                        TO MAKE THE BEST EDUCATION IN THE WORLD WITHIN REACH. OUR INSTRUCTORS ARE CAREFULLY
-                                        CHOSEN AMONGST THE BEST OF SCHOLARS, SCIENTISTS, AND PROFESSIONALS IN THEIR RESPECTIVE
-                                        FIELDS. THE GRADUATES OF RAHMA INTERNATIONAL ACADEMY ARE THOSE WHO MAKE A SIGNIFICANT
-                                        CONTRIBUTION TO SOCIETY; LOCALLY, NATIONALLY, AND INTERNATIONALLY.</p>
-                                </div>
+                                    PROGRAMS FOR A WORLDWIDE COMMUNITY THAT AIMS AT CREATING A WELL-EDUCATED, MORE
+                                    PEACEFUL WORLD. RAHMA INTERNATIONAL ACADEMY KNOWS NO BORDERS. WE GO BEYOND BORDERS
+                                    TO MAKE THE BEST EDUCATION IN THE WORLD WITHIN REACH. OUR INSTRUCTORS ARE CAREFULLY
+                                    CHOSEN AMONGST THE BEST OF SCHOLARS, SCIENTISTS, AND PROFESSIONALS IN THEIR RESPECTIVE
+                                    FIELDS. THE GRADUATES OF RAHMA INTERNATIONAL ACADEMY ARE THOSE WHO MAKE A SIGNIFICANT
+                                    CONTRIBUTION TO SOCIETY; LOCALLY, NATIONALLY, AND INTERNATIONALLY.</p>
                             </div>
 
                             <div className="row row3">
                                 <h1 className='h1-styles'>PROGRAMS <span>OFFERED</span></h1>
 
                                 <div className="row">
-                                    <div className="col-md-6">HANDS-ON/VOCATIONAL TRAINING</div>
-                                    <div className="col-md-6">HANDS-ON/VOCATIONAL TRAINING</div>
-                                    <div className="col-md-6">HANDS-ON/VOCATIONAL TRAINING</div>
-                                    <div className="col-md-6">HANDS-ON/VOCATIONAL TRAINING</div>
-                                    <div className="col-md-6">HANDS-ON/VOCATIONAL TRAINING</div>
-                                    <div className="col-md-6">HANDS-ON/VOCATIONAL TRAINING</div>
-                                    <div className="col-md-6">HANDS-ON/VOCATIONAL TRAINING</div>
-                                    <div className="col-md-6">HANDS-ON/VOCATIONAL TRAINING</div>
-                                    <div className="col-md-6">HANDS-ON/VOCATIONAL TRAINING</div>
-                                    <div className="col-md-6">HANDS-ON/VOCATIONAL TRAINING</div>
+                                    <div className="col-md-6"><p>HANDS-ON/VOCATIONAL TRAINING</p></div>
+                                    <div className="col-md-6"><p>HANDS-ON/VOCATIONAL TRAINING</p></div>
+                                    <div className="col-md-6"><p>HANDS-ON/VOCATIONAL TRAINING</p></div>
+                                    <div className="col-md-6"><p>HANDS-ON/VOCATIONAL TRAINING</p></div>
+                                    <div className="col-md-6"><p>HANDS-ON/VOCATIONAL TRAINING</p></div>
+                                    <div className="col-md-6"><p>HANDS-ON/VOCATIONAL TRAINING</p></div>
+                                    <div className="col-md-6"><p>HANDS-ON/VOCATIONAL TRAINING</p></div>
+                                    <div className="col-md-6"><p>HANDS-ON/VOCATIONAL TRAINING</p></div>
+                                    <div className="col-md-6"><p>HANDS-ON/VOCATIONAL TRAINING</p></div>
+                                    <div className="col-md-6"><p>HANDS-ON/VOCATIONAL TRAINING</p></div>
                                 </div>
                             </div>
                         </div>
@@ -117,6 +117,7 @@ const ProgramsPage = ({ history }) => {
                                     <h1>ORPHAN SPONSORSHIP</h1>
                                     <div>
                                         <div>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sunt magnam voluptatum .</p>
                                             <img src={orphanContent} alt="" />
                                         </div>
                                         <p>
@@ -140,28 +141,28 @@ const ProgramsPage = ({ history }) => {
                             <div className="container">
                                 <div className="row row1">
                                     <div className="col-md-6">
-                                        <img src={headerImg} />
+                                        <div className="videoDiv">
+                                            <iframe className="videoBox videoBox1" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                        </div>
                                         {/* <button className="btn-primary programs-video-cta" onClick={() => setVideoIsOpen(true)}></button> */}
                                     </div>
                                 </div>
                                 <div className="row row2">
-                                    <div className="col-md-8">
-                                        <p>RAHMA INTERNATIONAL ACADEMY OFFERS THE HIGHEST QUALITY EDUCATION AND CHALLENGING
-                                            PROGRAMS FOR A WORLDWIDE COMMUNITY THAT AIMS AT CREATING A WELL-EDUCATED, MORE
-                                            PEACEFUL WORLD. RAHMA INTERNATIONAL ACADEMY KNOWS NO BORDERS. WE GO BEYOND BORDERS
-                                            TO MAKE THE BEST EDUCATION IN THE WORLD WITHIN REACH. OUR INSTRUCTORS ARE CAREFULLY
-                                            CHOSEN AMONGST THE BEST OF SCHOLARS, SCIENTISTS, AND PROFESSIONALS IN THEIR RESPECTIVE
-                                            FIELDS. THE GRADUATES OF RAHMA INTERNATIONAL ACADEMY ARE THOSE WHO MAKE A SIGNIFICANT
-                                            CONTRIBUTION TO SOCIETY; LOCALLY, NATIONALLY, AND INTERNATIONALLY.</p>
-                                    </div>
+                                    <p>RAHMA INTERNATIONAL ACADEMY OFFERS THE HIGHEST QUALITY EDUCATION AND CHALLENGING
+                                        PROGRAMS FOR A WORLDWIDE COMMUNITY THAT AIMS AT CREATING A WELL-EDUCATED, MORE
+                                        PEACEFUL WORLD. RAHMA INTERNATIONAL ACADEMY KNOWS NO BORDERS. WE GO BEYOND BORDERS
+                                        TO MAKE THE BEST EDUCATION IN THE WORLD WITHIN REACH. OUR INSTRUCTORS ARE CAREFULLY
+                                        CHOSEN AMONGST THE BEST OF SCHOLARS, SCIENTISTS, AND PROFESSIONALS IN THEIR RESPECTIVE
+                                        FIELDS. THE GRADUATES OF RAHMA INTERNATIONAL ACADEMY ARE THOSE WHO MAKE A SIGNIFICANT
+                                        CONTRIBUTION TO SOCIETY; LOCALLY, NATIONALLY, AND INTERNATIONALLY.</p>
                                 </div>
 
                                 <div className="row row3">
                                     <h1 className='h1-styles'>PROGRAMS <span>OFFERED</span></h1>
 
                                     <Accordion className="Accordion" style={{ borderRadius: '10px', marginBottom: '5rem'}}>
-                                        <Accordion.Item eventKey='prgjerpgerpgoj' style={{ borderRadius: '10px', width: "100%" }}>
-                                            <Accordion.Header style={{ fontSize: "28px", borderRadius: '10px', width: "100%" }}><h4 style={{ color: "gray", letterSpacing: "0", textAlign: 'right', fontWeight: '300' }}>Covid-19 Effort</h4></Accordion.Header>
+                                        <Accordion.Item eventKey='prgjerpgerpgoj' style={{ borderRadius: '10px', width: "100%" , margin: '0.5rem'}}>
+                                            <Accordion.Header style={{ fontSize: "28px", borderRadius: '10px', width: "100%" }}><h4 style={{ color: "gray", letterSpacing: "0", textAlign: 'left', fontWeight: '300' }}>Covid-19 Effort</h4></Accordion.Header>
                                             <Accordion.Body style={{ borderRadius: '10px', width: "100%" }}>
                                                 <p style={{ letterSpacing: "0", width: "100%", textAlign: "left" }}>LOREM IPSUM, DIZGI VE BASKI ENDÜSTRISINDE KULLANILAN MIGIR METINLERDIR. LOREM IPSUM,
                                                     ADI BILINMEYEN BIR MATBAACININ BIR HURUFAT NUMUNE KITABI OLUŞTURMAK ÜZERE BIR YAZI
@@ -172,7 +173,7 @@ const ProgramsPage = ({ history }) => {
                                 </div>
                             </div>
                         </section>
-                    <ChartComponent />
+                        <ChartComponent bgColor="#e3e3e3"/>
                     <Footer />
                 </>
             ) : (

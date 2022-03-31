@@ -7,15 +7,16 @@ import Footer from '../Components/Footer'
 import supportlogo from '../Assets/images/unnamed.jpg'
 
 
-
 import videomp4 from "../Assets/videos/insta.mp4"
 import thumbnail from "../Assets/videos/videothumb.png"
 
 // importing some testing images
 import hand from '../Assets/images/handimg.png'
-import mainHeroimg from '../Assets/images/hero-main-img.png'
-import testImg from '../Assets/images/test-12.jpg'
-import testImage from '../Assets/images/imagetest-01.jpg'
+
+import mainHeroimg from '../Assets/images/1M5A0241.JPG'
+import testImg from '../Assets/images/6373d1470844afe3e9d86261f2292612.jpg'
+import testImage from '../Assets/images/511A9522.JPG'
+
 import afterImg from "../Assets/images/after-before-slider-01.jpg"
 import beforeImg from "../Assets/images/after-before-slider-02.jpg"
 import child from "../Assets/images/child.jpg"
@@ -38,6 +39,7 @@ import { ReactComponent as HeroSvgicon8 } from '../Assets/svgs/all-icons/newIcon
 import { ReactComponent as HeroSvgicon9 } from '../Assets/svgs/all-icons/newIcons-11.svg'
 import { ReactComponent as HeroSvgicon10 } from '../Assets/svgs/all-icons/newIcons-12.svg'
 import { ReactComponent as HeroSvgicon11 } from '../Assets/svgs/all-icons/icon-11.svg'
+import { ReactComponent as PlayIcon } from '../Assets/svgs/all-icons/playIcon.svg'
 
 import { ReactComponent as Icon1 } from '../Assets/svgs/all-icons/socialIcons-05.svg'
 import { ReactComponent as Icon2 } from '../Assets/svgs/all-icons/socialIcons-06.svg'
@@ -712,7 +714,7 @@ const Homepage = () => {
                                     </ul>
                                     <div className='video'>
                                         <ModalVideo channel='youtube' autoplay isOpen={videoIsOpen} videoId={data['aboutus_section']?.video_link_code} onClose={() => setVideoIsOpen(false)} />
-                                        <button className="btn-primary" onClick={() => setVideoIsOpen(true)}><i className="fa-solid fa-circle-play"></i></button>
+                                        <button className="btn-primary" onClick={() => setVideoIsOpen(true)}><PlayIcon /></button>
                                         <h6><span>Watch</span>  video</h6>
                                     </div>
                                 </div>
@@ -726,7 +728,7 @@ const Homepage = () => {
                                 <div className='success-stories-text'>
                                     <h1>SUCCESS STORIES</h1>
                                     <p style={{ whiteSpace: "break-spaces" }}>{data['successStories'][0]?.description}</p>
-                                    <button>Read More <i class="fa-solid fa-angles-right"></i></button>
+                                    {/* <button>Read More <i class="fa-solid fa-angles-right"></i></button> */}
                                 </div>
                                 <div className='success-stories-video'>
                                     <div>
@@ -1090,7 +1092,7 @@ const Homepage = () => {
                                     <MapComponent />
                                     <div className='video'>
                                         <ModalVideo channel='youtube' autoplay isOpen={videoIsOpen} videoId="X9uLXfjpzho" onClose={() => setVideoIsOpen(false)} />
-                                        <button className="btn-primary" onClick={() => setVideoIsOpen(true)}><i className="fa-solid fa-circle-play"></i></button>
+                                        <button className="btn-primary" onClick={() => setVideoIsOpen(true)}><PlayIcon /></button>
                                         <h6><span>Watch</span> demo <br /> video</h6>
                                     </div>
                                 </motion.div>
