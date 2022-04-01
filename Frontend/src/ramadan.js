@@ -1,0 +1,48 @@
+const RamadanContext = [
+    {
+        '_id': '1',
+        'name2': '1111وجبة يومية لأسرة / الشهر',
+        'name3': '2222وجبة يومية لأسرة / الشهر',
+        'name4': '3333وجبة يومية لأسرة / الشهر',
+        'name5': '4444وجبة يومية لأسرة / الشهر',
+        'name6': '5555وجبة يومية لأسرة / الشهر',
+        'name7': '6666وجبة يومية لأسرة / الشهر',
+    },
+    {
+        '_id': '2',
+        'name2': 'Daily Meal Per Family / Month 1111',
+        'name3': 'Daily Meal Per Family / Month 2222',
+        'name4': 'Daily Meal Per Family / Month 3333',
+        'name5': 'Daily Meal Per Family / Month 4444',
+        'name6': 'Daily Meal Per Family / Month 5555',
+        'name7': 'Daily Meal Per Family / Month 6666',
+    },
+    {
+        '_id': '3',
+        'name2': 'معلومات الوجبة ومما تتألف1111',
+        'name3': 'معلومات الوجبة ومما تتألف2222',
+        'name4': 'معلومات الوجبة ومما تتألف3333',
+        'name5': 'معلومات الوجبة ومما تتألف4444',
+        'name6': 'معلومات الوجبة ومما تتألف5555',
+        'name7': 'معلومات الوجبة ومما تتألف6666',
+    },
+    {
+        '_id': '4',
+        'name2': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis! Month 1111',
+        'name3': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis! Month 2222',
+        'name4': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis! Month 3333',
+        'name5': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis! Month 4444',
+        'name6': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis! Month 5555',
+        'name7': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis! Month 6666',
+    },
+    {
+        '_id': '5',
+        'name2': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis!  1111',
+        'name3': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis!  2222',
+        'name4': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis!  3333',
+        'name5': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis!  4444',
+        'name6': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis!  5555',
+        'name7': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, veritatis! adipisicing elit. Fugit, veritatis!  6666',
+    },
+]
+export default RamadanContext

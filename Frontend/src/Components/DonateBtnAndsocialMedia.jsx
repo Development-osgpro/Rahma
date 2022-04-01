@@ -8,6 +8,11 @@ import Stack from '@mui/material/Stack';
 
 const DonateBtnAndsocialMedia = () => {
 
+    var styleI = {
+        backgroundColor: 'red',
+        pointerEvents: 'auto',
+    }
+
     const actions = [
         { icon: <a
             href='https://www.facebook.com/RahmaWorldwide/' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-facebook-f" style={{color: '#3b5998'}}></i></a>},
@@ -19,22 +24,19 @@ const DonateBtnAndsocialMedia = () => {
             href='https://www.youtube.com/c/RahmaWorldwide' target="_blank" rel='noopener noreferrer'><i className="fa-brands fa-youtube" style={{color: '#FF0000'}}></i></a>},
     ];
 
-
-
     return (
         <>
             <div className='donateBtnandsocialContainer'>
                 <Box sx={{height: 320, transform: 'translateZ(0px)', flexGrow: 1}} className='MuiBoxBtnTest'>
                     <SpeedDial
-                        ariaLabel="SpeedDial basic example"
+                        ariaLabel=""
                         sx={{ position: 'absolute', bottom: 16, right: 16 }}
-                        icon={<SpeedDialIcon />}
+                        icon={<SpeedDialIcon  />}
                     >
                         {actions.map((action) => (
-                        <SpeedDialAction
-                            icon={action.icon}
-                            style={{backgroundColor: '#2b3990'}}
-                        />
+                            <SpeedDialAction
+                                icon={action.icon}
+                            />
                         ))}
                     </SpeedDial>
                 </Box>

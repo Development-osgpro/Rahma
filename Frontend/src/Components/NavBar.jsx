@@ -81,7 +81,7 @@ const NavBar = () => {
                                     onMouseLeave={hideDropdown1}>
                                     {/* <Nav.Link><NavLink to="/our_work" style={{textDecoration: 'none'}}>OurWork</NavLink></Nav.Link> */}
                                     <Dropdown.Toggle>
-                                        <NavLink to='/our_work' style={{textDecoration: 'none'}}>Our Work</NavLink>
+                                        <NavLink to='/our_work' style={{textDecoration: 'none', fontSize: '19px'}}>Our Work</NavLink>
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu
                                     onMouseOver={showDropdown1}

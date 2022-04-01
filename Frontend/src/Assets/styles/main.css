@@ -3106,6 +3106,231 @@ body {
   color: gray;
 }
 
+.ramadanPage .hero-section {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+.ramadanPage .hero-section .animation-screen {
+  display: flex;
+  padding: 2rem 0;
+  height: 65vh;
+  background-color: #e3e3e3;
+}
+.ramadanPage .hero-section .animation-screen .container {
+  height: 100% !important;
+  height: 100% !important;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .ramadanPage .hero-section .animation-screen .container {
+    width: 100% !important;
+  }
+}
+@media (max-width: 550px) {
+  .ramadanPage .hero-section .animation-screen .container {
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 700px) {
+  .ramadanPage .hero-section .animation-screen .container {
+    justify-content: flex-start;
+  }
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now {
+  align-self: flex-start;
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now h4 {
+  width: 52%;
+  font-weight: 700;
+  color: #2b3990;
+  font-size: 30px;
+  text-transform: uppercase !important;
+}
+@media (max-width: 1400px) {
+  .ramadanPage .hero-section .animation-screen .container .donate-now h4 {
+    width: 350px !important;
+  }
+}
+@media (max-width: 1340px) {
+  .ramadanPage .hero-section .animation-screen .container .donate-now h4 {
+    width: 300px !important;
+  }
+}
+@media (max-width: 550px) {
+  .ramadanPage .hero-section .animation-screen .container .donate-now h4 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 460px) {
+  .ramadanPage .hero-section .animation-screen .container .donate-now h4 {
+    width: 100% !important;
+    font-size: 20px;
+  }
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now button {
+  margin: 3rem 0;
+  width: 220px;
+  height: 70px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  font-weight: 600;
+  background: #2b3990;
+  background: linear-gradient(32deg, #2b3990 0%, #2b7634 100%);
+  color: white;
+  font-size: 20px;
+  transition: background 0.3s ease-out;
+  margin-right: auto;
+  text-decoration: none !important;
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now button a {
+  text-decoration: none !important;
+  color: white;
+}
+@media screen and (max-width: 700px) {
+  .ramadanPage .hero-section .animation-screen .container .donate-now button a {
+    font-size: 15px;
+  }
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now button:hover {
+  background-position-y: 70px;
+}
+@media (max-width: 550px) {
+  .ramadanPage .hero-section .animation-screen .container .donate-now button {
+    width: 159px;
+    height: 42px;
+  }
+}
+@media (max-width: 460px) {
+  .ramadanPage .hero-section .animation-screen .container .donate-now button {
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .ramadanPage .hero-section .animation-screen .container .donate-now button {
+    margin-top: 0.5rem;
+    margin-button: 0.5rem;
+    width: 150px !important;
+    height: 50px !important;
+  }
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now .links-cont {
+  display: flex;
+  align-items: flex-start;
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now .links-cont a {
+  background-color: white;
+  margin: 1rem 0.5rem;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px gray;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 700px) {
+  .ramadanPage .hero-section .animation-screen .container .donate-now .links-cont a {
+    display: none !important;
+  }
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now .links-cont a i {
+  color: #707070;
+  font-weight: 600;
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now .links-cont a:hover {
+  margin: 0.5rem;
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now .links-cont a:hover:first-of-type:hover i {
+  color: #3b5998;
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now .links-cont a:hover:nth-of-type(2):hover i {
+  color: #bc2a8d;
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now .links-cont a:hover:nth-of-type(3):hover i {
+  color: #1DA1F2;
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now .links-cont a:hover:last-of-type:hover i {
+  color: #FF0000;
+}
+.ramadanPage .hero-section .animation-screen .container .donate-now .links-cont a:hover i {
+  transition: all 0.2s ease-in-out;
+  color: #2b7634;
+}
+.ramadanPage .hero-section .animation-screen .hero-hand-img {
+  position: absolute;
+  z-index: 3000;
+  width: 606px;
+  right: 0;
+  bottom: 0 !important;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+@media (max-width: 550px) {
+  .ramadanPage .hero-section .animation-screen .hero-hand-img {
+    height: 400px;
+  }
+}
+@media (max-width: 460px) {
+  .ramadanPage .hero-section .animation-screen .hero-hand-img {
+    height: 355px !important;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .ramadanPage .hero-section .animation-screen .hero-hand-img {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .ramadanPage .hero-section .animation-screen .hero-hand-img {
+    width: 349px !important;
+  }
+}
+@media screen and (max-width: 462px) {
+  .ramadanPage .hero-section .animation-screen .hero-hand-img {
+    height: 479px !important;
+  }
+}
+.ramadanPage .hero-section .animation-screen .hero-hand-img img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  z-index: 100;
+  margin-right: auto;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+@media screen and (max-width: 462px) {
+  .ramadanPage .hero-section .animation-screen .hero-hand-img img {
+    margin: auto !important;
+  }
+}
+.ramadanPage .hero-section .animation-screen .hero-hand-img div {
+  background-color: #d2d5e5;
+  height: 110%;
+  width: 100%;
+  border-radius: 1952px 0px 0px 743px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+@media screen and (max-width: 769px) {
+  .ramadanPage .hero-section .animation-screen .hero-hand-img div {
+    display: none !important;
+  }
+}
+
+.ramadan_new_section {
+  margin: 4rem 0 !important;
+}
 .programsPage-header {
   position: relative;
 }
@@ -3848,4 +4073,138 @@ body {
   .weL {
     padding: 0 !important;
   }
+}
+
+.ramadan_new_section .container h1 {
+  margin-bottom: 3rem;
+}
+.ramadan_new_section .container .new_section {
+  display: flex;
+}
+@media (max-width: 991px) {
+  .ramadan_new_section .container .new_section {
+    flex-direction: column;
+    justify-content: center !important;
+  }
+}
+.ramadan_new_section .container .new_section .img-buttons {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+@media (max-width: 991px) {
+  .ramadan_new_section .container .new_section .img-buttons {
+    justify-content: center !important;
+  }
+}
+@media (max-width: 991px) {
+  .ramadan_new_section .container .new_section .img-buttons {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .ramadan_new_section .container .new_section .img-buttons {
+    flex-direction: column !important;
+  }
+}
+.ramadan_new_section .container .new_section .img-buttons .image_cont img {
+  width: 700px !important;
+  height: 700px !important;
+  max-width: 699px !important;
+  max-height: 699px !important;
+}
+@media (max-width: 1399px) {
+  .ramadan_new_section .container .new_section .img-buttons .image_cont img {
+    width: 600px !important;
+    height: 600px !important;
+    max-width: 599px !important;
+    max-height: 599px !important;
+  }
+}
+@media (max-width: 1199px) {
+  .ramadan_new_section .container .new_section .img-buttons .image_cont img {
+    width: 500px !important;
+    height: 500px !important;
+    max-width: 499px !important;
+    max-height: 499px !important;
+  }
+}
+@media (max-width: 767px) {
+  .ramadan_new_section .container .new_section .img-buttons .image_cont img {
+    width: 400px !important;
+    height: 400px !important;
+    max-width: 399px !important;
+    max-height: 399px !important;
+  }
+}
+@media (max-width: 475px) {
+  .ramadan_new_section .container .new_section .img-buttons .image_cont img {
+    width: 300px !important;
+    height: 300px !important;
+    max-width: 299px !important;
+    max-height: 299px !important;
+  }
+}
+.ramadan_new_section .container .new_section .img-buttons .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto !important;
+  background-color: white;
+}
+@media (max-width: 600px) {
+  .ramadan_new_section .container .new_section .img-buttons .buttons {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+}
+.ramadan_new_section .container .new_section .img-buttons .buttons button {
+  background-color: #2b3990;
+  padding: 1.5rem 0.5rem;
+  color: white;
+  border: none !important;
+  outline: none !important;
+  margin: 0.5rem 0;
+}
+@media (max-width: 1199px) {
+  .ramadan_new_section .container .new_section .img-buttons .buttons button {
+    padding: 1rem 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .ramadan_new_section .container .new_section .img-buttons .buttons button {
+    padding: 0.5rem 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .ramadan_new_section .container .new_section .img-buttons .buttons button {
+    margin: 0.5rem 0.5rem;
+  }
+}
+.ramadan_new_section .container .new_section .render_data {
+  padding: 1rem;
+  margin: 0rem 1rem;
+  width: 30%;
+}
+@media (max-width: 991px) {
+  .ramadan_new_section .container .new_section .render_data {
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
+.ramadan_new_section .container .new_section .render_data .price {
+  padding: 0.2rem;
+  outline: none !important;
+  border: none !important;
+  margin: 0.2rem;
+  color: white;
+  font-weight: 600;
+  background-color: #2b3990;
+}
+.ramadan_new_section .container .new_section .render_data .donateBtn {
+  background-color: #2b3990 !important;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none !important;
+  outline: none !important;
 }/*# sourceMappingURL=main.css.map */
